@@ -1,0 +1,179 @@
+tableInfos:
+#_1030，会话信息表
+    - origTable       : _1030
+      origClazzName   : _1030
+      newTable        : tb_session_info
+      newClazzName    : SessionInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  session_info_id
+              #会话ID
+              - origColumnName  :  F02
+                newColunmName   :  session_id
+              #创建时间
+              - origColumnName  :  F03
+                newColunmName   :  create_time
+              #账号ID
+              - origColumnName  :  F04
+                newColunmName   :  account_id
+              #过期时间
+              - origColumnName  :  F05
+                newColunmName   :  expiration_time
+              #登录IP
+              - origColumnName  :  F06
+                newColunmName   :  login_ip
+              #浏览器特征信息
+              - origColumnName  :  F07
+                newColunmName   :  browser_feature
+
+
+#_1031，会话验证码表
+    - origTable       : _1031
+      origClazzName   : _1031
+      newTable        : tb_session_verification_code
+      newClazzName    : SessionVerficationCode
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #会话ID
+              - origColumnName  :  F01
+                newColunmName   :  session_id
+              #
+              - origColumnName  :  F02
+                newColunmName   :  type
+              #显示内容
+              - origColumnName  :  F03
+                newColunmName   :  show_content
+              #验证内容
+              - origColumnName  :  F04
+                newColunmName   :  verification_content
+              #过期时间
+              - origColumnName  :  F05
+                newColunmName   :  expiration_time
+
+
+#_1032，会话属性表
+    - origTable       : _1032
+      origClazzName   : _1032
+      newTable        : tb_session_property
+      newClazzName    : SessionProperty
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #会话ID
+              - origColumnName  :  F01
+                newColunmName   :  session_id
+              #属性名称
+              - origColumnName  :  F02
+                newColunmName   :  name
+              #属性值
+              - origColumnName  :  F03
+                newColunmName   :  value
+
+
+#_1033，会话浏览器信息表
+    - origTable       : _1033
+      origClazzName   : _1033
+      newTable        : tb_session_browser_info
+      newClazzName    : SessionBrowserInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #会话ID
+              - origColumnName  :  F01
+                newColunmName   :  session_id
+              #浏览器信息
+              - origColumnName  :  F02
+                newColunmName   :  browser_feature
+
+
+#_1034，临时登录账户集合
+    - origTable       : _1034
+      origClazzName   : _1034
+      newTable        : tb_temp_login_list
+      newClazzName    : TempLoginList
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #账户ID
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+
+
+#_1035，用户登录人次
+    - origTable       : _1035
+      origClazzName   : _1035
+      newTable        : tb_user_login_count
+      newClazzName    : UserLoginCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #日期
+              - origColumnName  :  F01
+                newColunmName   :  date
+              #登录人次
+              - origColumnName  :  F02
+                newColunmName   :  count
+
+
+#_1036，用户在线统计表
+    - origTable       : _1036
+      origClazzName   : _1036
+      newTable        : tb_user_online
+      newClazzName    : UserOnline
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #日期
+              - origColumnName  :  F01
+                newColunmName   :  date
+              #时间
+              - origColumnName  :  F02
+                newColunmName   :  time
+              #在线人数
+              - origColumnName  :  F03
+                newColunmName   :  count
+
+
+#_1037，异常登录次数
+    - origTable       : _1037
+      origClazzName   : _1037
+      newTable        : tb_login_exception
+      newClazzName    : LoginException
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #账户ID
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #登录IP
+              - origColumnName  :  F02
+                newColunmName   :  login_ip
+              #失败次数
+              - origColumnName  :  F03
+                newColunmName   :  failure_count
+
+
+#_1038，
+    - origTable       : _1038
+      origClazzName   : _1038
+      newTable        : tb_
+      newClazzName    :
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :
+              #注册IP
+              - origColumnName  :  F02
+                newColunmName   :  register_ip
+              #时间
+              - origColumnName  :  F03
+                newColunmName   :  time
+              #注册次数
+              - origColumnName  :  F04
+                newColunmName   :  count

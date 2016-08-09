@@ -1,0 +1,1991 @@
+tableInfos:
+#S61.T6101，资金账户表
+    - origTable       : T6101
+      origClazzName   : T6101
+      newTable        : tb_fund_account
+      newClazzName    : FundAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #账户ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  fund_account_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #账户类型,WLZH:往来账户;FXBZJZH:风险保证金账户;SDZH:锁定账户
+              - origColumnName  :  F03
+                newColunmName   :  account_type
+              #资金账号
+              - origColumnName  :  F04
+                newColunmName   :  fund_account
+              #账户名称
+              - origColumnName  :  F05
+                newColunmName   :  account_name
+              #余额
+              - origColumnName  :  F06
+                newColunmName   :  balance
+              #最后更新时间
+              - origColumnName  :  F07
+                newColunmName   :  last_update_time
+
+
+
+#S61.T6102，资金流水表
+    - origTable       : T6102
+      origClazzName   : T6102
+      newTable        : tb_fund_payment_record
+      newClazzName    : FundPaymentRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_fund_payment_record_id
+              #资金账号ID,参考T6101.F01
+              - origColumnName  :  F02
+                newColunmName   :  fund_account_id
+              #交易类型ID,参考T5122.F01
+              - origColumnName  :  F03
+                newColunmName   :  transaction_type_id
+              #对方账户ID,参考T6101.F01
+              - origColumnName  :  F04
+                newColunmName   :  fund_account_id
+              #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+              #收入
+              - origColumnName  :  F06
+                newColunmName   :  income
+              #支出
+              - origColumnName  :  F07
+                newColunmName   :  expenditure
+              #余额
+              - origColumnName  :  F08
+                newColunmName   :  balance
+              #
+              - origColumnName  :  F09
+                newColunmName   :  bid_attachment_type_id
+              #对账状态,WDZ:未对账;YDZ:已对账
+              - origColumnName  :  F10
+                newColunmName   :  type_name
+              #对账时间
+              - origColumnName  :  F11
+                newColunmName   :  reconciliation_time
+              #托管商户编号,参考T5110.F02
+              - origColumnName  :  F12
+                newColunmName   :  merchant_number
+
+
+#S61.T6103，体验金信息表
+    - origTable       : T6103
+      origClazzName   : T6103
+      newTable        : tb_experience_information
+      newClazzName    : ExperienceInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #体验金ID（自增长）
+              - origColumnName  :  F01
+                newColunmName   :  experience_information_id
+              #用户ID（参考T6110.F01）
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #体验金金额
+              - origColumnName  :  F03
+                newColunmName   :  experience_money
+              #生效时间
+              - origColumnName  :  F04
+                newColunmName   :  take_effect_time
+              #失效时间
+              - origColumnName  :  F05
+                newColunmName   :  lose_efficacy_time
+              #使用状态：已过期：''YGQ'',已使用：''YSY'',未使用：''WSY'
+              - origColumnName  :  F06
+                newColunmName   :  use_status
+              #体验金有效收益月份数
+              - origColumnName  :  F07
+                newColunmName   :  experience_effective_earnings_months
+              #来源：（ZC:注册）
+              - origColumnName  :  F08
+                newColunmName   :  source
+              #备注
+              - origColumnName  :  F09
+                newColunmName   :  remark
+              #最后更新时间
+              - origColumnName  :  F10
+                newColunmName   :  last_update_time
+              #利息开始时间
+              - origColumnName  :  F11
+                newColunmName   :  strt_interest_time
+
+#S61.T6104，子资金账户表
+    - origTable       : T6104
+      origClazzName   : T6104
+      newTable        : tb_child_capital_account
+      newClazzName    : ChildCapitalAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #账户ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  child_capital_account_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #账户类型,WLZH:往来账户;FXBZJZH:风险保证金账户;SDZH:锁定账户
+              - origColumnName  :  F03
+                newColunmName   :  account_type
+              #资金账号
+              - origColumnName  :  F04
+                newColunmName   :  fund_account
+              #账户名称
+              - origColumnName  :  F05
+                newColunmName   :  account_name
+              #余额
+              - origColumnName  :  F06
+                newColunmName   :  balance
+              #最后更新时间
+              - origColumnName  :  F07
+                newColunmName   :  last_update_time
+              #托管商户编号,参考T5110.F02
+              - origColumnName  :  F08
+                newColunmName   :  merchant_number
+
+
+#S61.T6105，子账户资金流水表
+    - origTable       : T6105
+      origClazzName   : T6105
+      newTable        : tb_child_capital_account_record
+      newClazzName    : ChildCapitalAccountRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  child_capital_account_record_id
+              #资金账号ID,参考T6104.F01
+              - origColumnName  :  F02
+                newColunmName   :  child_capital_account_id
+              #交易类型ID,参考T5122.F01
+              - origColumnName  :  F03
+                newColunmName   :  transaction_type_id
+              #对方账户ID,参考T6104.F01
+              - origColumnName  :  F04
+                newColunmName   :  child_capital_account_id
+              #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+              #收入
+              - origColumnName  :  F06
+                newColunmName   :  income
+              #支出
+              - origColumnName  :  F07
+                newColunmName   :  expenditure
+              #余额
+              - origColumnName  :  F08
+                newColunmName   :  balance
+              #备注
+              - origColumnName  :  F09
+                newColunmName   :  remark
+              #对账状态,WDZ:未对账;YDZ:已对账
+              - origColumnName  :  F10
+                newColunmName   :  last_update_time
+              #对账时间
+              - origColumnName  :  F11
+                newColunmName   :  reconciliation_status
+              #托管商户编号,参考T5110.F02
+              - origColumnName  :  F12
+                newColunmName   :  merchant_number
+
+
+
+#S61.T6109，体验金资金账户表
+    - origTable       : T6109
+      origClazzName   : T6109
+      newTable        : tb_experience_money_account
+      newClazzName    : ExperienceMoneyAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增主键
+              - origColumnName  :  F01
+                newColunmName   :  experience_money_account_id
+              #用户id,参考S61.T6110 F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #用户账号,参考T6110.F02
+              - origColumnName  :  F03
+                newColunmName   :  account_name
+              #体验金余额
+              - origColumnName  :  F04
+                newColunmName   :  experience_balance
+              #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+
+
+#S61.T6110，用户账号表
+    - origTable       : T6110
+      origClazzName   : T6110
+      newTable        : tb_user_account
+      newClazzName    : UserAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #用户登录账号
+              - origColumnName  :  F02
+                newColunmName   :  account_name
+              #用户登录密码
+              - origColumnName  :  F03
+                newColunmName   :  user_login_password
+              #手机号码
+              - origColumnName  :  F04
+                newColunmName   :  phone
+              #邮箱
+              - origColumnName  :  F05
+                newColunmName   :  email
+              #用户类型,ZRR:自然人;FZRR:非自然人
+              - origColumnName  :  F06
+                newColunmName   :  user_type
+              #状态,QY启用;SD:锁定;HMD:黑名单
+              - origColumnName  :  F07
+                newColunmName   :  status
+              #注册来源,ZC:注册;HTTJ:后台添加;PLDR:批量导入
+              - origColumnName  :  F08
+                newColunmName   :  register_source
+              #注册时间
+              - origColumnName  :  F09
+                newColunmName   :  register_time
+              #S:担保机构，F:企业或个人，Q:渠道商, D:第三方代偿机构
+              - origColumnName  :  F10
+                newColunmName   :  guarantee_organization
+              #当日交易密码输入错误次数
+              - origColumnName  :  F11
+                newColunmName   :  transaction_password_input_error_time
+              #是否第一次登陆系统,S:是;F:否
+              - origColumnName  :  F12
+                newColunmName   :  is_first_login
+              #是否删除
+              - origColumnName  :  F13
+                newColunmName   :  is_delete
+              #DSH:待审核;YSH:已审核;SHZ:审核中
+              - origColumnName  :  F14
+                newColunmName   :  account_status
+              #注册IP
+              - origColumnName  :  F15
+                newColunmName   :  register_ip
+
+
+#S61.T6111，用户推广信息表
+    - origTable       : T6111
+      origClazzName   : T6111
+      newTable        : tb_user_generalize_information
+      newClazzName    : UserGeneralizeInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #推广码
+              - origColumnName  :  F02
+                newColunmName   :  promotion_code
+              #邀请码
+              - origColumnName  :  F03
+                newColunmName   :  invite_code
+              #邀请人手机号
+              - origColumnName  :  F04
+                newColunmName   :  inviter_phone
+              #邀请人姓名
+              - origColumnName  :  F05
+                newColunmName   :  inviter_name
+              #邀请人ID
+              - origColumnName  :  F06
+                newColunmName   :  user_account_id
+              #是否补填推广人,F:否;S:是
+              - origColumnName  :  F07
+                newColunmName   :  is_full_Promoter
+              #补填时间
+              - origColumnName  :  F08
+                newColunmName   :  full_time
+
+
+
+
+
+#S61.T6112, 用户房产信息表
+    - origTable       : T6112
+      origClazzName   : T6112
+      newTable        : tb_user_house_information
+      newClazzName    : UserHouseInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户房产ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  user_house_information_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #小区名称
+              - origColumnName  :  F03
+                newColunmName   :  community_name
+              #建筑面积(m2)
+              - origColumnName  :  F04
+                newColunmName   :  building_area
+              #使用年限,单位:年
+              - origColumnName  :  F05
+                newColunmName   :  durable_years
+              #购买价格
+              - origColumnName  :  F06
+                newColunmName   :  buy_price
+              #评估价格
+              - origColumnName  :  F07
+                newColunmName   :  evaluate_price
+              #区划ID,参考T5119.F01
+              - origColumnName  :  F08
+                newColunmName   :  china_administrative_division_id
+              #地址
+              - origColumnName  :  F09
+                newColunmName   :  address
+              #房产证编号
+              - origColumnName  :  F10
+                newColunmName   :  house_proprietary_certificate_number
+              #参考价格
+              - origColumnName  :  F11
+                newColunmName   :  reference_price
+
+
+
+#S61.T6113, 用户车产信息表
+    - origTable       : T6113
+      origClazzName   : T6113
+      newTable        : tb_user_car_information
+      newClazzName    : UserCarInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #车产ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  user_car_information_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #汽车品牌
+              - origColumnName  :  F03
+                newColunmName   :  car_brand
+              #车牌号码
+              - origColumnName  :  F04
+                newColunmName   :  car_number
+              #购车年份
+              - origColumnName  :  F05
+                newColunmName   :  year_of_buy_car
+              #购买价格
+              - origColumnName  :  F06
+                newColunmName   :  car_price
+              #评估价格
+              - origColumnName  :  F07
+                newColunmName   :  evaluate_price
+
+
+
+#S61.T6114,用户银行卡表
+    - origTable       : T6114
+      origClazzName   : T6114
+      newTable        : tb_user_bank_card
+      newClazzName    : UserBankCard
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户银行卡ID,自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_bank_card_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #银行ID,参考T5020.F01
+              - origColumnName  :  F03
+                newColunmName   :  bank_list_id
+              #开户行所在地区域ID,参考T5119.F01
+              - origColumnName  :  F04
+                newColunmName   :  china_administrative_division_id
+              #开户行
+              - origColumnName  :  F05
+                newColunmName   :  opening_bank
+              #银行卡号,前4位,后3位保留,其他星号代替
+              - origColumnName  :  F06
+                newColunmName   :  bank_card_number
+              #银行卡号,加密存储
+              - origColumnName  :  F07
+                newColunmName   :  bank_card_number_encrypt
+              #状态,QY:启用;JBZ:解绑中;TY:停用
+              - origColumnName  :  F08
+                newColunmName   :  status
+              #创建时间
+              - origColumnName  :  F09
+                newColunmName   :  create_time
+              #实名认证,TG:通过;BTG:不通过
+              - origColumnName  :  F10
+                newColunmName   :  certification
+              #YCL:已处理;CLZ:处理中;WCL:未处理
+              - origColumnName  :  F11
+                newColunmName   :  handle_status
+
+#S61.T6115, 用户理财统计表
+    - origTable       : T6115
+      origClazzName   : T6115
+      newTable        : tb_user_manage_money_statistics
+      newClazzName    : ManageMoneyStatistics
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_manage_money_statistics_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #抵押物类型ID,参考T6213.F01
+              - origColumnName  :  F03
+                newColunmName   :  pledge_type_id
+              #抵押物名称
+              - origColumnName  :  F04
+                newColunmName   :  pledge_name
+
+#S61.T6116, 用户信用账户表
+    - origTable       : T6116
+      origClazzName   : T6116
+      newTable        : tb_user_credit_account
+      newClazzName    : UserCreditAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #信用积分
+              - origColumnName  :  F02
+                newColunmName   :  credit_point
+              #授信额度
+              - origColumnName  :  F03
+                newColunmName   :  line_of_credit
+              #最后更新时间
+              - origColumnName  :  F04
+                newColunmName   :  last_update_time
+
+
+
+
+#S61.T6117, 用户信用流水表
+    - origTable       : T6117
+      origClazzName   : T6117
+      newTable        : tb_user_credit_record
+      newClazzName    : UserCreditRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_credit_record_id
+              #用户账号ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #交易类型ID,参考T5122.F01
+              - origColumnName  :  F03
+                newColunmName   :  transaction_type_id
+              #发生时间
+              - origColumnName  :  F04
+                newColunmName   :  happen_time
+              #收入
+              - origColumnName  :  F05
+                newColunmName   :  income
+              #支出
+              - origColumnName  :  F06
+                newColunmName   :  expenditure
+              #余额
+              - origColumnName  :  F07
+                newColunmName   :  balance
+              #备注
+              - origColumnName  :  F08
+                newColunmName   :  remark
+
+
+#S61.T6118, 用户安全认证表
+    - origTable       : T6118
+      origClazzName   : T6118
+      newTable        : tb_user_security_identification
+      newClazzName    : UserSecurityIdentification
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #身份认证状态,TG:通过;BTG:不通过
+              - origColumnName  :  F02
+                newColunmName   :  identity_authentication_status
+              #手机认证状态,TG:通过;BTG:不通过
+              - origColumnName  :  F03
+                newColunmName   :  phone_authentication_status
+              #邮箱认证状态,TG:通过;BTG:不通过
+              - origColumnName  :  F04
+                newColunmName   :  email_authentication_status
+              #交易密码,YSZ:已设置;WSZ:未设置
+              - origColumnName  :  F05
+                newColunmName   :  transaction_password_status
+              #手机号码
+              - origColumnName  :  F06
+                newColunmName   :  phone
+              #邮箱地址
+              - origColumnName  :  F07
+                newColunmName   :  email_address
+              #交易密码
+              - origColumnName  :  F08
+                newColunmName   :  transaction_password
+              #视频认证状态,TG:通过;BTG:不通过
+              - origColumnName  :  F09
+                newColunmName   :  vedio_authentication_status
+
+
+#S61.T6119, 用户第三方托管帐号表
+    - origTable       : T6119
+      origClazzName   : T6119
+      newTable        : tb_user_escrow_account
+      newClazzName    : UserEscrowAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #托管机构代码
+              - origColumnName  :  F02
+                newColunmName   :  managed_code
+              #托管帐号ID
+              - origColumnName  :  F03
+                newColunmName   :  hosting_account_id
+
+
+#S61.T6120, 用户认证信息表
+    - origTable       : T6120
+      origClazzName   : T6120
+      newTable        : tb_user_authentication_information
+      newClazzName    : UserAuthenticationInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #认证项ID,参考T5123.F01
+              - origColumnName  :  F02
+                newColunmName   :  credit_authentication_id
+              #认证次数
+              - origColumnName  :  F03
+                newColunmName   :  certification_number
+              #积分
+              - origColumnName  :  F04
+                newColunmName   :  integration
+              #认证状态,WYZ:未验证;DSH:待审核;TG:通过;BTG:不通过
+              - origColumnName  :  F05
+                newColunmName   :  authentication_status
+              #认证时间
+              - origColumnName  :  F06
+                newColunmName   :  authentication_time
+              #有效记录ID,,参考T6121.F01
+              - origColumnName  :  F07
+                newColunmName   :  user_authentication_record_id
+
+
+#S61.T6121, 用户认证记录表
+    - origTable       : T6121
+      origClazzName   : T6121
+      newTable        : tb_user_authentication_record
+      newClazzName    : UserAuthenticationRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_authentication_record_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #认证项ID,参考T5123.F01
+              - origColumnName  :  F03
+                newColunmName   :  credit_authentication_id
+              #认证内容
+              - origColumnName  :  F04
+                newColunmName   :  authentication_content
+              #状态,
+              - origColumnName  :  F05
+                newColunmName   :  status
+              #认证人ID,参考T7110.F01
+              - origColumnName  :  F06
+                newColunmName   :  manager_account_id
+              #认证时间
+              - origColumnName  :  F07
+                newColunmName   :  authentication_status
+
+#S61.T6122, 用户认证附件表
+    - origTable       : T6122
+      origClazzName   : T6122
+      newTable        : tb_user_authentication_attachment
+      newClazzName    : UserAuthenticationAttachment
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #认证记录ID,参考T6121.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_authentication_record_id
+              #附件内容
+              - origColumnName  :  F02
+                newColunmName   :  attachment_content
+              #附件大小
+              - origColumnName  :  F03
+                newColunmName   :  attachment_size
+              #上传时间
+              - origColumnName  :  F04
+                newColunmName   :  upload_time
+              #附件格式
+              - origColumnName  :  F05
+                newColunmName   :  attachment_format
+
+
+
+#S61.T6123, 用户站内信表
+    - origTable       : T6123
+      origClazzName   : T6123
+      newTable        : tb_user_mail
+      newClazzName    : UserMail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_mail_id
+              #接收用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #标题
+              - origColumnName  :  F03
+                newColunmName   :  title
+              #发送时间
+              - origColumnName  :  F04
+                newColunmName   :  send_time
+              #状态,WD:未读;YD:已读;SC:删除
+              - origColumnName  :  F05
+                newColunmName   :  status
+
+
+#S61.T6124, 用户站内信内容表
+    - origTable       : T6124
+      origClazzName   : T6124
+      newTable        : tb_user_mail_content
+      newClazzName    : UserMailContent
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #站内信ID,参考T6123.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_mail_id
+              #站内信内容
+              - origColumnName  :  F02
+                newColunmName   :  mail_content
+
+
+#S61.T6125, 身份信息表
+    - origTable       : T6125
+      origClazzName   : T6125
+      newTable        : tb_identity_information
+      newClazzName    : IdentityInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #身份证信息ID
+              - origColumnName  :  F01
+                newColunmName   :  identity_information_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #姓名
+              - origColumnName  :  F03
+                newColunmName   :  name
+              #性别,M:男;F:女;O:其他
+              - origColumnName  :  F04
+                newColunmName   :  sex
+              #民族
+              - origColumnName  :  F05
+                newColunmName   :  nation
+              #出生
+              - origColumnName  :  F06
+                newColunmName   :  birthday
+              #住址
+              - origColumnName  :  F07
+                newColunmName   :  address
+              #身份证号,3-18位星号替换
+              - origColumnName  :  F08
+                newColunmName   :  identity_card
+              #身份证号,加密存储,唯一
+              - origColumnName  :  F09
+                newColunmName   :  identity_card_encrypt
+              #签发机关
+              - origColumnName  :  F10
+                newColunmName   :  issuing_authority
+              #签发日期
+              - origColumnName  :  F11
+                newColunmName   :  issuing_date
+              #有效期至
+              - origColumnName  :  F12
+                newColunmName   :  date_of_expiry
+              #正面照附件ID,参考T6126.F01
+              - origColumnName  :  F13
+                newColunmName   :  user_bank_card_huaxing_id
+              #反面照附件ID,参考T6126.F01
+              - origColumnName  :  F14
+                newColunmName   :  user_bank_card_huaxing_id
+              #持卡半身照附件ID,参考T6126.F01
+              - origColumnName  :  F15
+                newColunmName   :  user_bank_card_huaxing_id
+              #正面照认证状态,WYZ:未验证;DSH:待审核;TG:通过;BTG:不通过
+              - origColumnName  :  F16
+                newColunmName   :  positive_picture_authentication_status
+              #反面照认证状态,WYZ:未验证;DSH:待审核;TG:通过;BTG:不通过
+              - origColumnName  :  F17
+                newColunmName   :  reverse_picture_authentication_status
+              #持卡半身照认证状态,WYZ:未验证;DSH:待审核;TG:通过;BTG:不通过
+              - origColumnName  :  F18
+                newColunmName   :  possess_a_bust_certification_status
+              #正面照片通过或不通过原因
+              - origColumnName  :  F19
+                newColunmName   :  positive_pictures_pass_reason
+              #反面照片通过或不通过原因
+              - origColumnName  :  F20
+                newColunmName   :  reverse_pictures_pass_reason
+              #半身持照片通过或不通过原因
+              - origColumnName  :  F21
+                newColunmName   :  half_body_picture_pass_reason
+
+
+#S61.T6126, 用户银行卡(华兴)表
+    - origTable       : T6126
+      origClazzName   : T6126
+      newTable        : tb_user_bank_card_huaxing
+      newClazzName    : UserBankCardHuaxing
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #银行卡ID,自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_bank_card_huaxing_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #托管帐号ID,参考T6119.F03
+              - origColumnName  :  F03
+                newColunmName   :  hosting_account_id
+              #支付公司ID,参考T5023.F01
+              - origColumnName  :  F04
+                newColunmName   :  certificate_type_id
+              #开户行代码,参考T5020.F05
+              - origColumnName  :  F05
+                newColunmName   :  gh_code
+              #银行卡号,前4位,后3位保留,其他星号代替
+              - origColumnName  :  F06
+                newColunmName   :  identity_card
+              #银行卡号,加密存储
+              - origColumnName  :  F07
+                newColunmName   :  identity_card_encrypt
+              #开户证件类型代码,参考T5023.F03
+              - origColumnName  :  F08
+                newColunmName   :  certificate_code
+              #银行卡类型代码,参考T5024.F03
+              - origColumnName  :  F09
+                newColunmName   :  bank_card_code
+              #信用卡有效期 YYMM
+              - origColumnName  :  F10
+                newColunmName   :  credit_card_expiration_date
+              #CVN2,信用卡背面的末3位数字
+              - origColumnName  :  F11
+                newColunmName   :  cvn2
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F12
+                newColunmName   :  status
+              #YCL:已处理;CLZ:处理中;WCL:未处理
+              - origColumnName  :  F13
+                newColunmName   :  handle_status
+              #创建时间
+              - origColumnName  :  F14
+                newColunmName   :  create_time
+              #修改时间
+              - origColumnName  :  F15
+                newColunmName   :  modify_time
+
+
+
+#S61.T6127, 身份认证附件表
+    - origTable       : T6127
+      origClazzName   : T6127
+      newTable        : tb_identity_authentication_attachment
+      newClazzName    : IdentityAuthenticationAttachment
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #身份附件ID
+              - origColumnName  :  F01
+                newColunmName   :  identity_authentication_attachment_id
+              #用户ID，参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #照片，Z:正面；F:反面;B:半身
+              - origColumnName  :  F03
+                newColunmName   :  picture_status
+              #附件内容
+              - origColumnName  :  F04
+                newColunmName   :  attachment_content
+              #附件大小
+              - origColumnName  :  F05
+                newColunmName   :  attachment_size
+              #上传时间
+              - origColumnName  :  F06
+                newColunmName   :  upload_time
+              #附件格式
+              - origColumnName  :  F07
+                newColunmName   :  attachment_format
+
+
+
+
+#S61.T6130, 用户提现申请表
+    - origTable       : T6130
+      origClazzName   : T6130
+      newTable        : tb_user_take_cash_apply
+      newClazzName    : UserTakeCashApply
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_take_cash_apply_id
+              #用户ID，参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #银行卡ID,参考T6114.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_bank_card_id
+              #提现金额
+              - origColumnName  :  F04
+                newColunmName   :  cash_money
+              #应收手续费
+              - origColumnName  :  F06
+                newColunmName   :  should_receive_handling_charge
+              #实收手续费
+              - origColumnName  :  F07
+                newColunmName   :  reality_receive_handling_charge
+              #创建时间
+              - origColumnName  :  F08
+                newColunmName   :  create_time
+              #状态,DSH:待审核;DFK:待放款;YFK:已放款;TXSB:提现失败
+              - origColumnName  :  F09
+                newColunmName   :  status
+              #审核人ID,参考T7110.F01
+              - origColumnName  :  F10
+                newColunmName   :  manager_account_id
+              #审核时间
+              - origColumnName  :  F11
+                newColunmName   :  audit_time
+              #审核意见
+              - origColumnName  :  F12
+                newColunmName   :  audit_opinion
+              #放款人ID,参考T7110.F01
+              - origColumnName  :  F13
+                newColunmName   :  manager_account_id
+              #放款时间
+              - origColumnName  :  F14
+                newColunmName   :  loan_time
+              #放款意见
+              - origColumnName  :  F15
+                newColunmName   :  loan_opinion
+              #是否已到账,F:否;S:是
+              - origColumnName  :  F16
+                newColunmName   :  is_to_account
+
+
+#S61.T6131, 用户在线充值订单表
+    - origTable       : T6131
+      origClazzName   : T6131
+      newTable        : tb_user_online_recharge_order
+      newClazzName    : UserOnlineRechargeOrder
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_take_cash_apply_id
+              #用户ID，参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #充值金额
+              - origColumnName  :  F03
+                newColunmName   :  recharge_money
+              #应收手续费
+              - origColumnName  :  F04
+                newColunmName   :  should_receive_handling_charge
+              #实收手续费
+              - origColumnName  :  F05
+                newColunmName   :  reality_receive_handling_charge
+              #创建时间
+              - origColumnName  :  F06
+                newColunmName   :  create_time
+              #状态,WRZ:未入账;YRZ:已入账
+              - origColumnName  :  F07
+                newColunmName   :  status
+              #支付公司
+              - origColumnName  :  F08
+                newColunmName   :  payment_company
+              #水单号
+              - origColumnName  :  F09
+                newColunmName   :  record_number
+              #入账时间
+              - origColumnName  :  F10
+                newColunmName   : enter_account_time
+
+#S61.T6132, 手机用户活动相关数据记录表
+    - origTable       : T6132
+      origClazzName   : T6132
+      newTable        : tb_phone_user_activity_data_record
+      newClazzName    : PhoneUserActivityDataRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_take_cash_apply_id
+              #用户ID，参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #userAgent
+              - origColumnName  :  F03
+                newColunmName   :  userAgent
+              #platform
+              - origColumnName  :  F04
+                newColunmName   :  platform
+              #宽度
+              - origColumnName  :  F05
+                newColunmName   :  width
+              #高度
+              - origColumnName  :  F06
+                newColunmName   :  height
+              #类型
+              - origColumnName  :  F07
+                newColunmName   :  type
+              #访问时间
+              - origColumnName  :  F08
+                newColunmName   :  visit_time
+              #活动名称
+              - origColumnName  :  F09
+                newColunmName   :  activity_name
+
+#T6141，个人基础信息
+    - origTable       : T6141
+      origClazzName   : T6141
+      newTable        : tb_personal_base_info
+      newClazzName    : PersonalBaseInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #登录账号ID
+              - origColumnName  :  F01
+                newColunmName   :  username
+              #姓名
+              - origColumnName  :  F02
+                newColunmName   :  name
+              #兴趣类型,LC:理财;JK:借款
+              - origColumnName  :  F03
+                newColunmName   :  interest_type
+              #实名认证,TG:通过;BTG:不通过;
+              - origColumnName  :  F04
+                newColunmName   :  autonym_authentication
+              #用户头像文件编码
+              - origColumnName  :  F05
+                newColunmName   :  head_portrait_encode
+              #身份证号,3-18位星号替换
+              - origColumnName  :  F06
+                newColunmName   :  identity_number_asterisk
+              #身份证号,加密存储,唯一
+              - origColumnName  :  F07
+                newColunmName   :  identity_number_encryption
+              #出身日期
+              - origColumnName  :  F08
+                newColunmName   :  birthday
+              #认证时间
+              - origColumnName  :  F09
+                newColunmName   :  authentication_time
+
+
+#T6142，个人学历记录
+    - origTable       : T6142
+      origClazzName   : T6142
+      newTable        : tb_education_background
+      newClazzName    :
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #学历记录ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  education_background_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #毕业院校
+              - origColumnName  :  F03
+                newColunmName   :  graduate_institutions
+              #入学年份
+              - origColumnName  :  F04
+                newColunmName   :  enrollment_year
+              #专业
+              - origColumnName  :  F05
+                newColunmName   :  major
+              #在校情况简介
+              - origColumnName  :  F06
+                newColunmName   :  at_school_situation
+
+
+#T6143，个人工作记录
+    - origTable       : T6143
+      origClazzName   : T6143
+      newTable        : tb_work_record
+      newClazzName    : WorkRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #工作记录ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  work_record_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #工作状态,ZZ:在职;LZ:离职;
+              - origColumnName  :  F03
+                newColunmName   :  work_status
+              #单位名称
+              - origColumnName  :  F04
+                newColunmName   :  unit_name
+              #职位
+              - origColumnName  :  F05
+                newColunmName   :  position
+              #工作邮箱
+              - origColumnName  :  F06
+                newColunmName   :  work_email
+              #工作城市,参考T5119.F01
+              - origColumnName  :  F07
+                newColunmName   :
+              #工作地址
+              - origColumnName  :  F08
+                newColunmName   :  work_place
+              #公司类别
+              - origColumnName  :  F09
+                newColunmName   :  company_type
+              #公司行业
+              - origColumnName  :  F10
+                newColunmName   :  company_industry
+              #公司规模
+              - origColumnName  :  F11
+                newColunmName   :  company_size
+
+
+#T6144，用户信用档案表
+    - origTable       : T6144
+      origClazzName   : T6144
+      newTable        : tb_user_credit_record
+      newClazzName    : UserCreditRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户账号ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #逾期次数
+              - origColumnName  :  F02
+                newColunmName   :  overdue_count
+              #严重逾期次数
+              - origColumnName  :  F03
+                newColunmName   :  serious_overdue_count
+              #最长逾期天数
+              - origColumnName  :  F04
+                newColunmName   :  longest_overdue_count
+              #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+
+
+#T6145，用户认证视频表
+    - origTable       : T6145
+      origClazzName   : T6145
+      newTable        : tb_user_authentication_video
+      newClazzName    : UserAuthenticationVideo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_authentication_video_id
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #视频文件格式
+              - origColumnName  :  F03
+                newColunmName   :  format
+              #视频文件编码
+              - origColumnName  :  F04
+                newColunmName   :  encode
+              #视频文件大小
+              - origColumnName  :  F05
+                newColunmName   :  size
+              #上传时间
+              - origColumnName  :  F06
+                newColunmName   :  upload_time
+              #审核状态,DSH:待审核;SHTG:审核通过;SHBTG:审核不通过
+              - origColumnName  :  F07
+                newColunmName   :  status
+              #审核意见
+              - origColumnName  :  F08
+                newColunmName   :  opinion
+
+
+#T6150，活动用户明细表
+    - origTable       : T6150
+      origClazzName   : T6150
+      newTable        : tb_user_activity_detail
+      newClazzName    : UserActivityDetail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_activity_detail_id
+              #活动ID,参考T6340.F01
+              - origColumnName  :  F02
+                newColunmName   :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #参加活动时间
+              - origColumnName  :  F04
+                newColunmName   :  join_time
+
+
+#T6151，礼品领取明细表
+    - origTable       : T6151
+      origClazzName   : T6151
+      newTable        : tb_receive_present_detail
+      newClazzName    : ReceivePresentDetail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  get_present_detail_id
+              #礼品ID,参考T6341.F01
+              - origColumnName  :  F02
+                newColunmName   :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #领取时间
+              - origColumnName  :  F04
+                newColunmName   :  receive_time
+              #使用时间
+              - origColumnName  :  F05
+                newColunmName   :  usage_time
+
+
+#T6161，企业基础信息
+    - origTable       : T6161
+      origClazzName   : T6161
+      newTable        : tb_enterprise_base_info
+      newClazzName    : EnterpriseBaseInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #企业编号
+              - origColumnName  :  F02
+                newColunmName   :  enterprise_number
+              #营业执照登记注册号,唯一
+              - origColumnName  :  F03
+                newColunmName   :  business_license
+              #企业名称
+              - origColumnName  :  F04
+                newColunmName   :  name
+              #企业纳税号
+              - origColumnName  :  F05
+                newColunmName   :  ratepaying_number
+              #组织机构代码
+              - origColumnName  :  F06
+                newColunmName   :  organization_code
+              #注册年份
+              - origColumnName  :  F07
+                newColunmName   :  register_year
+              #注册资金(万元)
+              - origColumnName  :  F08
+                newColunmName   :  register_money
+              #行业
+              - origColumnName  :  F09
+                newColunmName   :  industry
+              #
+              - origColumnName  :  F10
+                newColunmName   :  number
+              #法人
+              - origColumnName  :  F11
+                newColunmName   :  legal_person
+              #法人身份证号,9-16位星号替换
+              - origColumnName  :  F12
+                newColunmName   :  identity_number_asterisk
+              #法人身份证号,加密存储
+              - origColumnName  :  F13
+                newColunmName   :  identity_number_encryption
+              #资产净值(万元)
+              - origColumnName  :  F14
+                newColunmName   :  nav
+              #上年度经营现金流入(万元)
+              - origColumnName  :  F15
+                newColunmName   :  flow_into_money
+              #贷款卡证书编号
+              - origColumnName  :  F16
+                newColunmName   :  loan_card_number
+              #企业信用证书编号
+              - origColumnName  :  F17
+                newColunmName   :  enterprise_credit_number
+              #企业简称
+              - origColumnName  :  F18
+                newColunmName   :  abbreviation
+              #银行开户许可证
+              - origColumnName  :  F19
+                newColunmName   :  bank_opens_account_licence
+              #统一社会信用代码
+              - origColumnName  :  F20
+                newColunmName   :  society_credit_code
+
+
+#T6162，企业介绍资料
+    - origTable       : T6162
+      origClazzName   : T6162
+      newTable        : tb_enterprise_introduce_data
+      newClazzName    : EnterpriseIntroduceData
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #企业简介
+              - origColumnName  :  F02
+                newColunmName   :  introduction
+              #经营情况
+              - origColumnName  :  F03
+                newColunmName   :  business_condition
+              #涉诉情况
+              - origColumnName  :  F04
+                newColunmName   :  litigation_cases
+              #征信情况
+              - origColumnName  :  F05
+                newColunmName   :  credit_conditions
+
+
+#T6163，企业财务状况
+    - origTable       : T6163
+      origClazzName   : T6163
+      newTable        : tb_enterprise_property_detail
+      newClazzName    : EnterprisePropertyDetail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #年份
+              - origColumnName  :  F02
+                newColunmName   :  year
+              #主营收入(万元)
+              - origColumnName  :  F03
+                newColunmName   :  sales_revenue
+              #毛利率
+              - origColumnName  :  F04
+                newColunmName   :  gross_profit
+              #净利润(万元)
+              - origColumnName  :  F05
+                newColunmName   :  net_margin
+              #总资产(万元)
+              - origColumnName  :  F06
+                newColunmName   :  total_asset
+              #净资产(万元)
+              - origColumnName  :  F07
+                newColunmName   :  net_asset
+              #备注
+              - origColumnName  :  F08
+                newColunmName   :  remark
+
+
+#T6164，企业联系信息
+    - origTable       : T6164
+      origClazzName   : T6164
+      newTable        : tb_enterprise_contact_info
+      newClazzName    : EnterpriseContactInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #所在区域ID,参考T5119.F01
+              - origColumnName  :  F02
+                newColunmName   :
+              #联系地址
+              - origColumnName  :  F03
+                newColunmName   :  address
+              #联系电话
+              - origColumnName  :  F04
+                newColunmName   :  phone
+              #网站地址
+              - origColumnName  :  F05
+                newColunmName   :  website_url
+              #法人联系电话
+              - origColumnName  :  F06
+                newColunmName   :  legal_person_phone
+              #企业联系人
+              - origColumnName  :  F07
+                newColunmName   :  linkman
+
+
+#T6165，企业账号审核状态
+    - origTable       : T6165
+      origClazzName   : T6165
+      newTable        : tb_enterprise_account_status
+      newClazzName    : EnterpriseAccountStatus
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户id
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #审核状态标记，I：初始，T：提交，P：审核中，R：审核拒绝，F：开户失败，K：开户中，Y：开户成功
+              - origColumnName  :  F02
+                newColunmName   :  status
+              #审核描述
+              - origColumnName  :  F03
+                newColunmName   :  describe
+              #最后更新时间
+              - origColumnName  :  F04
+                newColunmName   :  last_update_time
+
+
+#T6170，资金冻结流水号
+    - origTable       : T6170
+      origClazzName   : T6170
+      newTable        : tb_freeze_fund_serial_number
+      newClazzName    : FundFreezeSerialNumber
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  fund_freeze_serial_number_id
+              #请求流水号
+              - origColumnName  :  F02
+                newColunmName   :  serial_number
+              #用户登录账号
+              - origColumnName  :  F03
+                newColunmName   :  username
+              #冻结金额
+              - origColumnName  :  F04
+                newColunmName   :  freeze_fund
+              #冻结时间
+              - origColumnName  :  F05
+                newColunmName   :  freeze_time
+
+
+#T6171，资金冻结解冻明细表
+    - origTable       : T6171
+      origClazzName   : T6171
+      newTable        : tb_unfreeze_fund_detail
+      newClazzName    : UnfreezeFundDetail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  unfreeze_fund_detail_id
+              #用户登录账号
+              - origColumnName  :  F02
+                newColunmName   :  username
+              #冻结金额
+              - origColumnName  :  F03
+                newColunmName   :  freeze_fund
+              #冻结时间
+              - origColumnName  :  F04
+                newColunmName   :  freeze_time
+              #预计解冻时间
+              - origColumnName  :  F05
+                newColunmName   :  expect_unfreeze_time
+              #实际解冻时间
+              - origColumnName  :  F06
+                newColunmName   :  actual_unfreeze_time
+              #冻结操作人 参考T7110.F01
+              - origColumnName  :  F07
+                newColunmName   :  freeze_manager_account_id
+              #解冻操作人 参考T7110.F01
+              - origColumnName  :  F08
+                newColunmName   :  unfreeze_manager_account_id
+              #请求流水号
+              - origColumnName  :  F09
+                newColunmName   :  serial_number
+              #冻结状态 S:冻结中  F:已解冻
+              - origColumnName  :  F10
+                newColunmName   :  unfreeze_status
+
+
+#T6180，担保方基础信息
+    - origTable       : T6180
+      origClazzName   : T6180
+      newTable        : tb_guarantee_party_info
+      newClazzName    : GuaranteePartyInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01',
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #担保资质描述
+              - origColumnName  :  F02
+                newColunmName   :  aptitude_describe
+              #机构类型状态,DBGS:担保公司;XDGS:小贷公司;RZZZGS:融资租债公司;
+              - origColumnName  :  F03
+                newColunmName   :  organization_type
+              #担保机构实际控制人
+              - origColumnName  :  F04
+                newColunmName   :  actual_controller
+              #实际控制人身份证号,9-16位星号替换
+              - origColumnName  :  F05
+                newColunmName   :  identity_number_asterisk
+              #实际控制人身份证号,加密存储
+              - origColumnName  :  F06
+                newColunmName   :  identity_number_encryption
+              #实际控制人联系地址
+              - origColumnName  :  F07
+                newColunmName   :  actual_controller_address
+              #实际控制人联系电话
+              - origColumnName  :  F08
+                newColunmName   :  actual_controller_phone
+
+
+#T6182，积分表
+    - origTable       : T6182
+      origClazzName   : T6182
+      newTable        : tb_integral
+      newClazzName    : Integral
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  integral_id
+              #邀请人ID
+              - origColumnName  :  F02
+                newColunmName   :  inviter_id
+              #获得积分
+              - origColumnName  :  F03
+                newColunmName   :  get_integral
+              #投资人ID
+              - origColumnName  :  F04
+                newColunmName   :  investor_id
+              #时间
+              - origColumnName  :  F05
+                newColunmName   :  time
+              #投资金额
+              - origColumnName  :  F06
+                newColunmName   :  investment_amount
+              #来源标识
+              - origColumnName  :  F07
+                newColunmName   :  source_type
+              #是否第一次投资
+              - origColumnName  :  F08
+                newColunmName   :  is_first_investment
+
+
+#T6183，渠道商基础信息
+    - origTable       : T6183
+      origClazzName   : T6183
+      newTable        : tb_channel_base_info
+      newClazzName    : ChannelBaseInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #营业执照登记注册号,唯一
+              - origColumnName  :  F02
+                newColunmName   :  business_license
+              #渠道商账号
+              - origColumnName  :  F03
+                newColunmName   :  username
+              #渠道商名称
+              - origColumnName  :  F04
+                newColunmName   :  name
+              #组织机构代码
+              - origColumnName  :  F05
+                newColunmName   :  organization_code
+              #注册年份
+              - origColumnName  :  F06
+                newColunmName   :  register_year
+              #行业
+              - origColumnName  :  F07
+                newColunmName   :  industry
+              #渠道商规模(人数)
+              - origColumnName  :  F08
+                newColunmName   :  number
+              #法人
+              - origColumnName  :  F09
+                newColunmName   :  legal_person
+              #法人身份证号,9-16位星号替换
+              - origColumnName  :  F10
+                newColunmName   :  identity_number_asterisk
+              #法人身份证号,加密存储
+              - origColumnName  :  F11
+                newColunmName   :  identity_number_encryption
+              #开户银行许可证
+              - origColumnName  :  F12
+                newColunmName   :  bank_opens_account_licence
+              #统一社会信用代码
+              - origColumnName  :  F13
+                newColunmName   :  society_credit_code
+
+
+#T6184，渠道商联系方式
+    - origTable       : T6184
+      origClazzName   : T6184
+      newTable        : tb_channel_contact_way
+      newClazzName    : ChannelContactWay
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #企业联系人
+              - origColumnName  :  F02
+                newColunmName   :  linkman
+              #联系人电话
+              - origColumnName  :  F03
+                newColunmName   :  phone
+              #联系地址
+              - origColumnName  :  F04
+                newColunmName   :  address
+
+
+#T6190，用户操作日志
+    - origTable       : T6190
+      origClazzName   : T6190
+      newTable        : tb_user_operation_log
+      newClazzName    : UserOperationLog
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #主键ID
+              - origColumnName  :  F01
+                newColunmName   :  user_operation_log_id
+              #后台帐号ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #操作时间
+              - origColumnName  :  F03
+                newColunmName   :  time
+              #操作类型
+              - origColumnName  :  F04
+                newColunmName   :  type
+              #操作描述
+              - origColumnName  :  F05
+                newColunmName   :  describe
+              #访问IP
+              - origColumnName  :  F06
+                newColunmName   :  visit_ip
+
+
+#T6191，我的借款金额按季度统计表
+    - origTable       : T6191
+      origClazzName   : T6191
+      newTable        : tb_loan_amount_quarter
+      newClazzName    : LoanAmountQuarter
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户账号ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #年
+              - origColumnName  :  F02
+                newColunmName   :  year
+              #季度(1,2,3,4)
+              - origColumnName  :  F03
+                newColunmName   :  quarter
+              #成功借款金额
+              - origColumnName  :  F04
+                newColunmName   :  money
+              #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+
+
+#T6192，我的借款还款按月份统计表
+    - origTable       : T6192
+      origClazzName   : T6192
+      newTable        : tb_repayment_money_month
+      newClazzName    : RepaymentMoneyMonth
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户账号ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #年
+              - origColumnName  :  F02
+                newColunmName   :  year
+              #月份
+              - origColumnName  :  F03
+                newColunmName   :  month
+              #还款总金额
+              - origColumnName  :  F04
+                newColunmName   :  money
+              #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+
+
+#T6194，渠道商分润表
+    - origTable       : T6194
+      origClazzName   : T6194
+      newTable        : tb_channel_split_profit
+      newClazzName    : ChannelSplitProfit
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增主键ID
+              - origColumnName  :  F01
+                newColunmName   :  channel_split_profit_id
+              #订单ID
+              - origColumnName  :  F02
+                newColunmName   :  order_id
+              #是否购买债权
+              - origColumnName  :  F03
+                newColunmName   :  is_buy_debts
+              #渠道商ID
+              - origColumnName  :  F04
+                newColunmName   :  channel_id
+              #员工ID，参考表T6110.F01
+              - origColumnName  :  F05
+                newColunmName   :  employee_user_account_id
+              #投资人ID，参考表T6110.F01
+              - origColumnName  :  F06
+                newColunmName   :  investor_user_account_id
+              #标ID，参考表T6230.F01
+              - origColumnName  :  F07
+                newColunmName   :  bid_information_id
+              #投资金额
+              - origColumnName  :  F08
+                newColunmName   :  investment_amount
+              #投资时间
+              - origColumnName  :  F09
+                newColunmName   :  investment_time
+              #是否债权转让,F:否;S:是;
+              - origColumnName  :  F10
+                newColunmName   :  is_debts_assignment
+              #债权转让订单ID
+              - origColumnName  :  F11
+                newColunmName   :  debts_assignment_order_id
+              #债权转让时间
+              - origColumnName  :  F12
+                newColunmName   :  debts_assignment_time
+              #债权ID
+              - origColumnName  :  F13
+                newColunmName   :  debts_id
+              #放款时间
+              - origColumnName  :  F14
+                newColunmName   :  advance_time
+
+
+#T6195，分润汇总统计表
+    - origTable       : T6195
+      origClazzName   : T6195
+      newTable        : tb_split_profit_collect
+      newClazzName    : SplitProfitCollect
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增主键ID
+              - origColumnName  :  F01
+                newColunmName   :  split_profit_collect_id
+              #分润明细ID
+              - origColumnName  :  F02
+                newColunmName   :  split_profit_detail_id
+              #订单ID
+              - origColumnName  :  F03
+                newColunmName   :  order_id
+              #债权ID
+              - origColumnName  :  F04
+                newColunmName   :  debts_id
+              #标ID
+              - origColumnName  :  F05
+                newColunmName   :  bid_id
+              #是否购买债权
+              - origColumnName  :  F06
+                newColunmName   :  is_buy_debts
+              #分润月份
+              - origColumnName  :  F07
+                newColunmName   :  split_profit_month
+              #渠道商ID
+              - origColumnName  :  F08
+                newColunmName   :  channel_id
+              #渠道商分润金额
+              - origColumnName  :  F09
+                newColunmName   :  channel_split_profit_money
+              #员工ID
+              - origColumnName  :  F10
+                newColunmName   :  employee_id
+              #员工分润金额
+              - origColumnName  :  F11
+                newColunmName   :  employee_split_profit_money
+              #投资人ID
+              - origColumnName  :  F12
+                newColunmName   :  investor_id
+              #投资金额
+              - origColumnName  :  F13
+                newColunmName   :  investment_amount
+              #分润状态,是否领取分润，F:否;S:是;
+              - origColumnName  :  F14
+                newColunmName   :  split_profit_status
+              #领取分润时间
+              - origColumnName  :  F15
+                newColunmName   :  receive_time
+              #标状态
+              - origColumnName  :  F16
+                newColunmName   :  bid_dynamic
+              #投资时间
+              - origColumnName  :  F17
+                newColunmName   :  investment_time
+              #结清时间
+              - origColumnName  :  F18
+                newColunmName   :  settle_time
+              #是否债权转让
+              - origColumnName  :  F19
+                newColunmName   :  is_debts_assignment
+              #债权转让时间
+              - origColumnName  :  F20
+                newColunmName   :  debts_assignment_time
+              #本月投资天数
+              - origColumnName  :  F21
+                newColunmName   :  investment_days
+              #放款时间
+              - origColumnName  :  F22
+                newColunmName   :  advance_time
+              #渠道商名称
+              - origColumnName  :  F23
+                newColunmName   :  channel_name
+              #渠道商分润比例
+              - origColumnName  :  F24
+                newColunmName   :  channel_split_profit_proportion
+              #员工分润比例
+              - origColumnName  :  F25
+                newColunmName   :  employee_split_profit_proprotion
+
+
+#T6196，二级代理分润表
+    - origTable       : T6196
+      origClazzName   : T6196
+      newTable        : tb_second_Agent_split_profit
+      newClazzName    : SecondAgentSplitProfit
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增主键ID
+              - origColumnName  :  F01
+                newColunmName   :  second_Agent_split_profit_id
+              #订单ID
+              - origColumnName  :  F02
+                newColunmName   :  order_id
+              #是否购买债权
+              - origColumnName  :  F03
+                newColunmName   :  is_buy_debts
+              #推荐人ID
+              - origColumnName  :  F04
+                newColunmName   :  referrer_user_account_id
+              #投资人ID，参考表T6110.F01
+              - origColumnName  :  F05
+                newColunmName   :  investor_user_account_id
+              #标ID，参考表T6230.F01
+              - origColumnName  :  F06
+                newColunmName   :  bid_information_id
+              #投资金额
+              - origColumnName  :  F07
+                newColunmName   :  investment_amount
+              #投资时间
+              - origColumnName  :  F08
+                newColunmName   :  investment_time
+              #是否债权转让,F:否;S:是;
+              - origColumnName  :  F09
+                newColunmName   :  is_debts_assignment
+              #债权转让订单ID
+              - origColumnName  :  F10
+                newColunmName   :  debts_assignment_order_id
+              #债权转让时间
+              - origColumnName  :  F11
+                newColunmName   :  debts_assignment_time
+              #债权ID
+              - origColumnName  :  F12
+                newColunmName   :  debts_id
+              #放款时间
+              - origColumnName  :  F13
+                newColunmName   :  advance_time
+
+
+#T6197，个人分润明细表
+    - origTable       : T6197
+      origClazzName   : T6197
+      newTable        : tb_split_profit_detail
+      newClazzName    : SplitProfitDetail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  split_profit_detail_id
+              #还款记录自增id，参考T6252.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_repayment_record_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_information_id
+              #标编号
+              - origColumnName  :  F04
+                newColunmName   :  bid_number
+              #借款金额
+              - origColumnName  :  F05
+                newColunmName   :  loan_amounts
+              #年利率
+              - origColumnName  :  F06
+                newColunmName   :  annual_interest
+              #还款人id，参考T6252.F03
+              - origColumnName  :  F07
+                newColunmName   :  user_generalize_info_user_account_id
+              #债权id，参考T6252.F11
+              - origColumnName  :  F08
+                newColunmName   :  bid_creditor_rights_record_id
+              #投资人id，参考T6252.F04
+              - origColumnName  :  F09
+                newColunmName   :  user_generalize_info_user_account_id
+              #投资用户
+              - origColumnName  :  F10
+                newColunmName   :  investment_account
+              #投资人姓名
+              - origColumnName  :  F11
+                newColunmName   :  investment_name
+              #借款天数
+              - origColumnName  :  F12
+                newColunmName   :  loan_days
+              #还款期数
+              - origColumnName  :  F13
+                newColunmName   :  repayment_periods
+              #还款利息
+              - origColumnName  :  F14
+                newColunmName   :  repayment_interest
+              #还款日期
+              - origColumnName  :  F15
+                newColunmName   :  repayment_date
+              #推荐人id，参考T6111.F06
+              - origColumnName  :  F16
+                newColunmName   :
+              #推荐人用户
+              - origColumnName  :  F17
+                newColunmName   :  referrer_account
+              #推荐人姓名
+              - origColumnName  :  F18
+                newColunmName   :  referrer_name
+              #推荐人分润
+              - origColumnName  :  F19
+                newColunmName   :  referrer_split_profit
+              #推荐人邀请人数
+              - origColumnName  :  F20
+                newColunmName   :  inviter_count
+              #会员等级
+              - origColumnName  :  F21
+                newColunmName   :  member_level
+              #获得分润比例
+              - origColumnName  :  F22
+                newColunmName   :  split_profit_proportion
+              #WFF=''未发放'' FFZ=''发放中'' YFF=''已发放''
+              - origColumnName  :  F23
+                newColunmName   :  status
+              #分润时间
+              - origColumnName  :  F24
+                newColunmName   :  split_profit_time
+              #操作人ID
+              - origColumnName  :  F25
+                newColunmName   :  manager_account_id
+              #托管商户编号,参考T5110.F02
+              - origColumnName  :  F26
+                newColunmName   :  merchant_number
+              #来源（基金：JJ；集团：JT；点分期：DFQ；小森：XS；按揭：AJ；个人：GR
+              - origColumnName  :  F27
+                newColunmName   :  source
+
+
+#T6198，会员分润汇总表
+    - origTable       : T6198
+      origClazzName   : T6198
+      newTable        : tb_member_split_profit_collect
+      newClazzName    : MemberSplitProfitCollect
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增主键ID
+              - origColumnName  :  F01
+                newColunmName   :  member_split_profit_collect_id
+              #推荐人ID,参考T6111.F06
+              - origColumnName  :  F02
+                newColunmName   :
+              #分润月份
+              - origColumnName  :  F03
+                newColunmName   :  month
+              #推荐人姓名
+              - origColumnName  :  F04
+                newColunmName   :  name
+              #推荐人账号
+              - origColumnName  :  F05
+                newColunmName   :  username
+              #托管商户编号,参考T5110.F02
+              - origColumnName  :  F06
+                newColunmName   :  merchant_number
+              #分润状态,是否领取分润，F:否;S:是;
+              - origColumnName  :  F07
+                newColunmName   :  is_receive_split_profit
+              #分润比例
+              - origColumnName  :  F08
+                newColunmName   :  proportion
+              #分润金额
+              - origColumnName  :  F09
+                newColunmName   :  money
+              #领取分润时间
+              - origColumnName  :  F10
+                newColunmName   :  receive_time
+              #WFF=''未发放'' FFZ=''发放中'' YFF=''已发放''
+              - origColumnName  :  F11
+                newColunmName   :  status
+              #会员分润明细ID（参考T6197.F01）
+              - origColumnName  :  F12
+                newColunmName   :  split_profit_detail_id

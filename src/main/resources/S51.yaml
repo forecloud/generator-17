@@ -1,0 +1,203 @@
+tableInfos:
+#T5110，托管商户
+    - origTable       : T5110
+      origClazzName   : T5110
+      newTable        : tb_trusteeship_merchant
+      newClazzName    : TrusteeshipMerchant
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #主键id
+              - origColumnName  :  F01
+                newColunmName   :  trusteeship_merchant_id
+              #托管商户编号
+              - origColumnName  :  F02
+                newColunmName   :  merchant_number
+              #托管商户名称
+              - origColumnName  :  F03
+                newColunmName   :  merchant_name
+              #状态,QY:启用;TY:停用;
+              - origColumnName  :  F04
+                newColunmName   :  status
+
+
+#T5122，交易类型
+    - origTable       : T5122
+      origClazzName   : T5122
+      newTable        : tb_transaction_type
+      newClazzName    : TransactionType
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #交易类型编码,非自增
+              - origColumnName  :  F01
+                newColunmName   :  transaction_type_id
+              #类型名称
+              - origColumnName  :  F02
+                newColunmName   :  type_name
+              #状态,QY:启用;TY:停用;
+              - origColumnName  :  F03
+                newColunmName   :  status
+
+
+#T5123，信用认证项
+    - origTable       : T5123
+      origClazzName   : T5123
+      newTable        : tb_credit_authentication
+      newClazzName    : CreditAuthentication
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #认证ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  credit_authentication_id
+              #类型名称
+              - origColumnName  :  F02
+                newColunmName   :  type_name
+              #必要认证,S:是;F:否
+              - origColumnName  :  F03
+                newColunmName   :  necessity_authenication
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F04
+                newColunmName   :  status
+              #最高分数
+              - origColumnName  :  F05
+                newColunmName   :  high_scores
+
+
+#T5124，信用等级
+    - origTable       : T5124
+      origClazzName   : T5124
+      newTable        : tb_credit_rating
+      newClazzName    : CreditRating
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  credit_rating_id
+              #等级名称
+              - origColumnName  :  F02
+                newColunmName   :  rating_name
+              #下限分数
+              - origColumnName  :  F03
+                newColunmName   :  floor_scores
+              #上限分数
+              - origColumnName  :  F04
+                newColunmName   :  ceiling_scores
+              #状态,QY:启用;TY:停用;
+              - origColumnName  :  F05
+                newColunmName   :  status
+
+
+#T5125，协议范本
+    - origTable       : T5125
+      origClazzName   : T5125
+      newTable        : tb_agreemen_model
+      newClazzName    : AgreemenModel
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #协议范本ID，非自增
+              - origColumnName  :  F01
+                newColunmName   :  agreemen_model_id
+              #最新版本号
+              - origColumnName  :  F02
+                newColunmName   :  latest_version
+              #类型名称
+              - origColumnName  :  F03
+                newColunmName   :  type_name
+              #更新时间
+              - origColumnName  :  F04
+                newColunmName   :  update_time
+
+
+#T5126，协议内容
+    - origTable       : T5125
+      origClazzName   : T5125
+      newTable        : tb_agreement_content
+      newClazzName    : AgreementContent
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #范本类型ID,参考T5125.F01
+              - origColumnName  :  F01
+                newColunmName   :  agreemen_model_id
+              #版本号
+              - origColumnName  :  F02
+                newColunmName   :  version
+              #模板内容
+              - origColumnName  :  F03
+                newColunmName   :  template_content
+              #最后更新时间
+              - origColumnName  :  F04
+                newColunmName   :  latest_update_time
+
+
+#T5127，等级信息
+    - origTable       : T5127
+      origClazzName   : T5127
+      newTable        : tb_rating_message
+      newClazzName    : RatingMessage
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  rating_message_id
+              #等级类型,TZ:投资;JK:借款;
+              - origColumnName  :  F02
+                newColunmName   :  rating_type
+              #等级,YJ:一级;EJ:二级,SJ:三级,SIJ:四级,WJ:五级,LJ六级:,QJ:七级;
+              - origColumnName  :  F03
+                newColunmName   :  rating
+              #上限
+              - origColumnName  :  F04
+                newColunmName   :  ceiling
+              #下限
+              - origColumnName  :  F05
+                newColunmName   :  floor
+              #状态,QY:启用;TY:停用;
+              - origColumnName  :  F06
+                newColunmName   :  status
+
+
+#T5129，
+    - origTable       : T5129
+      origClazzName   : T5129
+      newTable        :
+      newClazzName    :
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #
+              - origColumnName  :  F01
+                newColunmName   :
+              #
+              - origColumnName  :  F02
+                newColunmName   :
+              #
+              - origColumnName  :  F03
+                newColunmName   :
+              #
+              - origColumnName  :  F04
+                newColunmName   :
+
+
+#T5130，
+    - origTable       : T5130
+      origClazzName   : T5130
+      newTable        :
+      newClazzName    :
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #标id 参考T6231.F01 债权id  参考T6262.F02
+              - origColumnName  :  F01
+                newColunmName   :
+              #标对应借款协议编号 债权对应的协议编号
+              - origColumnName  :  F02
+                newColunmName   :
+              #编号标示  B 表示标的编号 Z 表示债权转让编号
+              - origColumnName  :  F03
+                newColunmName   :

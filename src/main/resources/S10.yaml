@@ -1,0 +1,575 @@
+tableInfos:
+#S10._1010，系统变量表
+    - origTable       : _1010
+      origClazzName   : _1010
+      newTable        : tb_system_constant
+      newClazzName    : SystemConstant
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #变量键值
+              - origColumnName  :  F01
+                newColunmName   :  variables_key
+              #'变量内容
+              - origColumnName  :  F02
+                newColunmName   :  variables_content
+              #'变量类型
+              - origColumnName  :  F03
+                newColunmName   :  variables_type
+              #变量名称
+              - origColumnName  :  F04
+                newColunmName   :  variables_name
+
+
+
+#S10._1020，角色表
+    - origTable       : _1020
+      origClazzName   : _1020
+      newTable        : tb_role
+      newClazzName    : Role
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  role_id
+              #角色名称
+              - origColumnName  :  F02
+                newColunmName   :  role_name
+              #角色描述
+              - origColumnName  :  F03
+                newColunmName   :  role_description
+              #创建时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+              #创建人账户ID
+              - origColumnName  :  F05
+                newColunmName   :  creater_id
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F06
+                newColunmName   :  status
+
+#S10._1021，角色权限表
+    - origTable       : _1021
+      origClazzName   : _1021
+      newTable        : tb_role_permission
+      newClazzName    : RolePermission
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #角色ID
+              - origColumnName  :  F01
+                newColunmName   :  role_id
+              #权限ID
+              - origColumnName  :  F02
+                newColunmName   :  permission_id
+
+#S10._1022，用户角色表
+    - origTable       : _1022
+      origClazzName   : _1022
+      newTable        : tb_user_role
+      newClazzName    : UserRole
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID
+              - origColumnName  :  F01
+                newColunmName   :  user_id
+              #角色ID
+              - origColumnName  :  F02
+                newColunmName   :  role_id
+
+
+#S10._1023，用户权限表
+    - origTable       : _1023
+      origClazzName   : _1023
+      newTable        : tb_user_permission
+      newClazzName    : UserPermission
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户ID
+              - origColumnName  :  F01
+                newColunmName   :  user_id
+              #权限ID
+              - origColumnName  :  F02
+                newColunmName   :  permission_id
+
+
+#S10._1030，会话信息表
+    - origTable       : _1030
+      origClazzName   : _1030
+      newTable        : tb_session_information
+      newClazzName    : SessionInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  session_information_id
+              #会话ID
+              - origColumnName  :  F02
+                newColunmName   :  session_id
+              #创建时间
+              - origColumnName  :  F03
+                newColunmName   :  create_time
+              #账号ID
+              - origColumnName  :  F04
+                newColunmName   :  account_id
+              #过期时间
+              - origColumnName  :  F05
+                newColunmName   :  expire_time
+              #登录IP
+              - origColumnName  :  F06
+                newColunmName   :  login_ip
+              #浏览器特征信息
+              - origColumnName  :  F07
+                newColunmName   :  browser_feature_information
+
+#S10._1031，会话验证码表
+    - origTable       : _1031
+      origClazzName   : _1031
+      newTable        : tb_session_verifycode
+      newClazzName    : SessionVerifycode
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #会话ID
+              - origColumnName  :  F01
+                newColunmName   :  session_information_id
+              #验证码类型
+              - origColumnName  :  F02
+                newColunmName   :  verifycode_type
+              #显示内容
+              - origColumnName  :  F03
+                newColunmName   :  view_content
+              #验证内容
+              - origColumnName  :  F04
+                newColunmName   :  verification_content
+              #过期时间
+              - origColumnName  :  F05
+                newColunmName   :  expire_time
+
+
+#S10._1032，会话属性表
+    - origTable       : _1032
+      origClazzName   : _1032
+      newTable        : tb_session_property
+      newClazzName    : SessionProperty
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #会话ID
+              - origColumnName  :  F01
+                newColunmName   :  session_information_id
+              #属性名称
+              - origColumnName  :  F02
+                newColunmName   :  property_name
+              #属性值
+              - origColumnName  :  F03
+                newColunmName   :  property_value
+
+#S10._1033, 会话浏览器信息表
+    - origTable       : _1034
+      origClazzName   : _1034
+      newTable        : tb_session_browser_information
+      newClazzName    : SessionBrowserInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #会话ID
+              - origColumnName  :  F01
+                newColunmName   :  session_information_id
+              #浏览器信息
+              - origColumnName  :  F02
+                newColunmName   :  browser_information
+
+
+#S10._1034, 临时登录账户集合表
+    - origTable       : _1034
+      origClazzName   : _1034
+      newTable        : tb_temporary_login_account_set
+      newClazzName    : TemporaryLoginAccountSet
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #账户ID
+              - origColumnName  :  F01
+                newColunmName   :  account_id
+
+
+#S10._1035, 用户登录人次表
+    - origTable       : _1035
+      origClazzName   : _1035
+      newTable        : tb_user_login_person_quantity
+      newClazzName    : UserLoginPersonQuantity
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #日期
+              - origColumnName  :  F01
+                newColunmName   :  date
+              #登录人次
+              - origColumnName  :  F02
+                newColunmName   :  login_person_quantity
+
+#S10._1036, 用户在线统计表
+    - origTable       : _1036
+      origClazzName   : _1036
+      newTable        : tb_user_online_statistics
+      newClazzName    : UserOnlineStatistics
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #日期
+              - origColumnName  :  F01
+                newColunmName   :  date
+              #时间
+              - origColumnName  :  F02
+                newColunmName   :  time
+              #在线人数
+              - origColumnName  :  F03
+                newColunmName   :  online_number_of_people
+
+#S10._1037, 用户在线统计表
+    - origTable       : _1037
+      origClazzName   : _1037
+      newTable        : tb_exception_login_time
+      newClazzName    : ExceptionLoginTime
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #账户ID
+              - origColumnName  :  F01
+                newColunmName   :  username
+              #登录IP
+              - origColumnName  :  F02
+                newColunmName   :  login_ip
+              #失败次数
+              - origColumnName  :  F03
+                newColunmName   :  fail_time
+
+#S10._1040, 待发送短信表
+    - origTable       : _1040
+      origClazzName   : _1040
+      newTable        : tb_message_to_be_send
+      newClazzName    : MessageToBeSend
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增主键
+              - origColumnName  :  F01
+                newColunmName   :  message_to_be_send_id
+              #发送类型
+              - origColumnName  :  F02
+                newColunmName   :  sent_type
+              #短信内容
+              - origColumnName  :  F03
+                newColunmName   :  message_content
+              #创建时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+              #发送状态,W:未发送，Z:正在发送
+              - origColumnName  :  F05
+                newColunmName   :  sent_status
+              #过期时间
+              - origColumnName  :  F06
+                newColunmName   :  expire_time
+
+
+#S10._1041, 短信息与手机号关系表
+    - origTable       : _1041
+      origClazzName   : _1041
+      newTable        : tb_message_phone_relation
+      newClazzName    : MessagePhoneRelation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #待发送短信id，参考_1040.F01
+              - origColumnName  :  F01
+                newColunmName   :  message_to_be_send_id
+              #手机号码
+              - origColumnName  :  F02
+                newColunmName   :  phone
+
+
+#S10._1042, 已发送短息表
+    - origTable       : _1042
+      origClazzName   : _1042
+      newTable        : tb_sent_message
+      newClazzName    : SentMessage
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #主键id
+              - origColumnName  :  F01
+                newColunmName   :  sent_message_id
+              #短信类型
+              - origColumnName  :  F02
+                newColunmName   :  message_type
+              #短信内容
+              - origColumnName  :  F03
+                newColunmName   :  message_content
+              #创建时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+              #是否发送成功
+              - origColumnName  :  F05
+                newColunmName   :  is_sent
+              #短信返回参数
+              - origColumnName  :  F06
+                newColunmName   :  message_return_parameter
+
+
+#S10._1043, 手机验证码表
+    - origTable       : _1043
+      origClazzName   : _1043
+      newTable        : tb_phone_verifycode
+      newClazzName    : PhoneVerifycode
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增主键
+              - origColumnName  :  F01
+                newColunmName   :  phone_verifycode_id
+              #发送类型
+              - origColumnName  :  F02
+                newColunmName   :  send_type
+              #手机号码
+              - origColumnName  :  F03
+                newColunmName   :  phone
+              #手机验证码
+              - origColumnName  :  F04
+                newColunmName   :  verifycode
+              #时间戳
+              - origColumnName  :  F05
+                newColunmName   :  timestamp
+
+#S10._1046, 待发送邮件表
+    - origTable       : _1046
+      origClazzName   : _1046
+      newTable        : tb_email_to_be_sent
+      newClazzName    : EmailToBeSent
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #主键id
+              - origColumnName  :  F01
+                newColunmName   :  email_to_be_sent_id
+              #邮件标题
+              - origColumnName  :  F02
+                newColunmName   :  email_type
+              #邮件内容
+              - origColumnName  :  F03
+                newColunmName   :  email_content
+              #邮件类型
+              - origColumnName  :  F04
+                newColunmName   :  email_type
+              #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+              #过期时间
+              - origColumnName  :  F06
+                newColunmName   :  expire_time
+              #发送状态，Z:正在发送，W:未发送
+              - origColumnName  :  F07
+                newColunmName   :  sent_status
+
+
+#S10._1047, 邮件发送与地址表
+    - origTable       : _1047
+      origClazzName   : _1047
+      newTable        : tb_email_address
+      newClazzName    : EmailAddress
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #待发送邮件id,参考_1046.F01s
+              - origColumnName  :  F01
+                newColunmName   :  email_to_be_sent_id
+              #邮件发送地址
+              - origColumnName  :  F02
+                newColunmName   :  email_address
+
+#S10._1048, 已发送邮件表
+    - origTable       : _1048
+      origClazzName   : _1048
+      newTable        : tb_sent_email
+      newClazzName    : SentEmail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #发送邮件id
+              - origColumnName  :  F01
+                newColunmName   :  email_to_be_sent_id
+              #邮件标题
+              - origColumnName  :  F02
+                newColunmName   :  email_title
+              #邮件内容
+              - origColumnName  :  F03
+                newColunmName   :  email_content
+              #邮件内容
+              - origColumnName  :  F04
+                newColunmName   :  email_type
+              #邮件发送时间
+              - origColumnName  :  F05
+                newColunmName   :  sent_time
+
+
+#S10._1050, 附件信息表
+    - origTable       : _1050
+      origClazzName   : _1050
+      newTable        : tb_attachment_information
+      newClazzName    : AttachmentInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  attachment_information_id
+              #创建时间
+              - origColumnName  :  F02
+                newColunmName   :  creat_time
+              #附件类型
+              - origColumnName  :  F03
+                newColunmName   :  attachment_type
+              #后缀名
+              - origColumnName  :  F04
+                newColunmName   :  suffix
+
+#S10._1051, 附件内容表
+    - origTable       : _1051
+      origClazzName   : _1051
+      newTable        : tb_attachment_content
+      newClazzName    : AttachmentContent
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #附件ID
+              - origColumnName  :  F01
+                newColunmName   :  attachment_information_id
+              #附件内容
+              - origColumnName  :  F02
+                newColunmName   :  attachment_content
+
+#S10._1060, 华兴报文日志表
+    - origTable       : _1060
+      origClazzName   : _1060
+      newTable        : tb_huaxing_message_log
+      newClazzName    : HuaxingMeessageLog
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #主键id
+              - origColumnName  :  F01
+                newColunmName   :  huaxing_message_log_id
+              #类型，IN:接收，OUT:发出，REPLAY:应答
+              - origColumnName  :  F02
+                newColunmName   :  type
+              #记录时间
+              - origColumnName  :  F03
+                newColunmName   :  record_time
+              #内容
+              - origColumnName  :  F04
+                newColunmName   :  content
+              #请求流水号
+              - origColumnName  :  F05
+                newColunmName   :  request_number
+              #报文唯一标识
+              - origColumnName  :  F06
+                newColunmName   :  message_unique_identification
+              #报文传输类型，SYNC:同步，ASYNC:异步
+              - origColumnName  :  F07
+                newColunmName   :  message_transport_type
+              #登录IP
+              - origColumnName  :  F08
+                newColunmName   :  login_ip
+              #交易类型
+              - origColumnName  :  F09
+                newColunmName   :  transaction_type
+              #TDATA明文
+              - origColumnName  :  F10
+                newColunmName   :  TDATA_plain_text
+
+
+#S10._1061, 大客户记账单邮件发送表
+    - origTable       : _1061
+      origClazzName   : _1061
+      newTable        : tb_key_account_billing_email
+      newClazzName    : KeyAccountBillingEmail
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增id
+              - origColumnName  :  F01
+                newColunmName   :  key_account_billing_email_id
+              #用户id
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+              #用户名
+              - origColumnName  :  F03
+                newColunmName   :  user_name
+              #用户邮箱
+              - origColumnName  :  F04
+                newColunmName   :  user_name
+              #邮件标题
+              - origColumnName  :  F05
+                newColunmName   :  email_title
+              #创建时间
+              - origColumnName  :  F06
+                newColunmName   :  create_time
+              #修改时间
+              - origColumnName  :  F07
+                newColunmName   :  modify_time
+              #发送状态Y:已经发送，W:未发送
+              - origColumnName  :  F08
+                newColunmName   :  send_status
+              #生成的html文件路径
+              - origColumnName  :  F09
+                newColunmName   :  html_paths
+              #生成的pdf文件路径
+              - origColumnName  :  F10
+                newColunmName   :  pdf_paths
+
+
+#S10._1070, 第三方接口异常请求记录表
+    - origTable       : _1070
+      origClazzName   : _1070
+      newTable        : tb_third_party_interface_exception_request
+      newClazzName    : ThirdPartyInterfaceExceptionRequest
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #主键ID
+              - origColumnName  :  F01
+                newColunmName   :  id
+              #状态，UNKNOW:未知，ERR:错误
+              - origColumnName  :  F02
+                newColunmName   :  status
+              #用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #订单ID,参考T6501.F01
+              - origColumnName  :  F04
+                newColunmName   :  order_id
+              #托管商户编号,参考T5110.F02
+              - origColumnName  :  F05
+                newColunmName   :  merchant_number
+              #备注
+              - origColumnName  :  F06
+                newColunmName   :  remark
+              #记录时间
+              - origColumnName  :  F07
+                newColunmName   :  record_time
+
+
+
+
+
+
+
+
+
+
+
+

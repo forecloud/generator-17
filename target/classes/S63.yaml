@@ -1,0 +1,995 @@
+tableInfos:
+#S63.T6310,推广奖励统计
+    - origTable       : T6310
+      origClazzName   : T6310
+      newTable        : tb_promotion_award_statistics
+      newClazzName    : PromotionAwardStatistics
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #推广用户ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  promotion_user_id
+                #推广数
+              - origColumnName  :  F02
+                newColunmName   :  promotion_number
+                #推广投资金额
+              - origColumnName  :  F03
+                newColunmName   :  promotion_invest_money
+                #推广持续奖励金额
+              - origColumnName  :  F04
+                newColunmName   :  promotion_continued_award_money
+                #有效推广奖励金额
+              - origColumnName  :  F05
+                newColunmName   :  promotion_valid_money
+
+#S63.T6311,首次充值奖励记录
+    - origTable       : T6311
+      origClazzName   : T6311
+      newTable        : tb_first_recharge_award_record
+      newClazzName    : FirstRechargeAwardRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #首次充奖励自增ID
+              - origColumnName  :  F01
+                newColunmName   :  first_recharge_award_id
+                #推广用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  promotion_user_id
+                #被推广用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  been_promotion_user_id
+                #首次充值金额
+              - origColumnName  :  F04
+                newColunmName   :  first_recharge_money
+                #奖励金额
+              - origColumnName  :  F05
+                newColunmName   :  award_money
+                #首次充值时间
+              - origColumnName  :  F06
+                newColunmName   :  first_recharge_time
+
+#S63.T6312,持续投资奖励记录
+    - origTable       : T6312
+      origClazzName   : T6312
+      newTable        : tb_continued_invest_award_record
+      newClazzName    : ContinuedInvestAwardRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #持续投资奖励记录自增ID
+              - origColumnName  :  F01
+                newColunmName   :  continued_invest_award_id
+                #推广用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  promotion_user_id
+                #被推广用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  been_promotion_user_id
+                #投资金额
+              - origColumnName  :  F04
+                newColunmName   :  invest_money
+                #奖励金额
+              - origColumnName  :  F05
+                newColunmName   :  award_money
+                #投资时间
+              - origColumnName  :  F06
+                newColunmName   :  invest_time
+
+#S63.T6320,活动信息表
+    - origTable       : T6320
+      origClazzName   : T6320
+      newTable        : tb_activity_info_first
+      newClazzName    : ActivityInfoFirst
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #活动信息id
+              - origColumnName  :  F01
+                newColunmName   :  activity_info_first_id
+                #活动名称
+              - origColumnName  :  F02
+                newColunmName   :  activity_name
+                #活动开始时间
+              - origColumnName  :  F03
+                newColunmName   :  activity_start_time
+                #活动结束时间
+              - origColumnName  :  F04
+                newColunmName   :  activity_end_time
+                #优惠券生效日期
+              - origColumnName  :  F05
+                newColunmName   :  coupon_valid_date
+                #优惠券失效日期
+              - origColumnName  :  F06
+                newColunmName   :  coupon_invalid_date
+                #发放数量
+              - origColumnName  :  F07
+                newColunmName   :  send_number
+                #金额
+              - origColumnName  :  F08
+                newColunmName   :  amount
+                #优惠券获取方式，CZ:充值;TG:推广;YHLQ:用户领取;ZJFF:直接发放;
+              - origColumnName  :  F09
+                newColunmName   :  coupon_gain_way
+                #是否充值可用，S:是，F：否
+              - origColumnName  :  F10
+                newColunmName   :  judge_recharge_use
+                #使用时最低充值金额
+              - origColumnName  :  F11
+                newColunmName   :  using_lowest_recharge_money
+                #是否投资可用,S:是,F:否
+              - origColumnName  :  F12
+                newColunmName   :  judge_invest_use
+                #使用时最低投资金额
+              - origColumnName  :  F13
+                newColunmName   :  using_lowest_invest_money
+                #状态,XJ:新建,SX:生效,YJS:已结束
+              - origColumnName  :  F14
+                newColunmName   :  state
+                #最低充值金额
+              - origColumnName  :  F15
+                newColunmName   :  lowest_recharge_money
+                #最低推广人数
+              - origColumnName  :  F16
+                newColunmName   :  lowest_promotion_number
+                #创建人id,参考T7110.F01
+              - origColumnName  :  F17
+                newColunmName   :  backstage_user_id
+                #剩余可发放数量
+              - origColumnName  :  F18
+                newColunmName   :  overplus_send_number
+
+#S63.T6321,活动说明表
+    - origTable       : T6321
+      origClazzName   : T6321
+      newTable        : tb_activity_explain
+      newClazzName    : ActivityExplain
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #活动信息表id，参考T6320.F01
+              - origColumnName  :  F01
+                newColunmName   :  activity_info_first_id
+                #优惠券使用说明
+              - origColumnName  :  F02
+                newColunmName   :  coupon_use_explain
+                #活动说明
+              - origColumnName  :  F03
+                newColunmName   :  activity_explain
+
+#S63.T6322,优惠券-用户关系表
+    - origTable       : T6322
+      origClazzName   : T6322
+      newTable        : tb_coupon_link_user
+      newClazzName    : CouponLinkUser
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  coupon_link_user_id
+                #活动id，参考T6320.F01
+              - origColumnName  :  F02
+                newColunmName   :  activity_info_first_id
+                #用户id，参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #WSY:未使用;YSY:已使用;YGQ:已过期;
+              - origColumnName  :  F04
+                newColunmName   :  use_state
+                #领取时间
+              - origColumnName  :  F05
+                newColunmName   :  gain_time
+                #金额
+              - origColumnName  :  F06
+                newColunmName   :  amount
+                #CZ:充值;TZ:投资;
+              - origColumnName  :  F07
+                newColunmName   :  type
+                #投资记录id或充值记录id
+              - origColumnName  :  F08
+                newColunmName   :  invest_recharge_id
+                #使用时间
+              - origColumnName  :  F09
+                newColunmName   :  use_time
+
+#S63.T6330,业务员信息表
+    - origTable       : T6330
+      origClazzName   : T6330
+      newTable        : tb_salesman_info
+      newClazzName    : SalesmanInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #业务员ID
+              - origColumnName  :  F01
+                newColunmName   :  salesman_id
+                #姓名
+              - origColumnName  :  F02
+                newColunmName   :  salesman_name
+                #手机号码
+              - origColumnName  :  F03
+                newColunmName   :  phone_number
+                #新增时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+                #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  update_time
+
+#S63.T6331,业务员推荐统计表
+    - origTable       : T6331
+      origClazzName   : T6331
+      newTable        : tb_salesman_recommend_count
+      newClazzName    : SalesmanRecommendCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #主键ID
+              - origColumnName  :  F01
+                newColunmName   :  salesman_recommend_count_id
+                #业务员ID,参考T6330.F01
+              - origColumnName  :  F02
+                newColunmName   :  salesman_id
+                #推荐人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #推荐时间
+              - origColumnName  :  F04
+                newColunmName   :  recommend_time
+                #金额
+              - origColumnName  :  F05
+                newColunmName   :  amount
+                #交易类型(''ZQZR'',''YXLC'',''FX'',''TB'',债权转让，优选理财，返现，投标)
+              - origColumnName  :  F06
+                newColunmName   :  trade_type
+                #当前余额
+              - origColumnName  :  F07
+                newColunmName   :  current_money
+
+#S63.T6332,购买标的信息记录表
+    - origTable       : T6332
+      origClazzName   : T6332
+      newTable        : tb_buy_bid_info_record
+      newClazzName    : BuyBidInfoRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #主键ID
+              - origColumnName  :  F01
+                newColunmName   :  buy_bid_info_record_id
+                #购买用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标的ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #购买时间
+              - origColumnName  :  F04
+                newColunmName   :  buy_time
+                #购买服务费
+              - origColumnName  :  F05
+                newColunmName   :  buy_service_fee
+
+#S63.T6333,活动信息表
+    - origTable       : T6333
+      origClazzName   : T6333
+      newTable        : tb_activity_info_second
+      newClazzName    : ActivityInfoSecond
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #活动信息id
+              - origColumnName  :  F01
+                newColunmName   :  activity_info_second_id
+                #活动开始时间
+              - origColumnName  :  F02
+                newColunmName   :  activity_start_time
+                #活动结束时间
+              - origColumnName  :  F03
+                newColunmName   :  activity_end_time
+                #劵生效日期
+              - origColumnName  :  F04
+                newColunmName   :  coupon_valid_date
+                #劵失效日期
+              - origColumnName  :  F05
+                newColunmName   :  coupon_invalid_date
+                #劵发放上限
+              - origColumnName  :  F06
+                newColunmName   :  send_toplimit
+                #劵面值，单位：元
+              - origColumnName  :  F07
+                newColunmName   :  face_value
+                #活动说明
+              - origColumnName  :  F08
+                newColunmName   :  activity_explain
+                #劵库存数
+              - origColumnName  :  F09
+                newColunmName   :  stock_number
+                #劵剩余库存数
+              - origColumnName  :  F10
+                newColunmName   :  overplus_stock_number
+                #录入人ID，参考T7110.F01
+              - origColumnName  :  F11
+                newColunmName   :  backstage_user_id
+                #录入时间
+              - origColumnName  :  F12
+                newColunmName   :  input_time
+                #状态,QY:启用;TY:停用
+              - origColumnName  :  F13
+                newColunmName   :  state
+                #活动名称
+              - origColumnName  :  F14
+                newColunmName   :  activity_name
+
+#S63.T6334,劵发放规则信息表
+    - origTable       : T6334
+      origClazzName   : T6334
+      newTable        : tb_ticket_send_rule_info
+      newClazzName    : TicketSendRuleInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增主键ID
+              - origColumnName  :  F01
+                newColunmName   :  ticket_send_rule_info_id
+                #活动ID，参考T6333.F01
+              - origColumnName  :  F02
+                newColunmName   :  activity_info_second_id
+                #发放场景,ZC:注册;CZ:充值
+              - origColumnName  :  F03
+                newColunmName   :  send_scene
+                #状态,QY:启用;TY:停用
+              - origColumnName  :  F04
+                newColunmName   :  state
+                #每次发放数量
+              - origColumnName  :  F05
+                newColunmName   :  every_send_number
+                #基数金额，单位：元
+              - origColumnName  :  F06
+                newColunmName   :  radix_value
+                #基数倍上限（单笔金额/基数金额）
+              - origColumnName  :  F07
+                newColunmName   :  radix_toplimit
+
+#S63.T6335,劵使用规则信息表
+    - origTable       : T6335
+      origClazzName   : T6335
+      newTable        : tb_ticket_use_rule_info
+      newClazzName    : TicketUseRuleInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增主键ID
+              - origColumnName  :  F01
+                newColunmName   :  ticket_use_rule_info_id
+                #使用场景,TZ:投资;
+              - origColumnName  :  F02
+                newColunmName   :  use_scene
+                #单笔投资金额下限
+              - origColumnName  :  F03
+                newColunmName   :  single_invest_money_lower_limit
+                #单笔投资基数金额
+              - origColumnName  :  F04
+                newColunmName   :  single_invest_radix_money
+                #单笔投资使用劵金额
+              - origColumnName  :  F05
+                newColunmName   :  single_invest_ticket_money
+                #单笔投资使用劵金额上限
+              - origColumnName  :  F06
+                newColunmName   :  single_invest_ticket_money_toplimit
+                #规则说明
+              - origColumnName  :  F07
+                newColunmName   :  rule_explain
+
+#S63.T6336,劵发放记录表
+    - origTable       : T6336
+      origClazzName   : T6336
+      newTable        : tb_ticket_send_record
+      newClazzName    : TicketSendRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增主键ID
+              - origColumnName  :  F01
+                newColunmName   :  ticket_send_record_id
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #活动ID,参考T6333.F01
+              - origColumnName  :  F03
+                newColunmName   :  activity_info_second_id
+                #劵面值
+              - origColumnName  :  F04
+                newColunmName   :  ticket_face_value
+                #使用状态,YSY:已使用;WSY:未使用
+              - origColumnName  :  F05
+                newColunmName   :  use_state
+                #劵生效日期
+              - origColumnName  :  F06
+                newColunmName   :  ticket_valid_date
+                #劵失效日期
+              - origColumnName  :  F07
+                newColunmName   :  ticket_invalid_date
+                #奖励来源文字说明
+              - origColumnName  :  F08
+                newColunmName   :  award_source_explain
+                #使用时间
+              - origColumnName  :  F09
+                newColunmName   :  use_time
+                #实际抵扣金额
+              - origColumnName  :  F10
+                newColunmName   :  offset_money
+
+#S63.T6340,活动信息总表
+    - origTable       : T6340
+      origClazzName   : T6340
+      newTable        : tb_activity_info
+      newClazzName    : ActivityInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #活动自增ID
+              - origColumnName  :  F01
+                newColunmName   :  activity_id
+                #活动名称
+              - origColumnName  :  F02
+                newColunmName   :  activity_name
+                #活动编号
+              - origColumnName  :  F03
+                newColunmName   :  activity_number
+                #活动开始时间
+              - origColumnName  :  F04
+                newColunmName   :  activity_start_time
+                #活动结束时间
+              - origColumnName  :  F05
+                newColunmName   :  activity_end_time
+                #活动说明
+              - origColumnName  :  F06
+                newColunmName   :  activity_explain
+                #录入人ID，参考T7110.F01
+              - origColumnName  :  F07
+                newColunmName   :  backstage_user_id
+                #录入时间
+              - origColumnName  :  F08
+                newColunmName   :  input_time
+                #活动状态,QY:启用;TY:停用
+              - origColumnName  :  F09
+                newColunmName   :  activity_state
+
+#S63.T6341,礼品信息总表
+    - origTable       : T6341
+      origClazzName   : T6341
+      newTable        : tb_gift_info
+      newClazzName    : GiftInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #礼品自增ID
+              - origColumnName  :  F01
+                newColunmName   :  gift_id
+                #活动ID,参考T6340.F01
+              - origColumnName  :  F02
+                newColunmName   :  activity_id
+                #礼品名称
+              - origColumnName  :  F03
+                newColunmName   :  gift_name
+                #礼品序号
+              - origColumnName  :  F04
+                newColunmName   :  gift_serial_number
+                #发放总数
+              - origColumnName  :  F05
+                newColunmName   :  gift_sum
+                #剩余数量
+              - origColumnName  :  F06
+                newColunmName   :  overplus_number
+                #礼品状态,QY:启用;TY:停用;ZF：作废
+              - origColumnName  :  F07
+                newColunmName   :  gift_state
+
+#S63.T6350,周年庆活动用户投资基础信息
+    - origTable       : T6350
+      origClazzName   : T6350
+      newTable        : tb_user_invest_record
+      newClazzName    : UserInvestRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_invest_record_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_id
+                #投标记录ID,参考T6250.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_record_id
+                #债权转让记录ID,参考T6260.F01
+              - origColumnName  :  F04
+                newColunmName   :  transfer_record_id
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F05
+                newColunmName   :  user_id
+                #投资金额
+              - origColumnName  :  F06
+                newColunmName   :  invest_money
+                #投资时间
+              - origColumnName  :  F07
+                newColunmName   :  invest_time
+                #手机号码
+              - origColumnName  :  F08
+                newColunmName   :  phone_number
+                #姓名
+              - origColumnName  :  F09
+                newColunmName   :  full_name
+                #易宝账号T6110.F02
+              - origColumnName  :  F10
+                newColunmName   :  user_name
+                #数据修改说明
+              - origColumnName  :  F11
+                newColunmName   :  data_update_explain
+
+#S63.T6351,抽奖活动中奖流水
+    - origTable       : T6351
+      origClazzName   : T6351
+      newTable        : tb_user_winning_record
+      newClazzName    : UserWinningRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_winning_record_id
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #中奖金额
+              - origColumnName  :  F03
+                newColunmName   :  winning_money
+                #账号T6110.F02
+              - origColumnName  :  F04
+                newColunmName   :  user_name
+                #手机号码
+              - origColumnName  :  F05
+                newColunmName   :  phone_number
+                #姓名
+              - origColumnName  :  F06
+                newColunmName   :  full_name
+                #中奖时间
+              - origColumnName  :  F07
+                newColunmName   :  winning_time
+                #活动名称
+              - origColumnName  :  F08
+                newColunmName   :  activity_name
+                #奖品类型,参考S50.T5030的F01
+              - origColumnName  :  F09
+                newColunmName   :  gift_type
+                #红包奖品id,T6352.F01
+              - origColumnName  :  award_id
+                newColunmName   :  award_id
+
+#S63.T6352,红包抽奖奖品
+    - origTable       : T6352
+      origClazzName   : T6352
+      newTable        : tb_draw_award_info
+      newClazzName    : DrawAwardInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  draw_award_info_id
+                #红包金额
+              - origColumnName  :  F02
+                newColunmName   :  award_money
+                #个数
+              - origColumnName  :  F03
+                newColunmName   :  award_number
+                #活动名称
+              - origColumnName  :  F04
+                newColunmName   :  activity_name
+                #对应转盘物品的编号
+              - origColumnName  :  F05
+                newColunmName   :  turntable_number
+                #奖品类型,参考S50.T5030的F01
+              - origColumnName  :  F06
+                newColunmName   :  award_type
+                #活动ID(T6340.F01)
+              - origColumnName  :  F07
+                newColunmName   :  activity_id
+                #修改人(T7110.F01)
+              - origColumnName  :  F08
+                newColunmName   :  backstage_user_id
+                #交易类型id,T5122.F01
+              - origColumnName  :  deal_type_id
+                newColunmName   :  deal_type_id
+
+#S63.T6353,红包抽奖奖品待发放
+    - origTable       : T6353
+      origClazzName   : T6353
+      newTable        : tb_award_wait_send
+      newClazzName    : AwardWaitSend
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  wait_send_id
+                #中奖流水ID,参考T6351.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_winning_record_id
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #创建时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+                #活动名称
+              - origColumnName  :  F05
+                newColunmName   :  activity_name
+                #状态
+              - origColumnName  :  status
+                newColunmName   :  status
+
+#S63.T6354,红包抽奖奖品已发放
+    - origTable       : T6354
+      origClazzName   : T6354
+      newTable        : tb_award_sended_record
+      newClazzName    : AwardSendedRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #待发放ID,参考T6353.F01
+              - origColumnName  :  F01
+                newColunmName   :  wait_send_id
+                #中奖流水ID,参考T6351.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_winning_record_id
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #直接转账订单ID,参考T6523.F01
+              - origColumnName  :  F04
+                newColunmName   :  transfer_accounts_id
+                #发放时间
+              - origColumnName  :  F05
+                newColunmName   :  send_time
+                #活动名称
+              - origColumnName  :  F06
+                newColunmName   :  activity_name
+
+#S63.T6355,额外抽奖次数表
+    - origTable       : T6355
+      origClazzName   : T6355
+      newTable        : tb_additional_draw_info
+      newClazzName    : AdditionalDrawInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #待额外抽奖次数表id
+              - origColumnName  :  F01
+                newColunmName   :  additional_draw_info_id
+                #用户Id，参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #活动名称
+              - origColumnName  :  F03
+                newColunmName   :  activity_name
+                #次数
+              - origColumnName  :  F04
+                newColunmName   :  draw_number
+                #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+
+#S63.T6356,用户投资抽奖次数表
+    - origTable       : T6356
+      origClazzName   : T6356
+      newTable        : tb_user_invest_draw_number
+      newClazzName    : UserInvestDrawNumber
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #用户投资抽奖次数表id
+              - origColumnName  :  F01
+                newColunmName   :  invest_draw_number_id
+                #活动ID（T6340.F01）
+              - origColumnName  :  F02
+                newColunmName   :  activity_id
+                #操作人ID（T7110.F01）
+              - origColumnName  :  F03
+                newColunmName   :  backstage_user_id
+                #左区间金额
+              - origColumnName  :  F04
+                newColunmName   :  left_interval_money
+                #右区间金额
+              - origColumnName  :  F05
+                newColunmName   :  right_interval_money
+                #抽奖次数
+              - origColumnName  :  F06
+                newColunmName   :  draw_number
+                #优先级（1~n）
+              - origColumnName  :  F07
+                newColunmName   :  priority
+                #操作时间
+              - origColumnName  :  F08
+                newColunmName   :  operation_time
+
+#S63.T6360,集团周年庆节目信息表
+    - origTable       : T6360
+      origClazzName   : T6360
+      newTable        : tb_program_info
+      newClazzName    : ProgramInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #节目ID
+              - origColumnName  :  F01
+                newColunmName   :  program_id
+                #用户ID（S61.T6110.F01）
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #活动ID（S63.T6340.F01）
+              - origColumnName  :  F03
+                newColunmName   :  activity_id
+                #节目标题
+              - origColumnName  :  F04
+                newColunmName   :  program_title
+                #节目描述
+              - origColumnName  :  F05
+                newColunmName   :  program_describe
+                #创建人
+              - origColumnName  :  F06
+                newColunmName   :  create_preson
+                #修改人
+              - origColumnName  :  F07
+                newColunmName   :  update_preson
+                #创建时间
+              - origColumnName  :  F08
+                newColunmName   :  create_time
+                #修改时间
+              - origColumnName  :  F09
+                newColunmName   :  update_time
+                #备注
+              - origColumnName  :  F10
+                newColunmName   :  remark
+
+#S63.T6361,节目投票流水记录表
+    - origTable       : T6361
+      origClazzName   : T6361
+      newTable        : tb_program_vote_record
+      newClazzName    : ProgramVoteRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #投票ID
+              - origColumnName  :  F01
+                newColunmName   :  vote_id
+                #节目ID（S63.T6360.F01）
+              - origColumnName  :  F02
+                newColunmName   :  program_id
+                #节目标题
+              - origColumnName  :  F03
+                newColunmName   :  program_title
+                #投票人
+              - origColumnName  :  F04
+                newColunmName   :  vote_preson
+                #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+
+#S63.T6362,投票统计信息表
+    - origTable       : T6362
+      origClazzName   : T6362
+      newTable        : tb_vote_count
+      newClazzName    : VoteCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #投票统计ID
+              - origColumnName  :  F01
+                newColunmName   :  vote_count_id
+                #节目ID（S63.T6360.F01）
+              - origColumnName  :  F02
+                newColunmName   :  program_id
+                #节目标题
+              - origColumnName  :  F03
+                newColunmName   :  program_title
+                #节目所得票数
+              - origColumnName  :  F04
+                newColunmName   :  program_gain_ticket
+                #已投用户总数
+              - origColumnName  :  F05
+                newColunmName   :  already_vote_user
+                #弃投用户总数
+              - origColumnName  :  F06
+                newColunmName   :  abandon_vote_user
+                #创建时间
+              - origColumnName  :  F07
+                newColunmName   :  create_time
+
+#S63.T6363,年会活动用户明细表
+    - origTable       : T6363
+      origClazzName   : T6363
+      newTable        : tb_user_info_detailed
+      newClazzName    : UserInfoDetailed
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  user_detailed_id
+                #用户ID（S61.T6110.F01）
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #用户投票状态（WTP：已投票；YTP：未投票）
+              - origColumnName  :  F03
+                newColunmName   :  vote_state
+                #创建时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+                #用户抢红包次数
+              - origColumnName  :  F05
+                newColunmName   :  draw_number
+                #活动名称
+              - origColumnName  :  F06
+                newColunmName   :  activity_name
+
+#S63.T6370,电子券信息表
+    - origTable       : T6370
+      origClazzName   : T6370
+      newTable        : tb_electronic_coupons_info
+      newClazzName    : ElectronicCouponsInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #电子券ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  electronic_coupons_id
+                #用户ID（S61.T6110.F01）
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #加息卷类型
+              - origColumnName  :  F03
+                newColunmName   :  electronic_coupons
+                #领取时间
+              - origColumnName  :  F04
+                newColunmName   :  gain_time
+                #使用状态，F：未使用，U：使用中，T：已使用
+              - origColumnName  :  F05
+                newColunmName   :  use_state
+                #活动名称
+              - origColumnName  :  F06
+                newColunmName   :  activity_name
+                #电子券类型
+              - origColumnName  :  F07
+                newColunmName   :  electronic_coupons_type
+                #电子券数值
+              - origColumnName  :  F08
+                newColunmName   :  electronic_coupons_value
+                #过期时间
+              - origColumnName  :  overdue_time
+                newColunmName   :  overdue_time
+                #加息券编号
+              - origColumnName  :  code
+                newColunmName   :  code
+                #是否转赠；是T，否F
+              - origColumnName  :  is_donation
+                newColunmName   :  is_donation
+                #获赠人id,T6110.F01
+              - origColumnName  :  receive_user_id
+                newColunmName   :  receive_user_id
+                #转赠时间
+              - origColumnName  :  receive_time
+                newColunmName   :  receive_time
+                #来源； 活动HD，后台HT
+              - origColumnName  :  source
+                newColunmName   :  source
+
+#S63.T6371,电子券对应标的情况跟踪表
+    - origTable       : T6371
+      origClazzName   : T6371
+      newTable        : tb_electronic_coupons_use_track
+      newClazzName    : ElectronicCouponsUseTrack
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #计息卷记录Id
+              - origColumnName  :  F01
+                newColunmName   :  electronic_coupons_record_id
+                #电子卷Id
+              - origColumnName  :  F02
+                newColunmName   :  electronic_coupons_id
+                #对应标Id 参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #投资金额
+              - origColumnName  :  F04
+                newColunmName   :  invest_money
+                #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+                #状态。YLB已流标，YFK已放款，YZR已转让，YJQ已结清，WFK未放款
+              - origColumnName  :  F06
+                newColunmName   :  state
+                #投标记录 T6250.F01
+              - origColumnName  :  tender_id
+                newColunmName   :  tender_id
+
+#S63.T6372,加息劵对应利息待发放表
+    - origTable       : T6372
+      origClazzName   : T6372
+      newTable        : tb_interest_wait_send
+      newClazzName    : InterestWaitSend
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #放款记录Id
+              - origColumnName  :  F01
+                newColunmName   :  loan_record_id
+                #收款用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  payee_id
+                #交易类型
+              - origColumnName  :  F03
+                newColunmName   :  trade_type
+                #标ID,参考T6230.F01
+              - origColumnName  :  F04
+                newColunmName   :  bid_id
+                #期号
+              - origColumnName  :  F05
+                newColunmName   :  number
+                #金额
+              - origColumnName  :  F06
+                newColunmName   :  amount
+                #到账时间
+              - origColumnName  :  F07
+                newColunmName   :  payment_date
+                #是否转账
+              - origColumnName  :  F08
+                newColunmName   :  judge_transfer_accounts
+                #备注
+              - origColumnName  :  F09
+                newColunmName   :  remark
+                #加息券使用记录id T6371.F01
+              - origColumnName  :  jxq_used_id
+                newColunmName   :  electronic_coupons_record_id
+
+#S63.T6384,奖品信息表
+    - origTable       : T6384
+      origClazzName   : T6384
+      newTable        : tb_award_info
+      newClazzName    : AwardInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增id
+              - origColumnName  :  F01
+                newColunmName   :  award_info_id
+                #用户id（T6110.F01）
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标id（T6230.F01）
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #活动名称
+              - origColumnName  :  F04
+                newColunmName   :  activity_name
+                #活动类型
+              - origColumnName  :  F05
+                newColunmName   :  electronic_coupons_type
+                #奖品
+              - origColumnName  :  F06
+                newColunmName   :  electronic_coupons_award
+                #是否已提醒用户
+              - origColumnName  :  F07
+                newColunmName   :  judge_remind_user
+                #提醒地点
+              - origColumnName  :  F08
+                newColunmName   :  remind_address
+                #提醒时间
+              - origColumnName  :  F09
+                newColunmName   :  remind_time
+
+

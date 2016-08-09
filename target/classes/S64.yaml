@@ -1,0 +1,181 @@
+tableInfos:
+#S64.T6410,优选理财计划
+    - origTable       : T6410
+      origClazzName   : T6410
+      newTable        : tb_optimization_financing_plan
+      newClazzName    : OptimizationFinancingPlan
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  optimization_financing_plan_id
+                #优选理财标题
+              - origColumnName  :  F02
+                newColunmName   :  financing_title
+                #总金额
+              - origColumnName  :  F03
+                newColunmName   :  total_amount
+                #可投余额
+              - origColumnName  :  F04
+                newColunmName   :  overplus_amount
+                #年化收益率
+              - origColumnName  :  F05
+                newColunmName   :  annualized_return
+                #投标类型ID,参考T6211.F01
+              - origColumnName  :  F06
+                newColunmName   :  bid_type_id
+                #计划状态,XJ:新建;YFB:已发布;YSX:已生效;YJZ:已截止
+              - origColumnName  :  F07
+                newColunmName   :  plan_state
+                #满额用时（秒计算）
+              - origColumnName  :  F08
+                newColunmName   :  full_amount
+                #申请开始时间
+              - origColumnName  :  F09
+                newColunmName   :  apply_start_time
+                #申请结束日期
+              - origColumnName  :  F10
+                newColunmName   :  apply_end_time
+                #锁定期限(月)
+              - origColumnName  :  F11
+                newColunmName   :  locking_term
+                #满额时间
+              - origColumnName  :  F12
+                newColunmName   :  full_amount_time
+                #锁定结束日期
+              - origColumnName  :  F13
+                newColunmName   :  locking_end_time
+                #收益处理,MYHXDQHB:每月还息，到期还本;YCXHBFX:一次性还本付息;DEBX:等额本息
+              - origColumnName  :  F14
+                newColunmName   :  Income_processing
+                #加入费率
+              - origColumnName  :  F15
+                newColunmName   :  add_rate
+                #服务费率
+              - origColumnName  :  F16
+                newColunmName   :  service_rate
+                #退出费率
+              - origColumnName  :  F17
+                newColunmName   :  out_rate
+                #计划介绍
+              - origColumnName  :  F18
+                newColunmName   :  plan_introduce
+                #创建人,参考T7010.F01
+              - origColumnName  :  F19
+                newColunmName   :  backstage_user_id
+                #创建时间
+              - origColumnName  :  F20
+                newColunmName   :  create_time
+                #下一还款日
+              - origColumnName  :  F21
+                newColunmName   :  next_repayment_date
+                #投资下限
+              - origColumnName  :  F22
+                newColunmName   :  invest_lower_limit
+                #投资上限
+              - origColumnName  :  F23
+                newColunmName   :  invest_toplimit
+                #保障方式,QEBXBZ:全额本息保障
+              - origColumnName  :  F24
+                newColunmName   :  guarantee_way
+
+#S64.T6411,优选理财持有人表
+    - origTable       : T6411
+      origClazzName   : T6411
+      newTable        : tb_optimization_financing_holder
+      newClazzName    : OptimizationFinancingHolder
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #优选理财持有人表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  optimization_financing_holder_id
+                #优选理财计划表ID,参考T6410.F01
+              - origColumnName  :  F02
+                newColunmName   :  optimization_financing_plan_id
+                #持有人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #原始债权
+              - origColumnName  :  F04
+                newColunmName   :  original_debts
+                #剩余债权
+              - origColumnName  :  F05
+                newColunmName   :  overplus_debts
+                #加入时间
+              - origColumnName  :  F06
+                newColunmName   :  add_time
+                #最后更新时间
+              - origColumnName  :  F07
+                newColunmName   :  update_time
+
+#S64.T6412,优选理财还款记录
+    - origTable       : T6412
+      origClazzName   : T6412
+      newTable        : tb_optimization_financing_repayment_record
+      newClazzName    : OptimizationFinancingRepaymentRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  optimization_financing_repayment_record_id
+                #优选理财计划ID,参考T6410.F01
+              - origColumnName  :  F02
+                newColunmName   :  optimization_financing_plan_id
+                #付款用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  payment_user_id
+                #收款用户ID,参考T6110.F01
+              - origColumnName  :  F04
+                newColunmName   :  payee_id
+                #交易类型ID,参考T5122.F01
+              - origColumnName  :  F05
+                newColunmName   :  deal_type_id
+                #期号
+              - origColumnName  :  F06
+                newColunmName   :  number
+                #金额
+              - origColumnName  :  F07
+                newColunmName   :  amount
+                #应还日期
+              - origColumnName  :  F08
+                newColunmName   :  should_date
+                #状态,WH:未还;YH:已还;
+              - origColumnName  :  F09
+                newColunmName   :  state
+                #实际还款时间
+              - origColumnName  :  F10
+                newColunmName   :  repayment_date
+
+#S64.T6413,优选计划统计表
+    - origTable       : T6413
+      origClazzName   : T6413
+      newTable        : tb_optimization_plan_count
+      newClazzName    : OptimizationFinancingHolder
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #优选理财持有人表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  optimization_plan_count_id
+                #优选理财计划表ID,参考T6410.F01
+              - origColumnName  :  F02
+                newColunmName   :  optimization_financing_plan_id
+                #持有人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #原始债权
+              - origColumnName  :  F04
+                newColunmName   :  original_debts
+                #剩余债权
+              - origColumnName  :  F05
+                newColunmName   :  overplus_debts
+                #加入时间
+              - origColumnName  :  F06
+                newColunmName   :  add_time
+                #最后更新时间
+              - origColumnName  :  F07
+                newColunmName   :  update_time
+

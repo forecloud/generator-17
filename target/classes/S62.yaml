@@ -1,0 +1,1368 @@
+tableInfos:
+#S62.T6211，标类型表
+    - origTable       : T6211
+      origClazzName   : T6211
+      newTable        : tb_label_type
+      newClazzName    : LabelTyel
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  label_type_id
+              #类型名称
+              - origColumnName  :  F02
+                newColunmName   :  type_name
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F03
+                newColunmName   :  status
+              #类型描述
+              - origColumnName  :  F04
+                newColunmName   :  type_description
+
+
+
+#S62.T6212，标附件类型表
+    - origTable       : T6212
+      origClazzName   : T6212
+      newTable        : tb_bid_attachment_type
+      newClazzName    : BidAttachmentType
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_attachment_type_id
+              #类型名称
+              - origColumnName  :  F02
+                newColunmName   :  type_name
+              #显示顺序
+              - origColumnName  :  F03
+                newColunmName   :  display_order
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F04
+                newColunmName   :  status
+
+
+#S62.T6213，抵押物类型表
+    - origTable       : T6213
+      origClazzName   : T6213
+      newTable        : tb_pledge_type
+      newClazzName    : PledgeType
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  pledge_type_id
+              #类型名称
+              - origColumnName  :  F02
+                newColunmName   :  type_name
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F03
+                newColunmName   :  status
+
+#S62.T6214，抵押物属性表
+    - origTable       : T6214
+      origClazzName   : T6214
+      newTable        : tb_pledge_property
+      newClazzName    : PledgeProperty
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  pledge_property_id
+              #抵押物类型ID,参考T6213.F01'
+              - origColumnName  :  F02
+                newColunmName   :  pledge_type_id
+              #属性名称
+              - origColumnName  :  F03
+                newColunmName   :  property_name
+              #状态：QY启用，TY停用
+              - origColumnName  :  F04
+                newColunmName   :  status
+
+
+#S62.T6215，标费率项目表
+    - origTable       : T6215
+      origClazzName   : T6215
+      newTable        : tb_bid_rate_project
+      newClazzName    : BidRateProject
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_rate_project_id
+              #费率项目
+              - origColumnName  :  F02
+                newColunmName   :  rate_project
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F03
+                newColunmName   :  status
+
+
+
+#S62.T6220，模拟标表
+    - origTable       : T6220
+      origClazzName   : T6220
+      newTable        : tb_simulated_bid
+      newClazzName    : SimulatedBid
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  simulated_bid_id
+              #标编号
+              - origColumnName  :  F02
+                newColunmName   :  bid_number
+              #借款标题
+              - origColumnName  :  F03
+                newColunmName   :  loan_title
+              #借款金额
+              - origColumnName  :  F04
+                newColunmName   :  loan_money
+              #投标金额
+              - origColumnName  :  F05
+                newColunmName   :  bid_money
+              #年利率
+              - origColumnName  :  F06
+                newColunmName   :  annual_interest_rate
+              #标显示期限,单位:天
+              - origColumnName  :  F07
+                newColunmName   :  bid_deadline
+              #标显示到期时间
+              - origColumnName  :  F08
+                newColunmName   :  bid_expire_time
+              #计息时间
+              - origColumnName  :  F09
+                newColunmName   :  calculate_interest_time
+              #计息时间
+              - origColumnName  :  F09
+                newColunmName   :  calculate_interest_time
+              #计息时间
+              - origColumnName  :  F09
+                newColunmName   :  calculate_interest_time
+              #发布时间
+              - origColumnName  :  F10
+                newColunmName   :  publish_time
+              #状态,DFB:待发布;YFB:已发布;YZF:已作废
+              - origColumnName  :  F11
+                newColunmName   :  status
+
+#S62.T6221，体验金用户表
+    - origTable       : T6221
+      origClazzName   : T6221
+      newTable        : tb_experience_money_user
+      newClazzName    : ExperienceMoneyUser
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  experience_money_user_id
+              #体验标ID,参考T6220.F01
+              - origColumnName  :  F02
+                newColunmName   :  simulated_bid_id
+              #用户ID,参考S61.T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #投资金额
+              - origColumnName  :  F04
+                newColunmName   :  investment_money
+              #投资时间
+              - origColumnName  :  F05
+                newColunmName   :  investment_time
+              #回款时间
+              - origColumnName  :  F06
+                newColunmName   :  remit_money_time
+              #应得体验金收益
+              - origColumnName  :  F07
+                newColunmName   :  deserved_experience_money_income
+              #体验金发放状态(Y:已发放,F:未发放,ERR:发放错误
+              - origColumnName  :  F08
+                newColunmName   :  experience_money_grant_status
+
+
+#S62.T6230，标信息表
+    - origTable       : T6230
+      origClazzName   : T6230
+      newTable        : tb_bid_information
+      newClazzName    : BidInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_information_id
+              #借款用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #借款标题
+              - origColumnName  :  F03
+                newColunmName   :  laon_title
+              #借款标类型ID,参考T6211.F01
+              - origColumnName  :  F04
+                newColunmName   :  label_type_id
+              #借款金额
+              - origColumnName  :  F05
+                newColunmName   :  loan_money
+              #年化利率
+              - origColumnName  :  F06
+                newColunmName   :  annual_interest_rate
+              #可投金额
+              - origColumnName  :  F07
+                newColunmName   :  available_money
+              #筹款期限,单位:天
+              - origColumnName  :  F08
+                newColunmName   :  fundraising_period
+              #借款周期,单位:月
+              - origColumnName  :  F09
+                newColunmName   :  borrowing_period
+              #还款方式,DEBX:等额本息;MYFX:每月付息,到期还本;YCFQ:本息到期一次付清;DEBJ:等额本金
+              - origColumnName  :  F10
+                newColunmName   :  repayment_method
+              #是否有担保,S:是;F:否
+              - origColumnName  :  F11
+                newColunmName   :  is_guarantee
+              #担保方案,BXQEDB:本息全额担保;BJQEDB:本金全额担保
+              - origColumnName  :  F12
+                newColunmName   :  guarantee_method
+              #是否有抵押,S:是;F:否
+              - origColumnName  :  F13
+                newColunmName   :  is_pledge
+              #是否实地认证,S:是;F:否
+              - origColumnName  :  F14
+                newColunmName   :  is_field_certification
+              #是否自动放款,S:是;F:否
+              - origColumnName  :  F15
+                newColunmName   :  is_automatic_loan
+              #是否允许流标,S:是;F:否
+              - origColumnName  :  F16
+                newColunmName   :  is_allow_flow
+              #付息方式,ZRY:自然月;GDR:固定日
+              - origColumnName  :  F17
+                newColunmName   :  way_of_paying_interest
+              #付息日,自然月在满标后设置为满标日+起息日,固定日则必须小于等于28
+              - origColumnName  :  F18
+                newColunmName   :  interest_date
+              #起息天数,T+N,默认为0
+              - origColumnName  :  F19
+                newColunmName   :  coupon_number
+              #状态,SQZ:申请中;DSH:待审核;DFB:待发布;YFB:预发布;TBZ:投标中;DFK:待放款;FKZ:放款中;HKZ:还款中;YJQ:已结清;YLB:已流标;YDF:已垫付;YZF:已作废
+              - origColumnName  :  F20
+                newColunmName   :  bid_status
+              #封面图片编码
+              - origColumnName  :  F21
+                newColunmName   :  cover_image_coding
+              #发布时间,预发布状态有效
+              - origColumnName  :  F22
+                newColunmName   :  publish_time
+              #信用等级,参考T5124.F01
+              - origColumnName  :  F23
+                newColunmName   :  rating_id
+              #申请时间
+              - origColumnName  :  F24
+                newColunmName   :  time_of_application
+              #标编号
+              - origColumnName  :  F25
+                newColunmName   :  bid_number
+              #计息金额
+              - origColumnName  :  F26
+                newColunmName   :  calculate_interest_money
+              #是否线下债权,S:是;F:否
+              - origColumnName  :  F27
+                newColunmName   :  is_offline_creditor_rights
+              #预发布标显示时间
+              - origColumnName  :  F29
+                newColunmName   :  preannouncement_bid_display_time
+              #是否缴纳成交服务费
+              - origColumnName  :  F30
+                newColunmName   :  is_repay_service_charge
+              #作废时间
+              - origColumnName  :  F31
+                newColunmName   :  cancellation_time
+              #是否活动标,F:否;S:是
+              - origColumnName  :  F32
+                newColunmName   :  is_activity_bid
+              #托管商户编号,参考T5110.F02
+              - origColumnName  :  F33
+                newColunmName   :  merchant_number
+              #是否显示前台，F:否;S:是
+              - origColumnName  :  F34
+                newColunmName   :  is_show_proscenium
+              #第三方代偿机构参考t6110.F01
+              - origColumnName  :  third_party_comp_mech_id
+                newColunmName   :  user_account_id
+              #原年化利率
+              - origColumnName  :  F35
+                newColunmName   :  original_annual_interest_rate
+              #年化利率增加值
+              - origColumnName  :  F36
+                newColunmName   :  annual_interest_rate_value_added
+              #收取服务费方式（YCXSQ：一次性收取，FQSQ：分期收取）
+              - origColumnName  :  collect_service_fee_way
+                newColunmName   :  collect_service_fee_way
+              #预计可投金额
+              - origColumnName  :  predict_vote_money
+                newColunmName   :  predict_vote_money
+              #乐观锁版本号
+              - origColumnName  :  opt
+                newColunmName   :  opt
+
+
+
+
+
+#S62.T6231, 标扩展信息表
+    - origTable       : T6231
+      origClazzName   : T6231
+      newTable        : tb_bid_extension_information
+      newClazzName    : BidExtensionInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #标ID,参考T6230.F01
+              - origColumnName  :  F01
+                newColunmName   :  bid_information_id
+              #还款总期数
+              - origColumnName  :  F02
+                newColunmName   :  repayment_total_periods
+              #剩余期数
+              - origColumnName  :  F03
+                newColunmName   :  surplus_periods
+              #月化收益率
+              - origColumnName  :  F04
+                newColunmName   :  month_rate_of_return
+              #日化收益率
+              - origColumnName  :  F05
+                newColunmName   :  date_rate_of_return
+              #下次还款日期
+              - origColumnName  :  F06
+                newColunmName   :  next_time_repayment_date
+              #项目区域位置ID,参考T5119.F01
+              - origColumnName  :  F07
+                newColunmName   :  china_administrative_division_id
+              #资金用途
+              - origColumnName  :  F08
+                newColunmName   :  money_use
+              #借款描述
+              - origColumnName  :  F09
+                newColunmName   :  loan_description
+              #审核时间
+              - origColumnName  :  F10
+                newColunmName   :  audit_time
+              #满标时间
+              - origColumnName  :  F11
+                newColunmName   :  full_scale_time
+              #放款时间
+              - origColumnName  :  F12
+                newColunmName   :  loan_time
+              #结清时间
+              - origColumnName  :  F13
+                newColunmName   :  settle_time
+              #垫付时间
+              - origColumnName  :  F14
+                newColunmName   :  advanced_time
+              #流标时间
+              - origColumnName  :  F15
+                newColunmName   :  flow_time
+              #还款来源
+              - origColumnName  :  F16
+                newColunmName   :  repaying_source
+              #起息日期
+              - origColumnName  :  F17
+                newColunmName   :  date_of_value
+              #结束日期
+              - origColumnName  :  F18
+                newColunmName   :  date_closed
+              #是否逾期,S:是(逾期);F:否;YZYQ:严重逾期
+              - origColumnName  :  F19
+                newColunmName   :  is_overdue
+              #还款提前预警日
+              - origColumnName  :  F20
+                newColunmName   :  is_proactive_date
+              #是否为按天借款,S:是;F:否
+              - origColumnName  :  F21
+                newColunmName   :  is_according_to_the_days_of_borrowing
+              #借款天数
+              - origColumnName  :  F22
+                newColunmName   :  borrowing_days
+
+
+#S62.T6232, 标附件列表(公开)
+    - origTable       : T6232
+      origClazzName   : T6232
+      newTable        : tb_bid_attachment_list_public
+      newClazzName    : BidAttachmentListPublic
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_attachment_list_public_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #附件类型,参考T6212.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_attachment_type_id
+              #附件文件编码
+              - origColumnName  :  F04
+                newColunmName   :  attachment_file_coding
+              #附件名称
+              - origColumnName  :  F05
+                newColunmName   :  attachment_name
+              #附件大小
+              - origColumnName  :  F06
+                newColunmName   :  attachment_size
+              #附件格式
+              - origColumnName  :  F07
+                newColunmName   :  attachment_format
+              #上传时间
+              - origColumnName  :  F08
+                newColunmName   :  uploading_time
+              #上传人ID,参考T7110.F01,后台上传时填入
+              - origColumnName  :  F09
+                newColunmName   :  manager_account_id
+
+
+#S62.T6233, 标附件列表（非公开）
+    - origTable       : T6233
+      origClazzName   : T6233
+      newTable        : tb_bid_attachment_list_nonpublic
+      newClazzName    : BidAttachmentListNonpublic
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_attachment_list_nonpublic_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #附件类型,参考T6212.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_attachment_type_id
+              #附件名称
+              - origColumnName  :  F04
+                newColunmName   :  attachment_name
+              #附件大小
+              - origColumnName  :  F05
+                newColunmName   :  attachment_size
+              #附件内容
+              - origColumnName  :  F06
+                newColunmName   :  attachment_content
+              #附件格式
+              - origColumnName  :  F07
+                newColunmName   :  attachment_format
+              #上传时间
+              - origColumnName  :  F08
+                newColunmName   :  uploading_time
+              #上传人ID,参考T7110.F01,后台上传时填入
+              - origColumnName  :  F09
+                newColunmName   :  manager_account_id
+              #是否是封面图标(S:是,F:否)
+              - origColumnName  :  F10
+                newColunmName   :  is_cover_icon
+
+#S62.T6234, 标抵押列表
+    - origTable       : T6234
+      origClazzName   : T6234
+      newTable        : tb_bid_pledge_list
+      newClazzName    : BidPledgeList
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_pledge_list_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #抵押物类型ID,参考T6213.F01
+              - origColumnName  :  F03
+                newColunmName   :  pledge_type_id
+              #抵押物名称
+              - origColumnName  :  F04
+                newColunmName   :  pledge_name
+
+#S62.T6235, 标抵押属性表
+    - origTable       : T6235
+      origClazzName   : T6235
+      newTable        : tb_bid_pledge_property
+      newClazzName    : BidPledgeProperty
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_pledge_property_id
+              #标抵押物ID,参考T6234.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_pledge_list_id
+              #抵押物属性ID,参考T6214.F01
+              - origColumnName  :  F03
+                newColunmName   :  pledge_property_id
+              #属性值
+              - origColumnName  :  F04
+                newColunmName   :  property_value
+
+#S62.T6236, 标担保方列表
+    - origTable       : T6236
+      origClazzName   : T6236
+      newTable        : tb_bid_guarantee
+      newClazzName    : BidGuarantee
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_guarantee_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #担保方ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #是否主担保方,S:是;F:否
+              - origColumnName  :  F04
+                newColunmName   :  is_main_guarantee
+              #担保情况
+              - origColumnName  :  F05
+                newColunmName   :  guarantee_description
+
+
+#S62.T6237, 标风险信息表
+    - origTable       : T6237
+      origClazzName   : T6237
+      newTable        : tb_bid_risk_information
+      newClazzName    : BidRiskInformation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #标ID,参考T6230.F01
+              - origColumnName  :  F01
+                newColunmName   :  bid_information_id
+              #风险综合描述
+              - origColumnName  :  F02
+                newColunmName   :  risk_composite_description
+              #反担保情况
+              - origColumnName  :  F03
+                newColunmName   :  reverse_guarantee_situation
+              #对应标担保方列表 T6236.F01
+              - origColumnName  :  F04
+                newColunmName   :  bid_guarantee_id
+
+
+#S62.T6238, 标的费率表
+    - origTable       : T6238
+      origClazzName   : T6238
+      newTable        : tb_bid_rate
+      newClazzName    : BidRate
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #标的ID,参考T6230.F01
+              - origColumnName  :  F01
+                newColunmName   :  bid_information_id
+              #成交服务费率
+              - origColumnName  :  F02
+                newColunmName   :  service_tariffing
+              #投资管理费率
+              - origColumnName  :  F03
+                newColunmName   : invest_manage_rate
+              #逾期罚息利率
+              - origColumnName  :  F04
+                newColunmName   :  overdue_penalty_interest_rates
+              #标的奖励利率
+              - origColumnName  :  F05
+                newColunmName   :  bid_reward_rate
+              #年成交服务费率
+              - origColumnName  :  F06
+                newColunmName   :  year_service_rate
+              #实际成交服务费
+              - origColumnName  :  F07
+                newColunmName   :  reality_service_rate
+              #违约金
+              - origColumnName  :  default_fine_ratio
+                newColunmName   :  default_fine_ratio
+
+
+#S62.T6239, 标的协议表
+    - origTable       : T6239
+      origClazzName   : T6239
+      newTable        : tb_bid_agreement
+      newClazzName    : BidAgreement
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #标的ID,参考T6230.F01
+              - origColumnName  :  F01
+                newColunmName   :  bid_information_id
+              #协议类型ID,参考T5125.F01
+              - origColumnName  :  F02
+                newColunmName   :  agreemen_model_agreemen_model_id
+              #协议版本号
+              - origColumnName  :  F03
+                newColunmName   :  agreement_version_number
+
+#S62.T6240, 标的线下债权关联表
+    - origTable       : T6240
+      origClazzName   : T6240
+      newTable        : tb_bid_offline_creditor_rights_relevance
+      newClazzName    : BidOfflineCreditorRightsRelevance
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #标的ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_information_id
+              #债权人ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #剩余期限
+              - origColumnName  :  F03
+                newColunmName   :  surplus_deadline
+              #债权价值
+              - origColumnName  :  F04
+                newColunmName   :  creditor_rights_value
+              #转让标题
+              - origColumnName  :  F05
+                newColunmName   :  transfer_title
+              #预留字段，原为预计收益
+              - origColumnName  :  F06
+                newColunmName   :  reserved_field
+              #原始投资金额
+              - origColumnName  :  F07
+                newColunmName   :  original_invest_money
+
+
+#S62.T6241, 标的审核记录表
+    - origTable       : T6241
+      origClazzName   : T6241
+      newTable        : tb_bid_audit_record
+      newClazzName    : BidAuditRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_audit_record_id
+              #标的ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #审核人,参考T7110.F01
+              - origColumnName  :  F03
+                newColunmName   :  manager_account_id
+              #反馈时间
+              - origColumnName  :  F04
+                newColunmName   :  eedback_time
+              #状态,YCL:已处理;WCL:未处理
+              - origColumnName  :  F05
+                newColunmName   :  status
+              #审核意见
+              - origColumnName  :  F06
+                newColunmName   :  audit_opinion
+
+#S62.T6250, 投标记录表
+    - origTable       : T6250
+      origClazzName   : T6250
+      newTable        : tb_bid_record
+      newClazzName    : BidRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_record_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #投资人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #购买价格
+              - origColumnName  :  F04
+                newColunmName   :  buy_price
+              #债权金额
+              - origColumnName  :  F05
+                newColunmName   :  creditor_rights_money
+              #投标时间
+              - origColumnName  :  F06
+                newColunmName   :  bid_time
+              #是否取消,F:否;S:是
+              - origColumnName  :  F07
+                newColunmName   :  is_cancel
+              #是否放款,F:否;S:是
+              - origColumnName  :  F08
+                newColunmName   :  is_loan
+              #是否自动投标
+              - origColumnName  :  F09
+                newColunmName   :  is_auto_bid
+
+
+#S62.T6251, 标债权记录表
+    - origTable       : T6251
+      origClazzName   : T6251
+      newTable        : tb_bid_creditor_rights_record
+      newClazzName    : BidCreditorRightsRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_creditor_rights_record_id
+              #债权编码
+              - origColumnName  :  F02
+                newColunmName   :  creditor_rights_encoding
+              #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_information_id
+              #债权人ID,参考T6110.F01
+              - origColumnName  :  F04
+                newColunmName   :  user_account_id
+              #购买价格
+              - origColumnName  :  F05
+                newColunmName   :  buy_price
+              #原始债权金额
+              - origColumnName  :  F06
+                newColunmName   :  original_creditor_rights_money
+              #持有债权金额
+              - origColumnName  :  F07
+                newColunmName   :  hold_creditor_rights_money
+              #是否正在转让,S:是;F:否
+              - origColumnName  :  F08
+                newColunmName   :  is_transferring
+              #创建日期
+              - origColumnName  :  F09
+                newColunmName   :  create_date
+              #起息日期
+              - origColumnName  :  F10
+                newColunmName   :  carry_interest_date
+              #投资记录ID,参考T6250.F01
+              - origColumnName  :  F11
+                newColunmName   :  bid_record_id
+              #债权转让订单Id
+              - origColumnName  :  F12
+                newColunmName   :  creditor_rights_transfer_order_id
+
+#S62.T6252, 标还款记录表
+    - origTable       : T6252
+      origClazzName   : T6252
+      newTable        : tb_bid_repayment_record
+      newClazzName    : BidRepaymentRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bid_repayment_record_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #付款用户ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #收款用户ID,参考T6110.F01
+              - origColumnName  :  F04
+                newColunmName   :  user_account_id
+              #交易类型ID,参考T5122.F01
+              - origColumnName  :  F05
+                newColunmName   :  transaction_type_id
+              #期号
+              - origColumnName  :  F06
+                newColunmName   :  issue
+              #金额
+              - origColumnName  :  F07
+                newColunmName   :  money
+              #应还日期
+              - origColumnName  :  F08
+                newColunmName   :  should+_return_date
+              #还款状态
+              - origColumnName  :  F09
+                newColunmName   :  repayment_status
+              #实际还款时间
+              - origColumnName  :  F10
+                newColunmName   :  reality_repayment_time
+              #债权ID,参考T6251.F01
+              - origColumnName  :  F11
+                newColunmName   :  bid_creditor_rights_record_id
+              #MEMBER:平台的会员托管账户  MERCHANT:平台的商户账户,区别投资人F04
+              - origColumnName  :  user_source_type
+                newColunmName   :  user_source_type
+
+#S62.T6253, 垫付记录表
+    - origTable       : T6253
+      origClazzName   : T6253
+      newTable        : tb_advanced_record
+      newClazzName    : AdvancedRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  advanced_record_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #垫付人,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #被垫付人,参考T6110.F01
+              - origColumnName  :  F04
+                newColunmName   :  user_account_id
+              #垫付金额
+              - origColumnName  :  F05
+                newColunmName   :  advanced_money
+              #垫付返回金额
+              - origColumnName  :  F06
+                newColunmName   :  advanced_return_money
+              #垫付时间
+              - origColumnName  :  F07
+                newColunmName   :  advanced_time
+              #垫付开始期数
+              - origColumnName  :  F08
+                newColunmName   :  advanced_start_period
+
+
+
+#S62.T6255, 用户还款记录表
+    - origTable       : T6255
+      origClazzName   : T6255
+      newTable        : tb_user_repayment_record
+      newClazzName    : UserRepaymentRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  user_repayment_record_id
+              #还款人ID（T6110.F01）
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #标ID（T6230.F01）
+              - origColumnName  :  F03
+                newColunmName   :  bid_information_id
+              #还款期数
+              - origColumnName  :  F04
+                newColunmName   :  repayment_period
+              #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+
+
+
+#S62.T6260, 债权转让申请表
+    - origTable       : T6260
+      origClazzName   : T6260
+      newTable        : tb_creditor_rights_transfer_apply
+      newClazzName    : CreditorRightsTransferApply
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  creditor_rights_transfer_apply_id
+              #债权ID,参考T6251.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_creditor_rights_record_id
+              #转让价格
+              - origColumnName  :  F03
+                newColunmName   :  transfer_price
+              #转让债权
+              - origColumnName  :  F04
+                newColunmName   :  transfer_creditor_rights
+              #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+              #结束日期
+              - origColumnName  :  F06
+                newColunmName   :  end_date
+              #状态,DSH:待审核;ZRZ:转让中;YJS:已结束
+              - origColumnName  :  F07
+                newColunmName   :  creditor_rights_status
+              #转让手续费率
+              - origColumnName  :  F08
+                newColunmName   :  transfer_procedure_rate
+
+
+#S62.T6261, 债权转让协议版本号表
+    - origTable       : T6261
+      origClazzName   : T6261
+      newTable        : tb_creditor_rights_transfer_agreement_version
+      newClazzName    : CreditorRightsTransferAgreementVersion
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #债权申请ID
+              - origColumnName  :  F01
+                newColunmName   :  creditor_rights_transfer_apply_id
+              #版本号
+              - origColumnName  :  F02
+                newColunmName   :  version_number
+
+
+#S62.T6262, 债权转让记录表
+    - origTable       : T6262
+      origClazzName   : T6262
+      newTable        : tb_creditor_rights_transfer_record
+      newClazzName    : CreditorRightsTransferRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  ccreditor_rights_transfer_record_id
+              #转让申请ID,参考T6261.F01
+              - origColumnName  :  F02
+                newColunmName   :  creditor_rights_transfer_apply_id
+              #购买人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #购买债权
+              - origColumnName  :  F04
+                newColunmName   :  buy_creditor_rights
+              #受让价格
+              - origColumnName  :  F05
+                newColunmName   :  transfer_price
+              #转让手续费
+              - origColumnName  :  F06
+                newColunmName   :  transfer_procedure_fee
+              #购买时间
+              - origColumnName  :  F07
+                newColunmName   :  buy_time
+              #转入盈亏
+              - origColumnName  :  F08
+                newColunmName   :  income_profit_and_loss
+              #转出盈亏
+              - origColumnName  :  F09
+                newColunmName   :  out_profit_and_loss
+
+
+#S62.T6263, 债权转让统计表
+    - origTable       : T6263
+      origClazzName   : T6263
+      newTable        : tb_creditor_rights_transfer_statistics
+      newClazzName    : CreditorRightsTransferStatistics
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #用户账号ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_account_id
+              #债权转让盈亏
+              - origColumnName  :  F02
+                newColunmName   :  creditor_rights_profit_loss
+              #成功转入金额
+              - origColumnName  :  F03
+                newColunmName   :  successful_income_money
+              #债权转入盈亏
+              - origColumnName  :  F04
+                newColunmName   :  creditor_rights_income_profit_loss
+              #已转入债权笔数
+              - origColumnName  :  F05
+                newColunmName   :  income_creditor_rights_number
+              #转让手续费
+              - origColumnName  :  F06
+                newColunmName   :  transfer_procedure_fee
+              #债权转出盈亏
+              - origColumnName  :  F07
+                newColunmName   :  creditor_rights_out_profit_loss
+              #已转出债权笔数
+              - origColumnName  :  F08
+                newColunmName   :  out_creditor_rights_number
+              #托管商户
+              - origColumnName  :  F09
+                newColunmName   :  merchant_number
+
+
+#S62.T6270, 提前还款申请
+    - origTable       : T6270
+      origClazzName   : T6270
+      newTable        : tb_ahead_repayment_apply
+      newClazzName    : AheadRepaymentApply
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  ahead_repayment_apply_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #期数
+              - origColumnName  :  F03
+                newColunmName   :  issue
+              #申请时间
+              - origColumnName  :  F04
+                newColunmName   :  apply_time
+              #状态,DSH:待审核;YHK:已还款;BTG:不通过
+              - origColumnName  :  F05
+                newColunmName   :  repayment_apply_status
+              #审核人ID,参考T7110.F01
+              - origColumnName  :  F06
+                newColunmName   :  manager_account_id
+              #审核时间
+              - origColumnName  :  F07
+                newColunmName   :  audit_time
+              #审核意见
+              - origColumnName  :  F08
+                newColunmName   :  audit_opinion
+              #备注
+              - origColumnName  :  F09
+                newColunmName   :  remark
+
+
+#S62.T6281, 企业融资申请表
+    - origTable       : T6281
+      origClazzName   : T6281
+      newTable        : tb_enterprise_financing_apply
+      newClazzName    : EnterpriseFinancingApply
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  enterprise_financing_apply_id
+              #用户ID，参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #企业名称
+              - origColumnName  :  F03
+                newColunmName   :  enterprise_name
+              #注册号
+              - origColumnName  :  F04
+                newColunmName   :  register_number
+              #联系人
+              - origColumnName  :  F05
+                newColunmName   :  linkman
+              #联系电话
+              - origColumnName  :  F06
+                newColunmName   :  contact_number
+              #身份证
+              - origColumnName  :  F07
+                newColunmName   :  identity_card
+              #公司地址
+              - origColumnName  :  F08
+                newColunmName   :  company_address
+              #融资金额
+              - origColumnName  :  F09
+                newColunmName   :  financing_money
+              #借款类型ID,参考T6211.F01
+              - origColumnName  :  F10
+                newColunmName   :  label_type_id
+              #所在区域ID，参考T5019.F01
+              - origColumnName  :  F11
+                newColunmName   :  china_administrative_division_id
+              #预计筹款期限
+              - origColumnName  :  F12
+                newColunmName   :  predictraise_funds_period
+              #借款描述
+              - origColumnName  :  F13
+                newColunmName   :  loan_description
+              #处理状态,WCL:未处理;YCL:已处理
+              - origColumnName  :  F14
+                newColunmName   :  handle_status
+              #处理人,参考T7110.F01
+              - origColumnName  :  F15
+                newColunmName   :  manager_account_id
+              #申请时间
+              - origColumnName  :  F16
+                newColunmName   :  apply_time
+              #处理时间
+              - origColumnName  :  F17
+                newColunmName   :  handle_time
+              #是否有抵押,S:是;F:否
+              - origColumnName  :  F18
+                newColunmName   :  is_pledge
+              #是否实地认证,S:是;F:否
+              - origColumnName  :  F19
+                newColunmName   :  is_field_certification
+              #是否有担保,S:是;F:否
+              - origColumnName  :  F20
+                newColunmName   :  is_guarantee
+              #处理结果
+              - origColumnName  :  F21
+                newColunmName   :  handle_result
+
+#S62.T6282, 个人融资申请表
+    - origTable       : T6282
+      origClazzName   : T6282
+      newTable        : tb_person_financing_apply
+      newClazzName    : PersonFinancingApply
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  person_financing_apply_id
+              #用户ID，参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_account_id
+              #联系人
+              - origColumnName  :  F03
+                newColunmName   :  linkman
+              #联系电话
+              - origColumnName  :  F04
+                newColunmName   :  contact_number
+              #身份证
+              - origColumnName  :  F05
+                newColunmName   :  identity_card
+              #融资金额
+              - origColumnName  :  F06
+                newColunmName   :  financing_money
+              #借款类型ID,参考T6211.F01
+              - origColumnName  :  F07
+                newColunmName   :  label_type_id
+              #所在区域ID，参考T5019.F01
+              - origColumnName  :  F08
+                newColunmName   :  china_administrative_division_id
+              #预计筹款期限
+              - origColumnName  :  F09
+                newColunmName   :  predictraise_funds_period
+              #借款描述
+              - origColumnName  :  F10
+                newColunmName   :  loan_description
+              #处理状态,WCL:未处理;YCL:已处理
+              - origColumnName  :  F11
+                newColunmName   :  handle_status
+              #处理人,参考T7110.F01
+              - origColumnName  :  F12
+                newColunmName   :  manager_account_id
+              #申请时间
+              - origColumnName  :  F13
+                newColunmName   :  apply_time
+              #处理时间
+              - origColumnName  :  F14
+                newColunmName   :  handle_time
+              #是否有抵押,S:是;F:否
+              - origColumnName  :  F15
+                newColunmName   :  is_pledge
+              #是否实地认证,S:是;F:否
+              - origColumnName  :  F16
+                newColunmName   :  is_field_certification
+              #是否有担保,S:是;F:否
+              - origColumnName  :  F17
+                newColunmName   :  is_guarantee
+              #处理结果
+              - origColumnName  :  F18
+                newColunmName   :  handle_result
+
+
+#S62.T6283, 企业融资意向附件表
+    - origTable       : T6283
+      origClazzName   : T6283
+      newTable        : tb_enterprise_financing_intention_Attachment
+      newClazzName    : EnterpriseFinancingIntentionAttachment
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  enterprise_financing_intention_Attachment_id
+              #企业融资意向ID,参考T6281.F01
+              - origColumnName  :  F02
+                newColunmName   :  enterprise_financing_apply_id
+              #附件内容
+              - origColumnName  :  F03
+                newColunmName   :  attachment_content
+
+#S62.T6284, 企业投资意向表
+    - origTable       : T6284
+      origClazzName   : T6284
+      newTable        : tb_enterprise_bid_intention
+      newClazzName    : EnterpriseBidIntention
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  enterprise_bid_intention_id
+              #联系人
+              - origColumnName  :  F02
+                newColunmName   :  linkman
+              #联系电话
+              - origColumnName  :  F03
+                newColunmName   :  contact_number
+              #手机号码
+              - origColumnName  :  F04
+                newColunmName   :  phone
+              #邮箱地址
+              - origColumnName  :  F05
+                newColunmName   :  email_address
+              #所在区域ID，参考T5019.F01
+              - origColumnName  :  F06
+                newColunmName   :  china_administrative_division_id
+              #借款描述
+              - origColumnName  :  F07
+                newColunmName   :  loan_description
+              #处理状态,WCL:未处理;YCL:已处理
+              - origColumnName  :  F08
+                newColunmName   :  handle_status
+              #处理人,参考T7110.F01
+              - origColumnName  :  F09
+                newColunmName   :  manager_account_id
+              #申请时间
+              - origColumnName  :  F10
+                newColunmName   :  apply_time
+              #处理时间
+              - origColumnName  :  F11
+                newColunmName   :  handle_time
+              #处理结果
+              - origColumnName  :  F12
+                newColunmName   :  handle_result
+
+
+#S62.T6285, 体验金利息返还记录表
+    - origTable       : T6285
+      origClazzName   : T6285
+      newTable        : tb_experience_money_interest_return_record
+      newClazzName    : ExperienceMoneyInterestReturnRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  experience_money_interest_return_record_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #付款平台ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #收款用户ID,参考T6110.F01
+              - origColumnName  :  F04
+                newColunmName   :  user_account_id
+              #交易类型ID,参考T5122.F01
+              - origColumnName  :  F05
+                newColunmName   :  transaction_type_id
+              #期号
+              - origColumnName  :  F06
+                newColunmName   :  issue
+              #体验金返还利息
+              - origColumnName  :  F07
+                newColunmName   :  experience_money_return_interest
+              #剩余体验金返还利息
+              - origColumnName  :  F11
+                newColunmName   :  surplus_experience_money_return_interest
+              #返还日期
+              - origColumnName  :  F08
+                newColunmName   :  return_date
+              #状态,WFH:未返还;YFH:已返还
+              - origColumnName  :  F09
+                newColunmName   :  status
+              #实际返还时间
+              - origColumnName  :  F10
+                newColunmName   :  reality_return_time
+
+#S62.T6286, 体验金投标记录表
+    - origTable       : T6286
+      origClazzName   : T6286
+      newTable        : tb_experience_money_bid_record
+      newClazzName    : ExperienceMoneyBidRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  experience_money_bid_record_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #投资人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #投资金额
+              - origColumnName  :  F04
+                newColunmName   :  invest_money
+              #投标时间
+              - origColumnName  :  F05
+                newColunmName   :  bid_time
+              #是否取消,F:否;S:是
+              - origColumnName  :  F06
+                newColunmName   :  is_cancel
+              #是否放款,F:否;S:是
+              - origColumnName  :  F07
+                newColunmName   :  is_make_loans
+              #是否自动投标
+              - origColumnName  :  F08
+                newColunmName   :  is_auto_bid
+
+#S62.T6287, 投资奖励发放表
+    - origTable       : T6287
+      origClazzName   : T6287
+      newTable        : tb_invest_award_grant
+      newClazzName    : InvestAwardGrant
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  invest_award_grant_id
+              #投标记录ID,参考T6251.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_creditor_rights_record_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_information_id
+              #发放人ID,参考T7110.F01
+              - origColumnName  :  F04
+                newColunmName   :  manager_account_id
+              #发放金额
+              - origColumnName  :  F05
+                newColunmName   :  grant_money
+              #发放时间
+              - origColumnName  :  F06
+                newColunmName   :  grant_time
+              #状态,DFF:待发放;YFF:已发放;BFF:不发放
+              - origColumnName  :  F07
+                newColunmName   :  status
+              #描述
+              - origColumnName  :  F08
+                newColunmName   :  description
+
+#S62.T6290, 服务费缴纳管控表
+    - origTable       : T6290
+      origClazzName   : T6290
+      newTable        : tb_service_charge_payment_control
+      newClazzName    : ServiceChargePaymentControl
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  service_charge_payment_control_id
+              #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_information_id
+              #借款人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_account_id
+              #借款金额(筹款到的金额)
+              - origColumnName  :  F04
+                newColunmName   :  loan_money
+              #年化成交服务费率
+              - origColumnName  :  F05
+                newColunmName   :  annual_transaction_service_rates
+              #实际成交服务费率
+              - origColumnName  :  F06
+                newColunmName   :  reality_transaction_service_rates
+              #实际成交服务费
+              - origColumnName  :  F07
+                newColunmName   :  reality_transaction_service_fee
+              #是否缴纳服务费 S:已缴纳  F:没有缴纳
+              - origColumnName  :  F08
+                newColunmName   :  is_pay_service_fee
+              #期数
+              - origColumnName  :  F09
+                newColunmName   :  issue
+              #应还日期
+              - origColumnName  :  F10
+                newColunmName   :  should_pay_date
+
+
+
+

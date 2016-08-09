@@ -1,0 +1,566 @@
+tableInfos:
+#T5011，文章
+    - origTable       : T5011
+      origClazzName   : T5011
+      newTable        : tb_article
+      newClazzName    : Article
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #文章自增ID
+              - origColumnName  :  F01
+                newColunmName   :  article_id
+              #文章类别,\r\nWDHYZX:网贷行业资讯;HLWJRYJ:互联网金融研究;MTBD:媒体报道;SHZR:社会责任;GLTD:管理团队;ZJGW:专家顾问;HZJG:合作机构;GSJJ:公司简介;\r\nZXNS:招贤纳士;LXWM:联系我们;AQBZ:安全保障;XSZY:新手指引;MCJS:名词解释;PTJS:平台介绍;LXHFY:利息和费用;WYJK:我要借款;WYLC:我要理财;\r\nPTZH:平台账户;BXDB:本息担保;XMFK:项目风控;ZJAQ:资金安全;FLHG:法律合规;GCTM:过程透明;HZHB:合作伙伴;CZYTX:充值与提现;TZYHK:投资与回款;\r\nZHYAQ:账户与安全;ZCYDL:注册与登录;DBMS:担保模式;RZMS:融租模式;ZQMS:债权模式;HZJRJG:合作金融机构;XSFKTX:信审风控体系;CFCAZLHZ:CFCA战略合作;\r\nZCFGBZ:政策法规保障;GSZZ:公司资质;GSDT:公司动态;FBGG:发标公告;XMAQ:项目安全;GSYJ:公司愿景;CZ:充值;TX:提现;TZ:投资;ZQZR:债权转让;ZHMM:账户密码;FXBZ:风险保障;JRDJT:金融大讲堂;
+              - origColumnName  :  F02
+                newColunmName   :  article_type
+              #浏览次数
+              - origColumnName  :  F03
+                newColunmName   :  browse_number
+              #排序值
+              - origColumnName  :  F04
+                newColunmName   :  sort_value
+              #发布状态,WFB:未发布;YFB:已发布;
+              - origColumnName  :  F05
+                newColunmName   :  publish_status
+              #文章标题
+              - origColumnName  :  F06
+                newColunmName   :  article_title
+              #文章来源
+              - origColumnName  :  F07
+                newColunmName   :  article_source
+              #文章摘要
+              - origColumnName  :  F08
+                newColunmName   :  article_summary
+              #封面图片文件编码
+              - origColumnName  :  F09
+                newColunmName   :  cover_image_encode
+              #创建者ID,参考T7011.F01
+              - origColumnName  :  F10
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F11
+                newColunmName   :  creation_time
+              #发布时间
+              - origColumnName  :  F12
+                newColunmName   :  pubdate
+              #最后更新时间
+              - origColumnName  :  F13
+                newColunmName   :  last_update_time
+
+
+#T5011_1，文章内容
+    - origTable       : T5011_1
+      origClazzName   : T5011_1
+      newTable        : tb_article_content
+      newClazzName    : ArticleContent
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #文章自增ID
+              - origColumnName  :  F01
+                newColunmName   :  article_content_id
+              #文章内容
+              - origColumnName  :  F02
+                newColunmName   :  article_content
+
+
+#T5011_2，文章附件
+    - origTable       : T5011_2
+      origClazzName   : T5011_2
+      newTable        : tb_article_attachment
+      newClazzName    : ArticleAttachment
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #文章自增ID
+              - origColumnName  :  F01
+                newColunmName   :  article_attachment_id
+              #附件编码
+              - origColumnName  :  F02
+                newColunmName   :  attachment_encode
+
+
+#T5012，在线客服
+    - origTable       : T5012
+      origClazzName   : T5012
+      newTable        : tb_online_service
+      newClazzName    : OnlineService
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #在线客服自增ID
+              - origColumnName  :  F01
+                newColunmName   :  online_service_id
+              #浏览次数
+              - origColumnName  :  F02
+                newColunmName   :  browse_number
+              #客服类型,QQ:QQ;DH:电话号码;YX:邮箱
+              - origColumnName  :  F03
+                newColunmName   :  service_type
+              #排序值
+              - origColumnName  :  F04
+                newColunmName   :  sort_value
+              #客服名称
+              - origColumnName  :  F05
+                newColunmName   :  service_name
+              #客服号码
+              - origColumnName  :  F06
+                newColunmName   :  service_number
+              #图片编码
+              - origColumnName  :  F07
+                newColunmName   :  image_encode
+              #创建者,参考T7011.F01
+              - origColumnName  :  F08
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F09
+                newColunmName   :  creation_time
+              #最后更新时间
+              - origColumnName  :  F10
+                newColunmName   :  last_update_time
+
+
+#T5013，合作伙伴
+    - origTable       : T5013
+      origClazzName   : T5013
+      newTable        : tb_collaboration_partner
+      newClazzName    : CollaborationPartner
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #合作伙伴自增ID
+              - origColumnName  :  F01
+                newColunmName   :  collaboration_partner_id
+              #排序值
+              - origColumnName  :  F02
+                newColunmName   :  sort_value
+              #浏览次数
+              - origColumnName  :  F03
+                newColunmName   :  browse_number
+              #公司名称
+              - origColumnName  :  F04
+                newColunmName   :  company_name
+              #链接地址
+              - origColumnName  :  F05
+                newColunmName   :  link_address
+              #图片编码
+              - origColumnName  :  F06
+                newColunmName   :  image_encode
+              #联系地址
+              - origColumnName  :  F07
+                newColunmName   :  contact_address
+              #公司描述
+              - origColumnName  :  F08
+                newColunmName   :  company_describe
+              #创建者ID,参考T7011.F01
+              - origColumnName  :  F09
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F10
+                newColunmName   :  creation_time
+              #最后更新时间
+              - origColumnName  :  F11
+                newColunmName   :  last_update_time
+
+
+#T5014，友情链接
+    - origTable       : T5014
+      origClazzName   : T5014
+      newTable        : tb_friendly_link
+      newClazzName    : FriendlyLink
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #友情链接自增ID
+              - origColumnName  :  F01
+                newColunmName   :  friendly_link_id
+              #浏览次数
+              - origColumnName  :  F02
+                newColunmName   :  browse_number
+              #排序值
+              - origColumnName  :  F03
+                newColunmName   :  sort_value
+              #名称
+              - origColumnName  :  F04
+                newColunmName   :  name
+              #链接地址
+              - origColumnName  :  F05
+                newColunmName   :  link_address
+              #创建者,参考T7011.F01
+              - origColumnName  :  F06
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F07
+                newColunmName   :  creation_time
+              #最后更新时间
+              - origColumnName  :  F08
+                newColunmName   :  last_update_time
+
+
+#T5015，网站公告
+    - origTable       : T5015
+      origClazzName   : T5015
+      newTable        : tb_site_notice
+      newClazzName    : SiteNotice
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #网站公告自增ID
+              - origColumnName  :  F01
+                newColunmName   :  site_notice_id
+              #类型,XT:系统;HD:活动
+              - origColumnName  :  F02
+                newColunmName   :  type
+              #浏览次数
+              - origColumnName  :  F03
+                newColunmName   :  browse_number
+              #发布状态,WFB:未发布;YFB:已发布;YZF:已作废
+              - origColumnName  :  F04
+                newColunmName   :  publish_status
+              #公告标题
+              - origColumnName  :  F05
+                newColunmName   :  notice_title
+              #内容
+              - origColumnName  :  F06
+                newColunmName   :  content
+              #创建者ID,参考T7011.F01
+              - origColumnName  :  F07
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F08
+                newColunmName   :  creation_time
+              #最后修改时间
+              - origColumnName  :  F09
+                newColunmName   :  last_update_time
+
+
+#T5016，广告管理
+    - origTable       : T5016
+      origClazzName   : T5016
+      newTable        : tb_ad_manage
+      newClazzName    : AdManage
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #广告管理自增ID
+              - origColumnName  :  F01
+                newColunmName   :  ad_manage_id
+              #排序值
+              - origColumnName  :  F02
+                newColunmName   :  sort_value
+              #广告图片标题
+              - origColumnName  :  F03
+                newColunmName   :  image_title
+              #图片链接
+              - origColumnName  :  F04
+                newColunmName   :  image_link
+              #图片编码
+              - origColumnName  :  F05
+                newColunmName   :  image_encode
+              #创建者,参考T7011.F01
+              - origColumnName  :  F06
+                newColunmName   :
+              #上架时间
+              - origColumnName  :  F07
+                newColunmName   :  putaway_time
+              #下架时间
+              - origColumnName  :  F08
+                newColunmName   :  sold_out_time
+              #创建时间
+              - origColumnName  :  F09
+                newColunmName   :  creation_time
+              #最后修改时间
+              - origColumnName  :  F10
+                newColunmName   :  last_update_time
+              #广告内容
+              - origColumnName  :  F11
+                newColunmName   :  ad_content
+              #平台
+              - origColumnName  :  F12
+                newColunmName   :  platform
+
+
+#T5017，协议条款
+    - origTable       : T5017
+      origClazzName   : T5017
+      newTable        : tb_agreement_clause
+      newClazzName    : AgreementClause
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #协议类型,BXBZ:本息保障计划;ZCXY:注册协议;DBBXY:担保标协议(借款协议(担保));XYRZBXY:信用认证标协议(借款协议(信));SDRZBXY:实地认证标协议(借款协议(实));YXLCXY;优选理财协议范本;ZQZRXY:债权转让协议(债权转让及受让协议);JKXYSB:借款协议(实/保);ZQZRSMS:债权转让说明书;GRDYDBBXY:个人抵押担保标协议;GRXYBXY:个人信用标协议;QYDYDBBXY:企业抵押担保标协议;QYXYBXY:企业信用标协议;XXZQZRXY:线下债权转让协议;XSZQZRXY:线上债权转让协议;
+              - origColumnName  :  F01
+                newColunmName   :  agreement_type
+              #浏览次数
+              - origColumnName  :  F02
+                newColunmName   :  browse_number
+              #协议内容
+              - origColumnName  :  F03
+                newColunmName   :  agreement_content
+              #创建者,参考T7011.F01
+              - origColumnName  :  F04
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  creation_time
+              #最后修改时间
+              - origColumnName  :  F06
+                newColunmName   :  last_update_time
+
+
+#T5017_1，协议附件
+    - origTable       : T5017_1
+      origClazzName   : T5017_1
+      newTable        : tb_agreement_attachment
+      newClazzName    : AgreementAttachment
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #协议类型,BXBZ:本息保障;ZCXY:注册协议
+              - origColumnName  :  F01
+                newColunmName   :  agreement_type
+              #附件编码
+              - origColumnName  :  F02
+                newColunmName   :  attachment_encode
+
+
+#T5018，业绩报告
+    - origTable       : T5018
+      origClazzName   : T5018
+      newTable        : tb_performance_report
+      newClazzName    : PerformanceReport
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #业绩报告自增ID
+              - origColumnName  :  F01
+                newColunmName   :  performance_report_id
+              #排序值
+              - origColumnName  :  F02
+                newColunmName   :  sort_value
+              #是否发布,WFB:未发布;YFB:已发布
+              - origColumnName  :  F03
+                newColunmName   :  is_publish
+              #浏览次数
+              - origColumnName  :  F04
+                newColunmName   :  browse_number
+              #文章标题
+              - origColumnName  :  F05
+                newColunmName   :  article_title
+              #附件编码
+              - origColumnName  :  F06
+                newColunmName   :  attachment_encode
+              #创建者ID,参考T7011.F01
+              - origColumnName  :  F07
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F08
+                newColunmName   :  creation_time
+              #最后修改时间
+              - origColumnName  :  F09
+                newColunmName   :  last_update_time
+
+
+#T5019，中国行政区划
+    - origTable       : T5019
+      origClazzName   : T5019
+      newTable        : tb_china_administrative_division
+      newClazzName    : ChinaAdministrativeDivision
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #ID,6位数字
+              - origColumnName  :  F01
+                newColunmName   :  china_administrative_division_id
+              #省级ID
+              - origColumnName  :  F02
+                newColunmName   :  provincial_level_id
+              #市级ID
+              - origColumnName  :  F03
+                newColunmName   :  city_level_id
+              #县级ID
+              - origColumnName  :  F04
+                newColunmName   :  county_level_id
+              #名称,最多15个字符
+              - origColumnName  :  F05
+                newColunmName   :  name
+              #省级名称,最多15个字符
+              - origColumnName  :  F06
+                newColunmName   :  provincial_level_name
+              #市级名称,最多15个字符
+              - origColumnName  :  F07
+                newColunmName   :  city_level_name
+              #县级名称,最多15个字符
+              - origColumnName  :  F08
+                newColunmName   :  county_level_name
+              #电话区号,最多4个字符
+              - origColumnName  :  F09
+                newColunmName   :  area_code
+              #邮政编码,最多5个字符
+              - origColumnName  :  F10
+                newColunmName   :  postal_code
+              #级别,SHENG:省级;SHI:市级;XIAN:县级
+              - origColumnName  :  F11
+                newColunmName   :  level
+              #简拼,最多15个字符
+              - origColumnName  :  F12
+                newColunmName   :  simple_spell
+              #启用状态,QY:启用;TY:停用;
+              - origColumnName  :  F13
+                newColunmName   :  status
+
+
+#T5020，银行列表
+    - origTable       : T5020
+      origClazzName   : T5020
+      newTable        : tb_bank
+      newClazzName    : BankList
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #银行自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bank_id
+              #银行名称
+              - origColumnName  :  F02
+                newColunmName   :  bank_name
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F03
+                newColunmName   :  status
+              #代码
+              - origColumnName  :  F04
+                newColunmName   :  code
+              #代码(华兴)
+              - origColumnName  :  F05
+                newColunmName   :  gh_code
+
+
+#T5021，支付公司列表
+    - origTable       : T5021
+      origClazzName   : T5021
+      newTable        : tb_pay_company
+      newClazzName    : PayCompany
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #支付公司自增ID
+              - origColumnName  :  F01
+                newColunmName   :  pay_company_id
+              #名称
+              - origColumnName  :  F02
+                newColunmName   :  name
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F03
+                newColunmName   :  status
+              #代码(华兴)
+              - origColumnName  :  F04
+                newColunmName   :  gh_code
+
+
+#T5022，招贤纳士
+    - origTable       : T5022
+      origClazzName   : T5022
+      newTable        : tb_join_us
+      newClazzName    : JoinUs
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #招贤纳士自增ID
+              - origColumnName  :  F01
+                newColunmName   :  join_us_id
+              #排序值
+              - origColumnName  :  F02
+                newColunmName   :  sort_value
+              #浏览次数
+              - origColumnName  :  F03
+                newColunmName   :  browse_number
+              #职位名称
+              - origColumnName  :  F04
+                newColunmName   :  position_name
+              #所属部门
+              - origColumnName  :  F05
+                newColunmName   :  department
+              #工作地点
+              - origColumnName  :  F06
+                newColunmName   :  work_place
+              #工作性质
+              - origColumnName  :  F07
+                newColunmName   :  work_property
+              #邮箱
+              - origColumnName  :  F08
+                newColunmName   :  email
+              #工作职责
+              - origColumnName  :  F09
+                newColunmName   :  job_duties
+              #岗位职责
+              - origColumnName  :  F10
+                newColunmName   :  position_statement
+              #创建者ID,参考T7011.F01
+              - origColumnName  :  F11
+                newColunmName   :
+              #创建时间
+              - origColumnName  :  F12
+                newColunmName   :  creation_time
+              #最后更新时间
+              - origColumnName  :  F13
+                newColunmName   :  last_update_time
+
+
+#T5023，证件类型
+    - origTable       : T5023
+      origClazzName   : T5023
+      newTable        : tb_certificate_type
+      newClazzName    : IdType
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  certificate_type_id
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F02
+                newColunmName   :  status
+              #代码
+              - origColumnName  :  F03
+                newColunmName   :  code
+              #名称
+              - origColumnName  :  F04
+                newColunmName   :  name
+
+
+#T5024，银行卡类型
+    - origTable       : T5024
+      origClazzName   : T5024
+      newTable        : tb_bank_card_type
+      newClazzName    : BankCardType
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  bank_card_type_id
+              #状态,QY:启用;TY:停用
+              - origColumnName  :  F02
+                newColunmName   :  status
+              #代码
+              - origColumnName  :  F03
+                newColunmName   :  code
+              #名称
+              - origColumnName  :  F04
+                newColunmName   :  name
+
+
+#T5030，抽奖奖品类型
+    - origTable       : T5030
+      origClazzName   : T5030
+      newTable        : tb_prize_type
+      newClazzName    : PrizeType
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+              #奖品类型编号,自增
+              - origColumnName  :  F01
+                newColunmName   :  prize_type_id
+              #奖品说明
+              - origColumnName  :  F02
+                newColunmName   :  prize_explain

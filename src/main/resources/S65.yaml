@@ -1,0 +1,684 @@
+tableInfos:
+#S65.T6501,订单表
+    - origTable       : T6501
+      origClazzName   : T6501
+      newTable        : tb_orders
+      newClazzName    : Orders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单ID,自增
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #类型编码
+              - origColumnName  :  F02
+                newColunmName   :  type_number
+                #状态,DTJ:待提交;YTJ:已提交;DQR:待确认;CG:成功;SB:失败;
+              - origColumnName  :  F03
+                newColunmName   :  state
+                #创建时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+                #提交时间
+              - origColumnName  :  F05
+                newColunmName   :  submit_time
+                #完成时间
+              - origColumnName  :  F06
+                newColunmName   :  finish_time
+                #订单来源,XT:系统;YH:用户;HT:后台;
+              - origColumnName  :  F07
+                newColunmName   :  order_source
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F08
+                newColunmName   :  user_id
+                #后台帐号ID,参考T7110.F01
+              - origColumnName  :  F09
+                newColunmName   :  backstage_user_id
+                #流水号
+              - origColumnName  :  F10
+                newColunmName   :  request_no
+                #同步状态,F:未同步;S:已同步;Z:再同步;
+              - origColumnName  :  F11
+                newColunmName   :  synchro_state
+                #托管商户编号,参考T5110.F02
+              - origColumnName  :  F12
+                newColunmName   :  trusteeship_merchant_number
+
+#S65.T6502,充值订单表
+    - origTable       : T6502
+      origClazzName   : T6502
+      newTable        : tb_recharge_orders
+      newClazzName    : RechargeOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #充值金额
+              - origColumnName  :  F03
+                newColunmName   :  recharge_amount
+                #应收手续费
+              - origColumnName  :  F04
+                newColunmName   :  fee_receivable
+                #实收手续费
+              - origColumnName  :  F05
+                newColunmName   :  actual_charge
+                #银行卡号
+              - origColumnName  :  F06
+                newColunmName   :  card_no
+                #支付公司代号
+              - origColumnName  :  F07
+                newColunmName   :  payment_compay_code
+                #流水单号,充值成功时记录
+              - origColumnName  :  F08
+                newColunmName   :  request_no
+                #充值方式,NET_B2B:B2B 网银;NET_B2C:B2C 网银;A_PAY:一键支付;WH_NO_CARD:代充值;SWIFT:快捷充值
+              - origColumnName  :  F09
+                newColunmName   :  recharge_way
+                #支付平台实收手续费
+              - origColumnName  :  F10
+                newColunmName   :  payment_platform_actual_charge
+
+#S65.T6503,提现订单表
+    - origTable       : T6503
+      origClazzName   : T6503
+      newTable        : tb_withdraw_deposit_orders
+      newClazzName    : WithdrawDepositOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #提现金额
+              - origColumnName  :  F03
+                newColunmName   :  withdraw_deposit_amount
+                #应收手续费
+              - origColumnName  :  F04
+                newColunmName   :  fee_receivable
+                #实收手续费
+              - origColumnName  :  F05
+                newColunmName   :  actual_charge
+                #银行卡号
+              - origColumnName  :  F06
+                newColunmName   :  card_no
+                #支付公司代号
+              - origColumnName  :  F07
+                newColunmName   :  payment_compay_code
+                #流水单号,提现成功时填入
+              - origColumnName  :  F08
+                newColunmName   :  request_no
+                #提现申请记录ID,参考T6130.F01
+              - origColumnName  :  F09
+                newColunmName   :  withdraw_deposit_apply_record_id
+                #提现方式,NORMAL:正常提现;URGENT:加急提现
+              - origColumnName  :  F10
+                newColunmName   :  withdraw_deposit_way
+                #支付平台实收手续费
+              - origColumnName  :  F11
+                newColunmName   :  payment_platform_actual_charge
+
+#S65.T6504,投标订单表
+    - origTable       : T6504
+      origClazzName   : T6504
+      newTable        : tb_bid_orders
+      newClazzName    : BidOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #投标金额
+              - origColumnName  :  F04
+                newColunmName   :  bid_amount
+                #投标记录ID,参考T6250.F01,投标成功时记录
+              - origColumnName  :  F05
+                newColunmName   :  bid_record_id
+
+#S65.T6505,放款订单表
+    - origTable       : T6505
+      origClazzName   : T6505
+      newTable        : tb_loan_orders
+      newClazzName    : LoanOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #投标记录ID,参考T6250.F01
+              - origColumnName  :  F04
+                newColunmName   :  bid_record_id
+                #投标金额
+              - origColumnName  :  F05
+                newColunmName   :  bid_amount
+
+#S65.T6506,还款订单表
+    - origTable       : T6506
+      origClazzName   : T6506
+      newTable        : tb_repayment_orders
+      newClazzName    : RepaymentOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #债权ID,参考T6251.F01
+              - origColumnName  :  F04
+                newColunmName   :  debts_id
+                #还款期号
+              - origColumnName  :  F05
+                newColunmName   :  repayment_number
+                #还款金额
+              - origColumnName  :  F06
+                newColunmName   :  repayment_amount
+                #交易类型ID,参考T5122.F01
+              - origColumnName  :  F07
+                newColunmName   :  deal_type_id
+                #标还款记录ID,参考T6252.F01
+              - origColumnName  :  bid_repayment_record_id
+                newColunmName   :  bid_repayment_record_id
+
+#S65.T6507,债权转让订单表
+    - origTable       : T6507
+      origClazzName   : T6507
+      newTable        : tb_debts_transfer_orders
+      newClazzName    : DebtsTransferOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #债权申请ID,参考T6260.F01
+              - origColumnName  :  F02
+                newColunmName   :  debts_apply_id
+                #购买人ID,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #购买债权
+              - origColumnName  :  F04
+                newColunmName   :  debts_amount
+                #受让价格
+              - origColumnName  :  F05
+                newColunmName   :  transfer_amount
+                #转让手续费
+              - origColumnName  :  F06
+                newColunmName   :  transfer_fee
+
+#S65.T6508,投标取消订单表
+    - origTable       : T6508
+      origClazzName   : T6508
+      newTable        : tb_bid_cancel_orders
+      newClazzName    : BidCancelOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #投标记录ID,参考T6250.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_record_id
+
+#S65.T6510,优选理财投标订单表
+    - origTable       : T6510
+      origClazzName   : T6510
+      newTable        : tb_optimization_financing_bid_orders
+      newClazzName    : OptimizationFinancingBidOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #优选理财ID,参考T6410.F01
+              - origColumnName  :  F03
+                newColunmName   :  optimization_financing_plan_id
+                #投标金额
+              - origColumnName  :  F04
+                newColunmName   :  bid_amount
+                #优选理财债权ID,参考T6411.F01
+              - origColumnName  :  F05
+                newColunmName   :  optimization_financing_holder_id
+
+#S65.T6511,优选理财放款订单表
+    - origTable       : T6511
+      origClazzName   : T6511
+      newTable        : tb_optimization_financing_loan_orders
+      newClazzName    : OptimizationFinancingLoanOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #优选理财ID,参考T6410.F01
+              - origColumnName  :  F03
+                newColunmName   :  optimization_financing_plan_id
+                #投标金额
+              - origColumnName  :  F04
+                newColunmName   :  bid_amount
+
+#S65.T6512,优选理财还款订单表
+    - origTable       : T6512
+      origClazzName   : T6512
+      newTable        : tb_optimization_financing_repayment_orders
+      newClazzName    : OptimizationFinancingRepaymentOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #优选理财ID,参考T6410.F01
+              - origColumnName  :  F03
+                newColunmName   :  optimization_financing_plan_id
+                #还款期号
+              - origColumnName  :  F04
+                newColunmName   :  repayment_number
+                #还款金额
+              - origColumnName  :  F05
+                newColunmName   :  repayment_amount
+                #科目类型ID,参考T5122.F01
+              - origColumnName  :  F06
+                newColunmName   :  deal_type_id
+
+#S65.T6513,保证金充值订单表
+    - origTable       : T6513
+      origClazzName   : T6513
+      newTable        : tb_deposit_recharge_orders
+      newClazzName    : DepositRechargeOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #金额
+              - origColumnName  :  F03
+                newColunmName   :  amount
+
+#S65.T6514,垫付订单表
+    - origTable       : T6514
+      origClazzName   : T6514
+      newTable        : tb_pay_orders
+      newClazzName    : PayOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单号,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #债权ID,参考T6251.F01
+              - origColumnName  :  F03
+                newColunmName   :  debts_id
+                #垫付人ID,参考T6110.F01
+              - origColumnName  :  F04
+                newColunmName   :  user_id
+                #垫付金额
+              - origColumnName  :  F05
+                newColunmName   :  pay_amount
+                #交易类型ID,参考T5122.F01
+              - origColumnName  :  F06
+                newColunmName   :  deal_type_id
+                #是否垫付,S:是;F:否;
+              - origColumnName  :  F07
+                newColunmName   :  judge_pay
+
+#S65.T6515,冻结订单表
+    - origTable       : T6515
+      origClazzName   : T6515
+      newTable        : tb_freeze_orders
+      newClazzName    : FreezeOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单id
+              - origColumnName  :  F01
+                newColunmName   :  freeze_order_id
+                #关联订单id
+              - origColumnName  :  F02
+                newColunmName   :  relation_id
+                #订单金额
+              - origColumnName  :  F03
+                newColunmName   :  order_amount
+
+#S65.T6516,解冻订单表
+    - origTable       : T6516
+      origClazzName   : T6516
+      newTable        : tb_thaw_orders
+      newClazzName    : ThawOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单id
+              - origColumnName  :  F01
+                newColunmName   :  thaw_order_id
+                #关联订单id
+              - origColumnName  :  F02
+                newColunmName   :  relation_id
+                #订单金额
+              - origColumnName  :  F03
+                newColunmName   :  order_amount
+
+#S65.T6517,转账订单表
+    - origTable       : T6517
+      origClazzName   : T6517
+      newTable        : tb_transfer_accounts_orders
+      newClazzName    : TransferAccountsOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #主键id
+              - origColumnName  :  F01
+                newColunmName   :  transfer_accounts_order_id
+                #金额
+              - origColumnName  :  F02
+                newColunmName   :  amount
+                #出账账号id
+              - origColumnName  :  F03
+                newColunmName   :  out_account_id
+                #入账账户id
+              - origColumnName  :  F04
+                newColunmName   :  in_account_id
+                #描述
+              - origColumnName  :  F05
+                newColunmName   :  describe
+
+#S65.T6518,体验金投标订单表
+    - origTable       : T6518
+      origClazzName   : T6518
+      newTable        : tb_experience_gold_bid_orders
+      newClazzName    : ExperienceGoldBidOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #主键id
+              - origColumnName  :  F01
+                newColunmName   :  experience_gold_bid_order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #投标金额
+              - origColumnName  :  F04
+                newColunmName   :  bid_amount
+                #投标记录ID,参考T6250.F01,投标成功时记录
+              - origColumnName  :  F05
+                newColunmName   :  bid_record_id
+
+#S65.T6519,投资金放款订单表
+    - origTable       : T6519
+      origClazzName   : T6519
+      newTable        : tb_invest_loan_orders
+      newClazzName    : InvestLoanOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单ID,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #投标记录ID,参考T6250.F01
+              - origColumnName  :  F04
+                newColunmName   :  bid_record_id
+                #体验金投标金额
+              - origColumnName  :  F05
+                newColunmName   :  experience_gold_bid_amount
+
+#S65.T6520,体验金利息返还订单表
+    - origTable       : T6520
+      origClazzName   : T6520
+      newTable        : tb_experience_gold_interest_return_orders
+      newClazzName    : ExperienceGoldInterestReturnOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单ID,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #返还利息期号
+              - origColumnName  :  F04
+                newColunmName   :  return_interest_number
+                #返还利息
+              - origColumnName  :  F05
+                newColunmName   :  return_interest
+                #科目类型ID,参考T5122.F01
+              - origColumnName  :  F06
+                newColunmName   :  deal_type_id
+                #返还利息平台ID
+              - origColumnName  :  F07
+                newColunmName   :  return_interest_platfrom_id
+
+#S65.T6521,提前还款订单表
+    - origTable       : T6521
+      origClazzName   : T6521
+      newTable        : tb_advance_repayment_orders
+      newClazzName    : AdvanceRepaymentOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单ID,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #投资用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #债权ID,参考T6251.F01
+              - origColumnName  :  F04
+                newColunmName   :  debts_id
+                #还款期号
+              - origColumnName  :  F05
+                newColunmName   :  repayment_number
+                #还款金额
+              - origColumnName  :  F06
+                newColunmName   :  repayment_amount
+                #科目类型ID,参考T5122.F01
+              - origColumnName  :  F07
+                newColunmName   :  deal_type_id
+                #当前期数
+              - origColumnName  :  F08
+                newColunmName   :  current_number
+                #付款用户ID
+              - origColumnName  :  F09
+                newColunmName   :  pay_user_id
+
+#S65.T6522,散标缴纳服务费转账订单表
+    - origTable       : T6522
+      origClazzName   : T6522
+      newTable        : tb_disperse_pay_service_fee_orders
+      newClazzName    : dispersePayServiceFeeOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单ID,参考T6501.F01
+              - origColumnName  :  F01
+                newColunmName   :  order_id
+                #对应标的id  参考T6230.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_id
+                #出账账号id
+              - origColumnName  :  F03
+                newColunmName   :  out_account_id
+                #入账账户id
+              - origColumnName  :  F04
+                newColunmName   :  in_account_id
+                #标的金额
+              - origColumnName  :  F05
+                newColunmName   :  bid_amount
+                #实际成交服务费率
+              - origColumnName  :  F06
+                newColunmName   :  actual_pay_service_fee
+                #成交服务费 转账金额
+              - origColumnName  :  F07
+                newColunmName   :  pay_service_fee
+                #描述
+              - origColumnName  :  F08
+                newColunmName   :  describe
+                #状态,DQR:待确认;CG:成功;SB:失败;
+              - origColumnName  :  F09
+                newColunmName   :  state
+                #期数
+              - origColumnName  :  number_of_periods
+                newColunmName   :  number_of_periods
+
+#S65.T6523,直接转账订单表
+    - origTable       : T6523
+      origClazzName   : T6523
+      newTable        : tb_direct_transfer_accounts_orders
+      newClazzName    : DirectTransferAccountsOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #订单id
+              - origColumnName  :  F01
+                newColunmName   :  direct_transfer_accounts_order_id
+                #金额
+              - origColumnName  :  F02
+                newColunmName   :  amount
+                #入账账户id,参考T6110.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #流水号
+              - origColumnName  :  F04
+                newColunmName   :  request_no
+                #描述
+              - origColumnName  :  F05
+                newColunmName   :  describe
+                #相关表主键id
+              - origColumnName  :  F06
+                newColunmName   :  relation_fee
+                #转账类型(新业务一定要新类型),HYJL:会员奖励;CJJL:抽奖奖励,TYJ:体验金,JXQ:加息券
+              - origColumnName  :  F07
+                newColunmName   :  transfer_accounts_type
+                #托管商户编号，参考T6230.F33
+              - origColumnName  :  F08
+                newColunmName   :  trusteeship_merchant_number
+
+#S65.T6550,订单异常日志表
+    - origTable       : T6550
+      origClazzName   : T6550
+      newTable        : tb_orders_abnormal_journal
+      newClazzName    : OrdersAbnormalJournal
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  orders_abnormal_journal_id
+                #订单ID,参考T6501.F01
+              - origColumnName  :  F02
+                newColunmName   :  order_id
+                #异常信息
+              - origColumnName  :  F03
+                newColunmName   :  abnormal_info
+                #发生时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+
+#S65.T6551,自动同步处理日志表
+    - origTable       : T6551
+      origClazzName   : T6551
+      newTable        : tb_auto_synchro_journal
+      newClazzName    : AutoSynchroJournal
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  auto_synchro_journal_id
+                #订单ID,参考T6501.F01
+              - origColumnName  :  F02
+                newColunmName   :  order_id
+                #处理结果
+              - origColumnName  :  F03
+                newColunmName   :  deal_result
+                #发生时间
+              - origColumnName  :  F04
+                newColunmName   :  create_time
+
+#S65.T6552,发标订单表
+    - origTable       : T6552
+      origClazzName   : T6552
+      newTable        : tb_release_orders
+      newClazzName    : ReleaseOrders
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  release_order_id
+                #借款用户ID,参考T6110.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #标ID,参考T6230.F01
+              - origColumnName  :  F03
+                newColunmName   :  bid_id
+                #发标金额,参考T6230.F05
+              - origColumnName  :  F04
+                newColunmName   :  release_amount
+
+
+

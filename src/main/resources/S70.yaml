@@ -1,0 +1,1435 @@
+tableInfos:
+#S70.T7010,首页统计表
+    - origTable       : T7010
+      origClazzName   : T7010
+      newTable        : tb_homepage_count
+      newClazzName    : HomepageCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #今日注册用户数
+              - origColumnName  :  F01
+                newColunmName   :  today_register_user
+                #历史注册用户总数
+              - origColumnName  :  F02
+                newColunmName   :  history_register_user
+                #今日登录用户数
+              - origColumnName  :  F03
+                newColunmName   :  today_login_user
+                #今日用户总充值
+              - origColumnName  :  F04
+                newColunmName   :  today_total_user_recharge
+                #用户历史总充值
+              - origColumnName  :  F05
+                newColunmName   :  history_total_user_recharge
+                #今日用户总提现
+              - origColumnName  :  F06
+                newColunmName   :  today_total_user_extract
+                #用户历史总提现
+              - origColumnName  :  F07
+                newColunmName   :  history_total_user_extract
+                #平台总收益
+              - origColumnName  :  F08
+                newColunmName   :  platform_total_income
+                #用户投资总收益
+              - origColumnName  :  F09
+                newColunmName   :  user_invest_total_income
+                #今日用户待还总金额
+              - origColumnName  :  F10
+                newColunmName   :  today_total_user_toRepay
+                #用户待还总金额
+              - origColumnName  :  F11
+                newColunmName   :  total_user_to_repay
+
+#S70.T7011,后台账号表
+    - origTable       : T7011
+      origClazzName   : T7011
+      newTable        : tb_backstage_account_number
+      newClazzName    : BackstageAccountNumber
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #后台账号表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  backstage_account_number_id
+                #登录名
+              - origColumnName  :  F02
+                newColunmName   :  login_name
+                #密码
+              - origColumnName  :  F03
+                newColunmName   :  password
+                #真实姓名
+              - origColumnName  :  F04
+                newColunmName   :  full_name
+                #状态,QY:启用;TY:停用
+              - origColumnName  :  F05
+                newColunmName   :  state
+                #创建时间
+              - origColumnName  :  F06
+                newColunmName   :  create_time
+                #最后登录时间
+              - origColumnName  :  F07
+                newColunmName   :  last_login_time
+                #登录IP
+              - origColumnName  :  F08
+                newColunmName   :  login_ip
+                #是否第一次登录修改密码,S:是;F:否
+              - origColumnName  :  F09
+                newColunmName   :  judge_first_login_update_password
+
+#S70.T7012,后台登录日志表
+    - origTable       : T7012
+      origClazzName   : T7012
+      newTable        : tb_backstage_login_log
+      newClazzName    : BackstageLoginLog
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #后台登录日志自增ID
+              - origColumnName  :  F01
+                newColunmName   :  backstage_login_log_id
+                #后台账号
+              - origColumnName  :  F02
+                newColunmName   :  backstage_account_number
+                #登录时间
+              - origColumnName  :  F03
+                newColunmName   :  login_time
+                #登录IP
+              - origColumnName  :  F04
+                newColunmName   :  login_ip
+                #是否成功登录,CG:成功;SB:失败
+              - origColumnName  :  F05
+                newColunmName   :  judge_login_success
+
+#S70.T7014,推广消息模版表
+    - origTable       : T7014
+      origClazzName   : T7014
+      newTable        : tb_extend_news_template
+      newClazzName    : ExtendNewsTemplate
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #系统消息模板表key
+              - origColumnName  :  F01
+                newColunmName   :  extend_news_template_id
+                #消息类型,ZNX:站内信;YJ:邮件;DX:短信
+              - origColumnName  :  F02
+                newColunmName   :  news_type
+                #事件描述
+              - origColumnName  :  F03
+                newColunmName   :  describe
+                #标题
+              - origColumnName  :  F04
+                newColunmName   :  title
+                #模板内容
+              - origColumnName  :  F05
+                newColunmName   :  template_content
+                #模板参数描述
+              - origColumnName  :  F06
+                newColunmName   :  template_parameter_describe
+                #最后更新时间
+              - origColumnName  :  F07
+                newColunmName   :  last_update_time
+                #默认模板内容
+              - origColumnName  :  F08
+                newColunmName   :  default_template_content
+                #是否启用,QY:启用;TY:停用
+              - origColumnName  :  F09
+                newColunmName   :  judge_using
+
+#S70.T7015,站内信推广表
+    - origTable       : T7015
+      origClazzName   : T7015
+      newTable        : tb_mail_extend
+      newClazzName    : MailExtend
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #站内信推广自增ID
+              - origColumnName  :  F01
+                newColunmName   :  mail_extend_id
+                #标题
+              - origColumnName  :  F02
+                newColunmName   :  title
+                #内容
+              - origColumnName  :  F03
+                newColunmName   :  content
+                #接受人数
+              - origColumnName  :  F04
+                newColunmName   :  accept_person_number
+                #创建者
+              - origColumnName  :  F05
+                newColunmName   :  backstage_user_id
+                #创建时间
+              - origColumnName  :  F06
+                newColunmName   :  create_time
+                #发送对象,SY:所有;ZDR:指定人
+              - origColumnName  :  F07
+                newColunmName   :  send_object
+
+#S70.T7016,站内信推广指定人列表
+    - origTable       : T7016
+      origClazzName   : T7016
+      newTable        : tb_mail_extend_person
+      newClazzName    : MailExtendPerson
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #站内信推广指定人列表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  mail_extend_person_id
+                #站内信推广ID,参考T7015.F01
+              - origColumnName  :  F02
+                newColunmName   :  mail_extend_id
+                #指定人账户名
+              - origColumnName  :  F03
+                newColunmName   :  person_account_name
+
+#S70.T7017,短信推广表
+    - origTable       : T7017
+      origClazzName   : T7017
+      newTable        : tb_sms_extend
+      newClazzName    : SmsExtend
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #短信推广自增ID
+              - origColumnName  :  F01
+                newColunmName   :  sms_extend_id
+                #内容
+              - origColumnName  :  F02
+                newColunmName   :  content
+                #接受人数
+              - origColumnName  :  F03
+                newColunmName   :  accept_person_number
+                #创建者,参考T7011.F01
+              - origColumnName  :  F04
+                newColunmName   :  backstage_account_number_id
+                #创建时间
+              - origColumnName  :  F05
+                newColunmName   :  create_time
+                #发送对象,SY:所有;ZDR:指定人
+              - origColumnName  :  F06
+                newColunmName   :  send_object
+
+#S70.T7018,短信推广指定人列表
+    - origTable       : T7018
+      origClazzName   : T7018
+      newTable        : tb_sms_extend_person
+      newClazzName    : SmsExtendPerson
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #短信推广指定人列表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  sms_extend_person_id
+                #短信推广ID,参考T7017.F01
+              - origColumnName  :  F02
+                newColunmName   :  sms_extend_id
+                #指定人手机号
+              - origColumnName  :  F03
+                newColunmName   :  person_phone_number
+
+#S70.T7019,邮件推广表
+    - origTable       : T7019
+      origClazzName   : T7019
+      newTable        : tb_email_extend
+      newClazzName    : EmailExtend
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #邮件推广自增ID
+              - origColumnName  :  F01
+                newColunmName   :  email_extend_id
+                #标题
+              - origColumnName  :  F02
+                newColunmName   :  title
+                #内容
+              - origColumnName  :  F03
+                newColunmName   :  content
+                #接受人数
+              - origColumnName  :  F04
+                newColunmName   :  accept_person_number
+                #创建者,参考T7011.F01
+              - origColumnName  :  F05
+                newColunmName   :  backstage_account_number_id
+                #创建时间
+              - origColumnName  :  F06
+                newColunmName   :  create_time
+                #发送对象,SY:所有;ZDR:指定人
+              - origColumnName  :  F07
+                newColunmName   :  send_object
+
+#S70.T7020,邮件推广指定人列表
+    - origTable       : T7020
+      origClazzName   : T7020
+      newTable        : tb_email_extend_person
+      newClazzName    : EmailExtendPerson
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #邮件推广指定人列表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  email_extend_person_id
+                #邮件推广ID,参考T7019.F01
+              - origColumnName  :  F02
+                newColunmName   :  email_extend_id
+                #指定人邮箱
+              - origColumnName  :  F03
+                newColunmName   :  person_email
+
+#S70.T7021,皮肤管理表
+    - origTable       : T7021
+      origClazzName   : T7021
+      newTable        : tb_skin_manage
+      newClazzName    : SkinManage
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #皮肤管理自增ID
+              - origColumnName  :  F01
+                newColunmName   :  skin_manage_id
+                #主题
+              - origColumnName  :  F02
+                newColunmName   :  theme
+                #位置,SY:首页;GRZX:个人中心
+              - origColumnName  :  F03
+                newColunmName   :  address
+                #图片Code
+              - origColumnName  :  F04
+                newColunmName   :  picture_code
+                #创建者,参考T7011.F01
+              - origColumnName  :  F05
+                newColunmName   :  backstage_account_number_id
+                #创建时间
+              - origColumnName  :  F06
+                newColunmName   :  create_time
+                #最后修改时间
+              - origColumnName  :  F07
+                newColunmName   :  last_update_time
+                #是否生效,S:是;F:否
+              - origColumnName  :  F08
+                newColunmName   :  judge_effective
+
+#S70.T7022,用户充值统计表
+    - origTable       : T7022
+      origClazzName   : T7022
+      newTable        : tb_user_recharge_count
+      newClazzName    : UserRechargeCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #充值总额
+              - origColumnName  :  F01
+                newColunmName   :  recharge_amount
+                #充值手续费
+              - origColumnName  :  F02
+                newColunmName   :  recharge_fee
+                #更新时间
+              - origColumnName  :  F03
+                newColunmName   :  update_time
+
+#S70.T7023,用户提现统计表
+    - origTable       : T7023
+      origClazzName   : T7023
+      newTable        : tb_user_withdraw_deposit_count
+      newClazzName    : UserWithdrawDepositCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #提现总额
+              - origColumnName  :  F01
+                newColunmName   :  withdraw_deposit_amount
+                #提现手续费
+              - origColumnName  :  F02
+                newColunmName   :  withdraw_deposit_fee
+                #更新时间
+              - origColumnName  :  F03
+                newColunmName   :  update_time
+
+#S70.T7024,用户资金统计表
+    - origTable       : T7024
+      origClazzName   : T7024
+      newTable        : tb_user_bankroll_count
+      newClazzName    : UserBankrollCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #可用金额总额
+              - origColumnName  :  F01
+                newColunmName   :  available_amount
+                #冻结总金额
+              - origColumnName  :  F02
+                newColunmName   :  freeze_amount
+                #账户余额总额
+              - origColumnName  :  F03
+                newColunmName   :  account_balance
+                #用户总收益
+              - origColumnName  :  F04
+                newColunmName   :  user_gross_income
+                #借款负债总额
+              - origColumnName  :  F05
+                newColunmName   :  loan_liabilities_amount
+                #优选理财资产总额
+              - origColumnName  :  F06
+                newColunmName   :  selective_preference_total_assets
+                #债权资产总额
+              - origColumnName  :  F07
+                newColunmName   :  debts_assets_amount
+                #更新时间
+              - origColumnName  :  F08
+                newColunmName   :  update_time
+
+#S70.T7025,平台资金账户表
+    - origTable       : T7025
+      origClazzName   : T7025
+      newTable        : tb_platform_bankroll_account
+      newClazzName    : PlatformBankrollAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #账户余额
+              - origColumnName  :  F01
+                newColunmName   :  account_balance
+                #总支出
+              - origColumnName  :  F02
+                newColunmName   :  total_expenditure
+                #总收入
+              - origColumnName  :  F03
+                newColunmName   :  total_income
+                #盈亏
+              - origColumnName  :  F04
+                newColunmName   :  profit_and_loss
+                #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+                #提现总额
+              - origColumnName  :  F06
+                newColunmName   :  withdraw_deposit_total
+                #充值总额
+              - origColumnName  :  F07
+                newColunmName   :  recharge_total
+
+#S70.T7026,平台资金流水表
+    - origTable       : T7026
+      origClazzName   : T7026
+      newTable        : tb_platform_bankroll_record
+      newClazzName    : PlatformBankrollRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #平台资金流水表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  platform_bankroll_record_id
+                #时间
+              - origColumnName  :  F02
+                newColunmName   :  create_time
+                #收入
+              - origColumnName  :  F03
+                newColunmName   :  income
+                #支出
+              - origColumnName  :  F04
+                newColunmName   :  expenditure
+                #余额
+              - origColumnName  :  F05
+                newColunmName   :  balance
+                #类型
+              - origColumnName  :  F06
+                newColunmName   :  type
+                #备注
+              - origColumnName  :  F07
+                newColunmName   :  remark
+                #引用ID,根据类型引用不同表ID
+              - origColumnName  :  F08
+                newColunmName   :  quote_id
+                #用户ID,参考T6010.F01
+              - origColumnName  :  F09
+                newColunmName   :  user_id
+
+#S70.T7027,平台保证金账户表
+    - origTable       : T7027
+      origClazzName   : T7027
+      newTable        : tb_platform_deposit_account
+      newClazzName    : PlatformDepositAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #风险保证金
+              - origColumnName  :  F01
+                newColunmName   :  risk_margin
+                #总支出
+              - origColumnName  :  F02
+                newColunmName   :  total_expenditure
+                #总收入
+              - origColumnName  :  F03
+                newColunmName   :  total_income
+                #盈亏
+              - origColumnName  :  F04
+                newColunmName   :  profit_and_loss
+                #更新时间
+              - origColumnName  :  F05
+                newColunmName   :  update_time
+                #提现总额
+              - origColumnName  :  F06
+                newColunmName   :  withdraw_deposit_amount
+                #充值总额
+              - origColumnName  :  F07
+                newColunmName   :  recharge_total
+
+#S70.T7028,平台保证金流水表
+    - origTable       : T7028
+      origClazzName   : T7028
+      newTable        : tb_platform_deposit_account
+      newClazzName    : PlatformDepositAccount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #风险保证金
+              - origColumnName  :  F01
+                newColunmName   :  risk_margin
+                #总支出
+              - origColumnName  :  F02
+                newColunmName   :  total_expenditure
+                #总收入
+              - origColumnName  :  F03
+                newColunmName   :  total_income
+                #盈亏
+              - origColumnName  :  F04
+                newColunmName   :  profit_and_loss
+                #更新时间
+              - origColumnName  :  F05
+                newColunmName   :  update_time
+                #提现总额
+              - origColumnName  :  F06
+                newColunmName   :  withdraw_deposit_amount
+                #充值总额
+              - origColumnName  :  F07
+                newColunmName   :  recharge_total
+
+#S70.T7029,机构信息表
+    - origTable       : T7028
+      origClazzName   : T7028
+      newTable        : tb_organization_info
+      newClazzName    : OrganizationInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #机构信息表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  organization_info_id
+                #名称
+              - origColumnName  :  F02
+                newColunmName   :  organization_name
+                #类型,SDRZ:实地认证;DYDB:机构担保;SDRZJDYDB:实地认证+机构担保
+              - origColumnName  :  F03
+                newColunmName   :  type
+                #联系地址
+              - origColumnName  :  F04
+                newColunmName   :  contact_address
+                #状态,YX:有效;WX:无效;SC:删除
+              - origColumnName  :  F05
+                newColunmName   :  state
+                #创建人,参考T7011.F01
+              - origColumnName  :  F06
+                newColunmName   :  backstage_account_number_id
+                #创建时间
+              - origColumnName  :  F07
+                newColunmName   :  create_time
+                #最后修改时间
+              - origColumnName  :  F08
+                newColunmName   :  last_update_time
+                #机构信用额度
+              - origColumnName  :  F09
+                newColunmName   :  organization_credit_limit
+                #机构可用信用额度
+              - origColumnName  :  F10
+                newColunmName   :  organization_usable_credit_limit
+                #原始备用金总额
+              - origColumnName  :  F11
+                newColunmName   :  original_spare_amount
+                #备用金余额
+              - origColumnName  :  F12
+                newColunmName   :  spare_amount
+                #机构标识符,唯一
+              - origColumnName  :  F13
+                newColunmName   :  organization_identifiers
+
+#S70.T7030,机构风险备用金流水表
+    - origTable       : T7030
+      origClazzName   : T7030
+      newTable        : tb_organization_risk_amount_record
+      newClazzName    : OrganizationRiskAmountRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #机构风险备用金表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  organization_risk_amount_record_id
+                #机构信息表ID,参考T7029.F01
+              - origColumnName  :  F02
+                newColunmName   :  organization_info_id
+                #时间
+              - origColumnName  :  F03
+                newColunmName   :  create_time
+                #收入
+              - origColumnName  :  F04
+                newColunmName   :  income
+                #支出
+              - origColumnName  :  F05
+                newColunmName   :  expenditure
+                #余额
+              - origColumnName  :  F06
+                newColunmName   :  balance
+                #类型,DF:垫付;DFHF:垫付返还;JKCJFWF:借款成交服务费;SDZJBZJ:手动增加保证金;SDKCBZJ:手动扣除保证金;
+              - origColumnName  :  F07
+                newColunmName   :  type
+                #备注
+              - origColumnName  :  F08
+                newColunmName   :  remark
+                #引用ID,具体参考类型引用表ID
+              - origColumnName  :  F09
+                newColunmName   :  quote_id
+                #用户ID,参考T6010.F01
+              - origColumnName  :  F10
+                newColunmName   :  user_id
+
+#S70.T7031,合同信息表
+    - origTable       : T7031
+      origClazzName   : T7031
+      newTable        : tb_contract_info
+      newClazzName    : ContractInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #合同信息表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  contract_info_id
+                #机构信息表ID,参考T7029.F01
+              - origColumnName  :  F02
+                newColunmName   :  organization_info_id
+                #合同类型,SDRZ:实地认证;DYDB:机构担保
+              - origColumnName  :  F03
+                newColunmName   :  contract_type
+                #合同号
+              - origColumnName  :  F04
+                newColunmName   :  contract_number
+                #借款者姓名
+              - origColumnName  :  F05
+                newColunmName   :  full_name
+                #借款者身份证
+              - origColumnName  :  F06
+                newColunmName   :  Borrower_id
+                #机构服务费率
+              - origColumnName  :  F07
+                newColunmName   :  organization_service_fee
+                #合同金额
+              - origColumnName  :  F08
+                newColunmName   :  contract_amount
+                #合同余额
+              - origColumnName  :  F09
+                newColunmName   :  contract_balance
+                #创建人,参考T7011.F01
+              - origColumnName  :  F10
+                newColunmName   :  backstage_account_number_id
+                #创建时间
+              - origColumnName  :  F11
+                newColunmName   :  create_time
+                #合同状态,YX:有效;WX无效
+              - origColumnName  :  F12
+                newColunmName   :  contract_state
+                #用户ID,参考T6010.F01
+              - origColumnName  :  F13
+                newColunmName   :  quote_id
+
+#S70.T7032,催收记录表
+    - origTable       : T7032
+      origClazzName   : T7032
+      newTable        : tb_collection_record
+      newClazzName    : CollectionRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #催收记录表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  collection_record_id
+                #借款标ID,参考T6036.F01
+              - origColumnName  :  F02
+                newColunmName   :  bid_id
+                #借款人ID,参考T6010.F01
+              - origColumnName  :  F03
+                newColunmName   :  loan_user_id
+                #催收方式,DH:电话;XC:现场;FL法律
+              - origColumnName  :  F04
+                newColunmName   :  collection_way
+                #催收人
+              - origColumnName  :  F05
+                newColunmName   :  collection_person
+                #结果概要
+              - origColumnName  :  F06
+                newColunmName   :  results_summary
+                #备注
+              - origColumnName  :  F07
+                newColunmName   :  remark
+                #催收时间
+              - origColumnName  :  F08
+                newColunmName   :  collection_time
+                #操作人,参考T7011.F01
+              - origColumnName  :  F09
+                newColunmName   :  backstage_account_number_id
+                #操作时间
+              - origColumnName  :  F10
+                newColunmName   :  update_time
+
+#S70.T7033,拉黑记录表
+    - origTable       : T7033
+      origClazzName   : T7033
+      newTable        : tb_defriend_record
+      newClazzName    : DefriendRecord
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #拉黑记录表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  defriend_record_id
+                #被黑ID,参考T6010.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #拉黑管理员ID,参考T7011.F01
+              - origColumnName  :  F03
+                newColunmName   :  backstage_account_number_id
+                #拉黑详情
+              - origColumnName  :  F04
+                newColunmName   :  defriend_details
+                #拉黑时间
+              - origColumnName  :  F05
+                newColunmName   :  defriend_time
+                #状态,LH:拉黑;QXLH:取消拉黑
+              - origColumnName  :  F06
+                newColunmName   :  state
+
+#S70.T7034,平台用户数据统计-按季度
+    - origTable       : T7034
+      origClazzName   : T7034
+      newTable        : tb_platform_count_by_year
+      newClazzName    : PlatformCountByYear
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年份
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #季度
+              - origColumnName  :  F02
+                newColunmName   :  quarter
+                #用户数
+              - origColumnName  :  F03
+                newColunmName   :  user_number
+                #新增用户数
+              - origColumnName  :  F04
+                newColunmName   :  add_user_number
+                #借款用户数
+              - origColumnName  :  F05
+                newColunmName   :  loan_user_id
+                #投标用户数
+              - origColumnName  :  F06
+                newColunmName   :  bid_user_number
+                #更新时间
+              - origColumnName  :  F07
+                newColunmName   :  update_time
+                #新增借款人
+              - origColumnName  :  F08
+                newColunmName   :  add_borrower
+                #新增投资人
+              - origColumnName  :  F09
+                newColunmName   :  add_investor
+
+#S70.T7035,平台用户数据统计-按月
+    - origTable       : T7035
+      origClazzName   : T7035
+      newTable        : tb_platform_count_by_month
+      newClazzName    : PlatformCountByMonth
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年份
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #月份
+              - origColumnName  :  F02
+                newColunmName   :  count_month
+                #用户数
+              - origColumnName  :  F03
+                newColunmName   :  user_number
+                #新增用户数
+              - origColumnName  :  F04
+                newColunmName   :  add_user_number
+                #借款用户数
+              - origColumnName  :  F05
+                newColunmName   :  loan_user_id
+                #投标用户数
+              - origColumnName  :  F06
+                newColunmName   :  bid_user_number
+                #更新时间
+              - origColumnName  :  F07
+                newColunmName   :  update_time
+                #新增借款人
+              - origColumnName  :  F08
+                newColunmName   :  add_borrower
+                #新增投资人
+              - origColumnName  :  F09
+                newColunmName   :  add_investor
+
+#S70.T7037,平台资金统计-按季度
+    - origTable       : T7037
+      origClazzName   : T7037
+      newTable        : tb_platform_bankroll_count_by_quarter
+      newClazzName    : PlatformBankrollCountByQuarter
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年度
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #季度
+              - origColumnName  :  F02
+                newColunmName   :  quarter
+                #收入
+              - origColumnName  :  F03
+                newColunmName   :  income
+                #支出
+              - origColumnName  :  F04
+                newColunmName   :  expenditure
+                #盈亏
+              - origColumnName  :  F05
+                newColunmName   :  profit_and_loss
+                #更新时间
+              - origColumnName  :  F06
+                newColunmName   :  update_time
+
+#S70.T7038,平台资金统计-按年度
+    - origTable       : T7038
+      origClazzName   : T7038
+      newTable        : tb_platform_bankroll_count_by_year
+      newClazzName    : PlatformBankrollCountByYear
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年度
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #更新时间
+              - origColumnName  :  F02
+                newColunmName   :  update_time
+                #充值手续费
+              - origColumnName  :  F03
+                newColunmName   :  recharge_fee
+                #提现手续费
+              - origColumnName  :  F04
+                newColunmName   :  withdraw_deposit_fee
+                #充值成本
+              - origColumnName  :  F05
+                newColunmName   :  recharge_cost
+                #提现成本
+              - origColumnName  :  F06
+                newColunmName   :  withdraw_deposit_cost
+                #身份验证手续费
+              - origColumnName  :  F07
+                newColunmName   :  authentication_fee
+                #借款管理费
+              - origColumnName  :  F08
+                newColunmName   :  loan_manage_fee
+                #逾期管理费
+              - origColumnName  :  F09
+                newColunmName   :  overdue_manage_fee
+                #债权转让费
+              - origColumnName  :  F10
+                newColunmName   :  debts_fee
+                #活动费用
+              - origColumnName  :  F11
+                newColunmName   :  activity_fee
+
+#S70.T7039,风险保证金统计-按季度
+    - origTable       : T7039
+      origClazzName   : T7039
+      newTable        : tb_risk_margin_count_by_quarter
+      newClazzName    : RiskMarginCountByQuarter
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年度
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #季度
+              - origColumnName  :  F02
+                newColunmName   :  quarter
+                #收入
+              - origColumnName  :  F03
+                newColunmName   :  income
+                #支出
+              - origColumnName  :  F04
+                newColunmName   :  expenditure
+                #盈亏
+              - origColumnName  :  F05
+                newColunmName   :  profit_and_loss
+                #更新时间
+              - origColumnName  :  F06
+                newColunmName   :  update_time
+                #机构ID 如果为0为平台
+              - origColumnName  :  F07
+                newColunmName   :  organization_id
+
+#S70.T7040,风险保证金统计-按年度
+    - origTable       : T7040
+      origClazzName   : T7040
+      newTable        : tb_risk_margin_count_by_year
+      newClazzName    : RiskMarginCountByYear
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年度
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #更新时间
+              - origColumnName  :  F02
+                newColunmName   :  update_time
+                #垫付
+              - origColumnName  :  F03
+                newColunmName   :  pay
+                #垫付返还
+              - origColumnName  :  F04
+                newColunmName   :  pay_return
+                #借款成交服务费
+              - origColumnName  :  F05
+                newColunmName   :  loan_finish_fee
+                #手动增加保证金
+              - origColumnName  :  F06
+                newColunmName   :  add_margin
+                #手动扣除保证金
+              - origColumnName  :  F07
+                newColunmName   :  deduction_margin
+                #机构ID 如果为0代表平台
+              - origColumnName  :  F08
+                newColunmName   :  organization_id
+
+#S70.T7041,充值提现数据统计-按月
+    - origTable       : T7041
+      origClazzName   : T7041
+      newTable        : tb_recharge_withdraw_deposit_count_by_year
+      newClazzName    : RechargeWithdrawDepositCountByYear
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年份
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #月份
+              - origColumnName  :  F02
+                newColunmName   :  count_month
+                #充值金额
+              - origColumnName  :  F03
+                newColunmName   :  recharge_amount
+                #提现金额
+              - origColumnName  :  F04
+                newColunmName   :  withdraw_deposit_amount
+                #充值笔数
+              - origColumnName  :  F05
+                newColunmName   :  recharge_number
+                #提现笔数
+              - origColumnName  :  F06
+                newColunmName   :  withdraw_deposit_number
+                #更新时间
+              - origColumnName  :  F07
+                newColunmName   :  update_time
+
+#S70.T7042,成交数据统计-按月
+    - origTable       : T7042
+      origClazzName   : T7042
+      newTable        : tb_finish_data_count_by_year
+      newClazzName    : FinishDataCountByYear
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年份
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #月份
+              - origColumnName  :  F02
+                newColunmName   :  count_month
+                #成交金额
+              - origColumnName  :  F03
+                newColunmName   :  finish_amount
+                #成交笔数
+              - origColumnName  :  F04
+                newColunmName   :  finish_number
+                #更新时间
+              - origColumnName  :  F05
+                newColunmName   :  update_time
+
+#S70.T7043,成交数据统计-按月-按类型
+    - origTable       : T7043
+      origClazzName   : T7043
+      newTable        : tb_finish_data_count_by_year_type
+      newClazzName    : FinishDataCountByYearType
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年份
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #月份
+              - origColumnName  :  F02
+                newColunmName   :  count_month
+                #成交金额
+              - origColumnName  :  F03
+                newColunmName   :  finish_amount
+                #成交笔数
+              - origColumnName  :  F04
+                newColunmName   :  finish_number
+                #类型（信用认证、机构担保、实地认证）
+              - origColumnName  :  F05
+                newColunmName   :  type
+                #更新时间
+              - origColumnName  :  F06
+                newColunmName   :  update_time
+
+#S70.T7044,成交数据统计-按月-按期限
+    - origTable       : T7044
+      origClazzName   : T7044
+      newTable        : tb_finish_data_count_by_year_term
+      newClazzName    : FinishDataCountByYearTerm
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年份
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #月份
+              - origColumnName  :  F02
+                newColunmName   :  count_month
+                #成交金额
+              - origColumnName  :  F03
+                newColunmName   :  finish_amount
+                #成交笔数
+              - origColumnName  :  F04
+                newColunmName   :  finish_number
+                #期限（1月..36月）
+              - origColumnName  :  F05
+                newColunmName   :  term
+                #更新时间
+              - origColumnName  :  F06
+                newColunmName   :  update_time
+
+#S70.T7045,成交数据统计-按月-按地域
+    - origTable       : T7045
+      origClazzName   : T7045
+      newTable        : tb_finish_data_count_by_year_region
+      newClazzName    : FinishDataCountByYearRegion
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年份
+              - origColumnName  :  F01
+                newColunmName   :  count_year
+                #月份
+              - origColumnName  :  F02
+                newColunmName   :  count_month
+                #成交金额
+              - origColumnName  :  F03
+                newColunmName   :  finish_amount
+                #成交笔数
+              - origColumnName  :  F04
+                newColunmName   :  finish_number
+                #地域代码
+              - origColumnName  :  F05
+                newColunmName   :  region_code
+                #更新时间
+              - origColumnName  :  F06
+                newColunmName   :  update_time
+
+#S70.T7046,活动信息表
+    - origTable       : T7046
+      origClazzName   : T7046
+      newTable        : tb_activity_info_third
+      newClazzName    : ActivityInfoThird
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #活动自增ID
+              - origColumnName  :  F01
+                newColunmName   :  activity_info_third_id
+                #活动主题
+              - origColumnName  :  F02
+                newColunmName   :  activity_title
+                #开始时间
+              - origColumnName  :  F03
+                newColunmName   :  start_time
+                #结束时间
+              - origColumnName  :  F04
+                newColunmName   :  end_time
+                #发布人,参考T7011.F01
+              - origColumnName  :  F05
+                newColunmName   :  backstage_account_number_id
+                #活动描述
+              - origColumnName  :  F06
+                newColunmName   :  activity_describe
+                #活动费用
+              - origColumnName  :  F07
+                newColunmName   :  activity_fee
+                #参与人数
+              - origColumnName  :  F08
+                newColunmName   :  join_number
+                #受益人数
+              - origColumnName  :  F09
+                newColunmName   :  benefit_number
+                #创建时间
+              - origColumnName  :  F10
+                newColunmName   :  create_time
+
+#S70.T7047,活动-参与人列表
+    - origTable       : T7047
+      origClazzName   : T7047
+      newTable        : tb_activity_join_person
+      newClazzName    : ActivityJoinPerson
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #活动-参与人列表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  activity_join_person_id
+                #活动ID,参考T7046.F01
+              - origColumnName  :  F02
+                newColunmName   :  activity_info_third_id
+                #参与人ID,参考T6010.F01
+              - origColumnName  :  F03
+                newColunmName   :  user_id
+                #奖励金额
+              - origColumnName  :  F04
+                newColunmName   :  reward_amount
+                #是否受益,S:是;F:否
+              - origColumnName  :  F05
+                newColunmName   :  judge_benefit
+                #参与时间
+              - origColumnName  :  F06
+                newColunmName   :  join_time
+
+#S70.T7048,优选理财计划-统计
+    - origTable       : T7048
+      origClazzName   : T7048
+      newTable        : tb_preferred_financial_planning_statistics
+      newClazzName    : PreferredFinancialPlanningStatistics
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #累计计划总金额
+              - origColumnName  :  F01
+                newColunmName   :  planned_total_amount
+                #为用户累计赚取
+              - origColumnName  :  F02
+                newColunmName   :  user_accumulative_earn
+                #累计实际总金额
+              - origColumnName  :  F03
+                newColunmName   :  accumulative_total
+                #加入总人数
+              - origColumnName  :  F04
+                newColunmName   :  join_total
+                #加权平均收益率
+              - origColumnName  :  F05
+                newColunmName   :  average_rate_of_return
+                #最后更新时间
+              - origColumnName  :  F06
+                newColunmName   :  last_update_time
+
+#S70.T7049,线下充值记录表
+    - origTable       : T7049
+      origClazzName   : T7049
+      newTable        : tb_line_recharge_recharge
+      newClazzName    : LineRechargeRecharge
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #线下充值记录表自增ID
+              - origColumnName  :  F01
+                newColunmName   :  line_recharge_recharge_id
+                #用户ID,参考T6010.F01
+              - origColumnName  :  F02
+                newColunmName   :  user_id
+                #时间
+              - origColumnName  :  F03
+                newColunmName   :  create_time
+                #创建人,参考T7011.F01
+              - origColumnName  :  F04
+                newColunmName   :  backstage_account_number_id
+                #充值状态，DSH：待审核；YCZ：已充值；YQX：已取消
+              - origColumnName  :  F05
+                newColunmName   :  recharge_state
+                #金额
+              - origColumnName  :  F06
+                newColunmName   :  amount
+                #备注
+              - origColumnName  :  F07
+                newColunmName   :  remark
+                #审核人ID,参考T7011.F01
+              - origColumnName  :  F08
+                newColunmName   :  backstage_account_number_id
+                #审核时间
+              - origColumnName  :  F09
+                newColunmName   :  audit_time
+                #审核意见
+              - origColumnName  :  F10
+                newColunmName   :  audit_opinion
+
+#S70.T7050,用户投资排行表 -按周
+    - origTable       : T7050
+      origClazzName   : T7050
+      newTable        : tb_user_invest_ranking_by_week
+      newClazzName    : userInvestRankingByWeek
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #账号ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_id
+                #登录账号
+              - origColumnName  :  F02
+                newColunmName   :  login_name
+                #投资总额
+              - origColumnName  :  F03
+                newColunmName   :  invest_total
+                #周(yyyy+周次)
+              - origColumnName  :  F04
+                newColunmName   :  week
+                #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+
+#S70.T7051,用户投资排行表 -按月
+    - origTable       : T7051
+      origClazzName   : T7051
+      newTable        : tb_user_invest_ranking_by_month
+      newClazzName    : userInvestRankingByMonth
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #账号ID,参考T6110.F01
+              - origColumnName  :  F01
+                newColunmName   :  user_id
+                #登录账号
+              - origColumnName  :  F02
+                newColunmName   :  login_name
+                #投资总额
+              - origColumnName  :  F03
+                newColunmName   :  invest_total
+                #月(yyyyMM)
+              - origColumnName  :  F04
+                newColunmName   :  month
+                #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+
+#S70.T7100_1,实名认证信息锁
+    - origTable       : T7051
+      origClazzName   : T7051
+      newTable        : tb_full_name_certification_info_lock
+      newClazzName    : FullNameCertificationInfoLock
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #身份证号
+              - origColumnName  :  F01
+                newColunmName   :  id_number
+
+#S70.T7100,实名认证信息库
+    - origTable       : T7100
+      origClazzName   : T7100
+      newTable        : tb_full_name_certification_info
+      newClazzName    : FullNameCertificationInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #身份证号
+              - origColumnName  :  F01
+                newColunmName   :  id_number
+                #姓名
+              - origColumnName  :  F02
+                newColunmName   :  full_name
+                #认证状态,TG:通过;SB:失败;
+              - origColumnName  :  F03
+                newColunmName   :  certification_state
+                #图像
+              - origColumnName  :  F04
+                newColunmName   :  picture
+                #最后更新时间
+              - origColumnName  :  F05
+                newColunmName   :  last_update_time
+
+#S70.T7101,实名认证日志
+    - origTable       : T7101
+      origClazzName   : T7101
+      newTable        : tb_full_name_certification_log
+      newClazzName    : FullNameCertificationLog
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  full_name_certification_log_id
+                #身份证号
+              - origColumnName  :  F02
+                newColunmName   :  id_number
+                #姓名
+              - origColumnName  :  F03
+                newColunmName   :  full_name
+                #认证结果,TG:认证通过;SB:认证失败;
+              - origColumnName  :  F04
+                newColunmName   :  certification_result
+                #错误代码
+              - origColumnName  :  F05
+                newColunmName   :  error_code
+                #认证时间
+              - origColumnName  :  F06
+                newColunmName   :  certification_time
+
+#S70.T7102,修改系统常量日志表
+    - origTable       : T7102
+      origClazzName   : T7102
+      newTable        : tb_update_system_constant_log
+      newClazzName    : UpdateSystemConstantLog
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  update_system_constant_log_id
+                #KEY值
+              - origColumnName  :  F02
+                newColunmName   :  key_value
+                #常量名称
+              - origColumnName  :  F03
+                newColunmName   :  constant_name
+                #修改前值
+              - origColumnName  :  F04
+                newColunmName   :  update_before_value
+                #修改后值
+              - origColumnName  :  F05
+                newColunmName   :  update_after_value
+                #修改人ID,参考T7011表ID
+              - origColumnName  :  F06
+                newColunmName   :  backstage_account_number_id
+                #修改时间
+              - origColumnName  :  F07
+                newColunmName   :  update_time
+
+#S70.T7106,企业与合同关系表
+    - origTable       : T7106
+      origClazzName   : T7106
+      newTable        : tb_enterprise_and_contract_relation
+      newClazzName    : EnterpriseAndContractRelation
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #合同id，参考T70
+              - origColumnName  :  F01
+                newColunmName   :  contract_info_id
+                #企业编号，参考T6110.F07
+              - origColumnName  :  F02
+                newColunmName   :  enterprise_number
+
+#S70.T7201,后台操作日志表
+    - origTable       : T7201
+      origClazzName   : T7201
+      newTable        : tb_background_operation_log
+      newClazzName    : BackgroundOperationLog
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #自增ID
+              - origColumnName  :  F01
+                newColunmName   :  background_operation_log_id
+                #后台账号(关联T7011.F01)
+              - origColumnName  :  F02
+                newColunmName   :  backstage_account_number_id
+                #关联ID
+              - origColumnName  :  F03
+                newColunmName   :  relation_id
+                #操作时间
+              - origColumnName  :  F04
+                newColunmName   :  operation_time
+                #操作描述
+              - origColumnName  :  F05
+                newColunmName   :  operation_describe
+                #角色名称
+              - origColumnName  :  F06
+                newColunmName   :  role_name
+                #访问IP
+              - origColumnName  :  F07
+                newColunmName   :  visit_ip
+
+#S70.T7202,法人用户资金统计表
+    - origTable       : T7202
+      origClazzName   : T7202
+      newTable        : tb_corporation_user_bankroll_count
+      newClazzName    : CorporationUserBankrollCount
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #可用金额总额
+              - origColumnName  :  F01
+                newColunmName   :  available_amount
+                #冻结总金额
+              - origColumnName  :  F02
+                newColunmName   :  freeze_amount
+                #账户余额总额
+              - origColumnName  :  F03
+                newColunmName   :  account_balance
+                #借款负债总额
+              - origColumnName  :  F04
+                newColunmName   :  loan_liabilities_amount
+                #更新时间
+              - origColumnName  :  F05
+                newColunmName   :  update_time
+
+#S70.T7203,法人用户资金信息表
+    - origTable       : T7203
+      origClazzName   : T7203
+      newTable        : tb_corporation_user_bankroll_info
+      newClazzName    : CorporationUserBankrollInfo
+      newClazzModule  :
+      newClazzPackage : cn.xdb.security
+      columnInfos     :
+                #年
+              - origColumnName  :  F01
+                newColunmName   :  year
+                #月
+              - origColumnName  :  F02
+                newColunmName   :  month
+                #投资金额
+              - origColumnName  :  F03
+                newColunmName   :  invest_amount
+                #债权转让盈亏
+              - origColumnName  :  F04
+                newColunmName   :  debts_profit_and_loss
+                #已收本金
+              - origColumnName  :  F05
+                newColunmName   :  gain_capital
+                #已收利息
+              - origColumnName  :  F06
+                newColunmName   :  gain_interest
+                #已收罚息
+              - origColumnName  :  F07
+                newColunmName   :  gain_default_interest
+                #已收违约金
+              - origColumnName  :  F08
+                newColunmName   :  gain_liquidated_damages
+                #待收本金
+              - origColumnName  :  F09
+                newColunmName   :  wait_charge_capital
+                #待收利息
+              - origColumnName  :  F10
+                newColunmName   :  wait_charge_interest
+                #待收罚息
+              - origColumnName  :  F11
+                newColunmName   :  wait_charge_default_interest
+                #用户ID
+              - origColumnName  :  F12
+                newColunmName   :  user_id
+
